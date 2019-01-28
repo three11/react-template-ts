@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component should render successfully 1`] = `
+<h1
+  className="NotFound__Title-kTWIRC loNduh"
+>
+  404 
+  <br />
+  Page not found
+</h1>
+`;

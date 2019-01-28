@@ -1,0 +1,12 @@
+// import or declare global application styles here
+@import 'normalize.css';
+
+.c-svg-icon {
+	display: block;
+
+	svg {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component should render successfully 1`] = `
+Array [
+  <react.svg
+    height={200}
+    style={
+      Object {
+        "display": "block",
+        "margin": "auto",
+      }
+    }
+    width={200}
+  />,
+  <div
+    className="styles__Wrapper-dhcWqx bdfcP"
+  >
+    <button
+      className="btn "
+      onClick={[Function]}
+    >
+      -
+    </button>
+    <button
+      className="btn "
+      onClick={[Function]}
+    >
+      Async -
+    </button>
+    <small>
+      0
+    </small>
+    <button
+      className="btn "
+      onClick={[Function]}
+    >
+      Async +
+    </button>
+    <button
+      className="btn "
+      onClick={[Function]}
+    >
+      +
+    </button>
+  </div>,
+  <img
+    alt="Redux Saga Logo"
+    src="redux-saga.png"
+    style={
+      Object {
+        "display": "block",
+        "margin": "auto",
+      }
+    }
+  />,
+]
+`;

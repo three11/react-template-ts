@@ -1,0 +1,27 @@
+{
+	"extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+	"rules": {
+		"trailing-comma": false,
+		"no-console": [true, "time", "timeEnd", "trace", "log"],
+		"no-consecutive-blank-lines": [true, 2],
+		"max-line-length": false,
+		"no-string-literal": false,
+		"no-use-before-declare": true,
+		"object-literal-sort-keys": false,
+		"ordered-imports": false,
+		"interface-name": false,
+		"quotemark": [true, "single", "avoid-escape", "jsx-double"],
+		"variable-name": [true, "allow-leading-underscore", "allow-pascal-case", "ban-keywords", "check-format"],
+		"space-before-function-paren": [true, { "anonymous": "never", "named": "never", "asyncArrow": "always" }],
+		"member-ordering": false,
+		"import-blacklist": [true, "rxjs"],
+		"jsx-no-lambda": false,
+		"jsx-no-multiline-js": false,
+		"no-import-side-effect": [true, { "ignore-module": "\\.scss$" }],
+		"no-unused-variable": [true, "react"],
+		"typedef": [true, "call-signature", "parameter", "member-variable-declaration"],
+		"jsx-curly-spacing": [2, "always"],
+		"no-bitwise": false,
+		"max-classes-per-file": [true, 3, "exclude-class-expressions"]
+	}
+}

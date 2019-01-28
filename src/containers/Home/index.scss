@@ -1,0 +1,20 @@
+.o-wrapper {
+	max-width: 400px;
+	margin: auto;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+
+	small {
+		font-size: 1.25rem;
+		text-align: center;
+		flex: 1;
+	}
+}
+
+.c-svg-icon {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}
