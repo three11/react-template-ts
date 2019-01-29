@@ -1,28 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomePage component should render successfully 1`] = `
+exports[`Home component should render successfully 1`] = `
 Array [
-  <react.svg
-    height={200}
-    style={
-      Object {
-        "display": "block",
-        "margin": "auto",
-      }
-    }
-    width={200}
+  <span
+    className="isvg loading c-svg-icon"
   />,
   <div
-    className="styles__Wrapper-dhcWqx bdfcP"
+    className="o-wrapper"
   >
     <button
-      className="btn "
+      className="c-btn "
       onClick={[Function]}
     >
       -
     </button>
     <button
-      className="btn "
+      className="c-btn "
       onClick={[Function]}
     >
       Async -
@@ -31,13 +24,13 @@ Array [
       0
     </small>
     <button
-      className="btn "
+      className="c-btn "
       onClick={[Function]}
     >
       Async +
     </button>
     <button
-      className="btn "
+      className="c-btn "
       onClick={[Function]}
     >
       +
@@ -45,7 +38,6 @@ Array [
   </div>,
   <img
     alt="Redux Saga Logo"
-    src="redux-saga.png"
     style={
       Object {
         "display": "block",

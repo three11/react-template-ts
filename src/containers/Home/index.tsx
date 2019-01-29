@@ -22,7 +22,7 @@ interface Props {
 	readonly dispatch: Dispatch;
 }
 
-export const HomePage = ({ counter, dispatch }: Props): React.ReactElement<any> => (
+export const Home = ({ counter, dispatch }: Props): React.ReactElement<any> => (
 	<React.Fragment>
 		<SVG src="assets/react.svg" className="c-svg-icon" />
 
@@ -50,4 +50,4 @@ export default connect(
 	} => ({
 		counter: store.counter
 	})
-)(HomePage);
+)(Home);

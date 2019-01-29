@@ -17,3 +17,5 @@ declare module '*.json' {
 	const content: any;
 	export default content;
 }
+
+declare var module: any;

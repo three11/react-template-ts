@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 
 import Button from '.';
 
