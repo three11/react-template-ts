@@ -1,15 +1,25 @@
-const path = require('path');
-const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+import * as path from 'path';
+import * as webpack from 'webpack';
+import * as TerserPlugin from 'terser-webpack-plugin';
+import * as CopyWebpackPlugin from 'copy-webpack-plugin';
+import * as HtmlWebPackPlugin from 'html-webpack-plugin';
+import * as WebpackPwaManifest from 'webpack-pwa-manifest';
+import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-const resolve = path.resolve.bind(__dirname);
+// because there are no type definitions available
+const OfflinePlugin: any = require('offline-plugin');
 
-const PATHS = {
+interface IndexedList<T> {
+	[key: string]: T;
+}
+
+interface Environment {
+	dev?: any;
+}
+
+const resolve: (path: string) => string = path.resolve.bind(__dirname);
+
+const PATHS: IndexedList<string> = {
 	src: resolve('./src'),
 	root: resolve('./'),
 	assets: resolve('./src/assets'),
@@ -19,7 +29,7 @@ const PATHS = {
 	nodeModules: resolve('./node_modules')
 };
 
-const tsConfig = {
+const tsConfig: IndexedList<any> = {
 	test: /\.tsx?$/,
 	loaders: [
 		'react-hot-loader/webpack',
@@ -40,7 +50,7 @@ const tsConfig = {
 	include: PATHS.src
 };
 
-const htmlConfig = {
+const htmlConfig: IndexedList<any> = {
 	test: /\.html$/,
 	use: [
 		{
@@ -52,7 +62,7 @@ const htmlConfig = {
 	]
 };
 
-const postcssPlugins = [
+const postcssPlugins: any[] = [
 	require('postcss-easy-import'),
 	require('postcss-url')({
 		url: 'rebase'
@@ -62,15 +72,15 @@ const postcssPlugins = [
 	require('autoprefixer')()
 ];
 
-const cssConfig = {
+const cssConfig: IndexedList<any> = {
 	test: /(\.css|\.scss)$/,
 	use: ['css-hot-loader'].concat(
-		MiniCssExtractPlugin.loader,
+		MiniCssExtractPlugin.loader as any,
 		'css-loader',
 		{
 			loader: 'postcss-loader',
 			options: {
-				plugins: loader => {
+				plugins: (loader: any) => {
 					if (!loader.hot) {
 						postcssPlugins.push(
 							require('cssnano')({
@@ -84,23 +94,23 @@ const cssConfig = {
 					return postcssPlugins;
 				}
 			}
-		},
+		} as any,
 		'sass-loader'
 	)
 };
 
-const fontsConfig = {
+const fontsConfig: IndexedList<any> = {
 	test: /\.(eot|otf|ttf|woff|woff2)$/,
 	use: 'file-loader'
 };
 
-const svgConfig = {
+const svgConfig: IndexedList<any> = {
 	test: /\.svg$/,
 	exclude: /node_modules/,
 	loader: 'svg-inline-loader'
 };
 
-const imagesConfig = {
+const imagesConfig: IndexedList<any> = {
 	test: /\.(jpg|png|gif|ico)$/,
 	use: [
 		{
@@ -131,7 +141,7 @@ const imagesConfig = {
 	]
 };
 
-const mediaConfig = {
+const mediaConfig: IndexedList<any> = {
 	test: /\.(mp3|mp4|webm)$/,
 	use: {
 		loader: 'url-loader',
@@ -141,7 +151,7 @@ const mediaConfig = {
 	}
 };
 
-module.exports = (env = {}) => {
+module.exports = (env: Environment = {}): webpack.Configuration => {
 	const isDev = env.dev;
 
 	return {
@@ -245,6 +255,7 @@ module.exports = (env = {}) => {
 		devtool: isDev ? 'eval-source-map' : 'source-map',
 		devServer: {
 			hot: true,
+			noInfo: true,
 			hotOnly: true,
 			overlay: true,
 			historyApiFallback: true
