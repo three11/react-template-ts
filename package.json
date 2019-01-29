@@ -7,7 +7,7 @@
 		"start": "webpack-dev-server --mode development --open --env.dev",
 		"build": "rm -rf ./dist && webpack --mode production",
 		"lint": "npm run lint:ts && npm run lint:scss",
-		"lint:ts": "tslint",
+		"lint:ts": "tslint -p tsconfig.json -c tslint.json 'src/**/*.{ts,tsx}'",
 		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
 		"test": "jest"
 	},
@@ -81,8 +81,6 @@
 		"@types/webpack": "4.4.24",
 		"@types/webpack-dev-server": "3.1.1",
 		"autoprefixer": "9.4.7",
-		"awesome-typescript-loader": "5.2.1",
-		"babel-jest": "24.0.0",
 		"copy-webpack-plugin": "4.6.0",
 		"css-hot-loader": "1.4.3",
 		"css-loader": "2.1.0",
