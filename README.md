@@ -5,7 +5,7 @@
 
 # React Template
 
-Opinionated React starter template using Redux, React Router, Redux Saga, Styled Components, SCSS, PostCSS and more.
+Opinionated React starter template using TypeScript, Redux, React Router, Redux Saga, SCSS, PostCSS and more, offering PWA and offline capabilities and many more.
 
 ## Dependencies
 
