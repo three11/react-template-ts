@@ -315,7 +315,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/copy-webpack-plugin@^4.4.2":
+"@types/copy-webpack-plugin@4.4.2":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-4.4.2.tgz#6dfac0dc8692378f76a20c6c1bbe01eec438f316"
   integrity sha512-/L0m5kc7pKGpsu97TTgAP6YcVRmau2Wj0HpRPQBGEbZXT1DZkdozZPCZHGDWXpxcvWDFTxob2JmYJj3RC7CwFA==
