@@ -92,11 +92,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.2.3":
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.2.3.tgz#32f5df65744b70888d17872ec106b02434ba1489"
-  integrity sha512-0LyEcVlfCoFmci8mXx8A5oIkpkOgyo8dRHtxBnK9RRBwxO2+JZPNsqtVEZQ7mJFPxnXF9lfmU24mHOPI0qnlkA==
-
 "@babel/parser@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.1.0.tgz#a7cd42cb3c12aec52e24375189a47b39759b783e"
@@ -150,21 +145,6 @@
     "@babel/code-frame" "^7.0.0"
     "@babel/parser" "^7.2.2"
     "@babel/types" "^7.2.2"
-
-"@babel/traverse@^7.0.0":
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.2.3.tgz#7ff50cefa9c7c0bd2d81231fdac122f3957748d8"
-  integrity sha512-Z31oUD/fJvEWVR0lNZtfgvVt512ForCTNKYcJBGbPb1QZfve4WGH8Wsy7+Mev33/45fhP/hwQtvgusNdcCMgSw==
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.2.2"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.0.0"
-    "@babel/parser" "^7.2.3"
-    "@babel/types" "^7.2.2"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.10"
 
 "@babel/traverse@^7.1.5":
   version "7.1.5"
@@ -335,6 +315,14 @@
   dependencies:
     "@types/node" "*"
 
+"@types/copy-webpack-plugin@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-4.4.2.tgz#6dfac0dc8692378f76a20c6c1bbe01eec438f316"
+  integrity sha512-/L0m5kc7pKGpsu97TTgAP6YcVRmau2Wj0HpRPQBGEbZXT1DZkdozZPCZHGDWXpxcvWDFTxob2JmYJj3RC7CwFA==
+  dependencies:
+    "@types/minimatch" "*"
+    "@types/webpack" "*"
+
 "@types/enzyme@3.1.16":
   version "3.1.16"
   resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.16.tgz#b29e1d7148e4e15a773a9b9f2149ea4c42d3a91d"
@@ -422,6 +410,11 @@
   dependencies:
     "@types/webpack" "*"
 
+"@types/minimatch@*":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
+  integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
+
 "@types/node@*":
   version "10.12.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
@@ -493,16 +486,6 @@
     "@types/history" "*"
     "@types/react" "*"
     "@types/react-router" "*"
-
-"@types/react-router-redux@5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@types/react-router-redux/-/react-router-redux-5.0.17.tgz#f7a3df9b20e52e199b28d12ef94ddcb8868df9c3"
-  integrity sha512-BSh7O1s5QBbV4tUOby8UcIdvEHOePXT9CCdwBtAIKw/lLRghKgWUA4modmWaXGx5o/rLk03UuVxx04BXFgHu5A==
-  dependencies:
-    "@types/history" "*"
-    "@types/react" "*"
-    "@types/react-router" "*"
-    redux ">= 3.7.2"
 
 "@types/react-router@*", "@types/react-router@4.4.3":
   version "4.4.3"
@@ -8944,7 +8927,7 @@ redux-saga@*, redux-saga@1.0.0:
   dependencies:
     "@redux-saga/core" "^1.0.0"
 
-redux@*, redux@4.0.1, "redux@>= 3.7.2", "redux@>=0.10 <5", redux@^4.0.0:
+redux@*, redux@4.0.1, "redux@>=0.10 <5", redux@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
   integrity sha512-R7bAtSkk7nY6O/OYMVR9RiBI+XghjF9rlbl5806HJbQph0LJVHZrU5oaO4q70eUKiqMRqm4y07KLTlMZ2BlVmg==
@@ -10091,20 +10074,6 @@ stylelint-config-recommended@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-2.1.0.tgz#f526d5c771c6811186d9eaedbed02195fee30858"
   integrity sha512-ajMbivOD7JxdsnlS5945KYhvt7L/HwN6YeYF2BH6kE4UCLJR0YvXMf+2j7nQpJyYLZx9uZzU5G1ZOSBiWAc6yA==
-
-stylelint-config-styled-components@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/stylelint-config-styled-components/-/stylelint-config-styled-components-0.1.1.tgz#b408388d7c687833ab4be4c4e6522d97d2827ede"
-  integrity sha512-z5Xz/9GmvxO6e/DLzBMwkB85zHxEEjN6K7Cj80Bi+o/9vR9eS3GX3E9VuMnX9WLFYulqbqLtTapGGY28JBiy9Q==
-
-stylelint-processor-styled-components@1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/stylelint-processor-styled-components/-/stylelint-processor-styled-components-1.5.2.tgz#875e21baa2dd0a0c0d5de082430e47c45c7d14ce"
-  integrity sha512-sjOU/GtTQMR1McdntJWo6Za1wbdl5YuxQwWm5l2Nz6ELYoVI9WJTZbU9DQcvkOGjW3+HEk4ZKBytqFrMJPIx9Q==
-  dependencies:
-    "@babel/parser" "^7.0.0"
-    "@babel/traverse" "^7.0.0"
-    postcss "^7.0.0"
 
 stylelint@9.10.1:
   version "9.10.1"
