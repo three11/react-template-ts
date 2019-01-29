@@ -63,21 +63,25 @@ npm run build
     -   `components/` - stateless components.
     -   `containers/` - statefull components.
     -   `utilities/` - helpers and utility functions
-    -   `index.html`
-    -   `index.js`
-    -   `reducers.js`
-    -   `sagas.js`
-    -   `store.js`
+    -   `app.scss` - Application's global SCSS entry point
+    -   `app.tsx` - Application's main component
+    -   `custom.d.ts` - Custom type definitions
+    -   `index.html` - Application's HTML file
+    -   `index.tsx` - The main entry point
+    -   `loadables.tsx` - Code split and lazy loaded components
+    -   `reducers.js` - Application's root reducer
+    -   `sagas.js` - Application's sagas
+    -   `store.js` - Application's Redux store
 
 2.  Latest EcmaScript support
 
     -   Usage of the latest features in EcmaScript
-    -   Using [Babel](https://github.com/babel/babel) to transpile to ES5
+    -   Using [TypeScript](https://www.typescriptlang.org/) to transpile to ES5
     -   Minification of the bundled file
     -   Source maps
 
-3.  Webpack aliases: Checkout the aliases property in the `webpack.config.js` file.
-4.  Choose your style: CSS in JS using `styled-components` or SCSS files.
+3.  Webpack aliases: Checkout the aliases property in the `webpack.config.ts` file.
+4.  SCSS usage.
 5.  Lint your files: ESLint and Stylelint included
 6.  Tests using Jest. The Test environment has been configured so you don't have to
 7.  Offline first - using Offline Plugin to cache important files and assets
