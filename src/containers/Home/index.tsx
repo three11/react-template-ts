@@ -11,7 +11,7 @@ import { INCREMENT_ASYNC, DECREMENT_ASYNC } from './constants';
 
 import './index.scss';
 
-import ReduxSagaLogo from '@assets/redux-saga.png';
+import * as ReduxSagaLogo from '@assets/redux-saga.png';
 
 interface Counter {
 	count: number;
@@ -38,7 +38,7 @@ export const Home = ({ counter, dispatch }: Props): React.ReactElement<any> => (
 			<Button onClick={() => dispatch(increment())}>+</Button>
 		</div>
 
-		<img src={ReduxSagaLogo} alt="Redux Saga Logo" style={{ display: 'block', margin: 'auto' }} />
+		<img src={ReduxSagaLogo as any} alt="Redux Saga Logo" style={{ display: 'block', margin: 'auto' }} />
 	</React.Fragment>
 );
 
