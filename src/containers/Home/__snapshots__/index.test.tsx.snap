@@ -38,6 +38,7 @@ Array [
   </div>,
   <img
     alt="Redux Saga Logo"
+    src="redux-saga.png"
     style={
       Object {
         "display": "block",
