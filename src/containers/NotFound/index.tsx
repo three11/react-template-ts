@@ -1,12 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 
 import './index.scss';
 
-const NotFoundPage = (): React.ReactElement<HTMLHeadingElement> => (
-	<h1 className="c-not-found">
+export const NotFound = (): React.ReactElement<any> => (
+	<div className="c-not-found">
 		404 <br />
 		Page not found
-	</h1>
+	</div>
 );
 
-export default NotFoundPage;
+export default NotFound;

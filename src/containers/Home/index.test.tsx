@@ -1,11 +1,11 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 
-import { HomePage } from '.';
+import { Home } from '.';
 
-describe('HomePage component', () => {
+describe('Home component', () => {
 	it('should render successfully', () => {
-		const tree = renderer.create(<HomePage counter={{ count: 0 }} dispatch={jest.fn()} />).toJSON();
+		const tree = renderer.create(<Home counter={{ count: 0 }} dispatch={jest.fn()} />).toJSON();
 
 		expect(tree).toMatchSnapshot();
 	});
