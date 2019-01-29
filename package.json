@@ -6,10 +6,9 @@
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open --env.dev",
 		"build": "rm -rf ./dist && webpack --mode production",
-		"lint": "npm run lint:ts && npm run lint:css && npm run lint:scss",
+		"lint": "npm run lint:ts && npm run lint:scss",
 		"lint:ts": "tslint",
-		"lint:css": "stylelint './src/**/*.js' --config .stylelintrc",
-		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc.json",
+		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
 		"test": "jest"
 	},
 	"repository": {
@@ -82,7 +81,7 @@
 		"@types/webpack": "^4.4.24",
 		"@types/webpack-dev-server": "^3.1.1",
 		"autoprefixer": "9.4.6",
-		"awesome-typescript-loader": "^5.2.1",
+		"babel-jest": "^24.0.0",
 		"copy-webpack-plugin": "^4.6.0",
 		"css-hot-loader": "1.4.3",
 		"css-loader": "2.1.0",
@@ -139,8 +138,12 @@
 			"src"
 		],
 		"moduleFileExtensions": [
+			"ts",
+			"tsx",
 			"js",
-			"jsx"
+			"jsx",
+			"json",
+			"node"
 		],
 		"moduleNameMapper": {
 			"^@src/(.*)$": "<rootDir>/src/$1",
@@ -160,11 +163,18 @@
 			"enzyme-to-json/serializer"
 		],
 		"transform": {
-			"^.+\\.js$": "babel-jest",
+			"^.+\\.tsx?$": "ts-jest",
 			"\\.(css|less|sass|scss)$": "<rootDir>/test-config/StyleMock.js",
 			"\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/FileMock.js"
 		},
-		"verbose": false
+		"verbose": false,
+		"testRegex": "(.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"testPathIgnorePatterns": [
+			"<rootDir>/node_modules/",
+			"<rootDir>/dist/",
+			"<rootDir>/test-config/",
+			"<rootDir>/webpack-config.js"
+		]
 	},
 	"private": true
 }

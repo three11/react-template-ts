@@ -1,8 +1,9 @@
+import { History } from 'history';
 import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'connected-react-router';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import createSagaMiddleware, { Saga } from 'redux-saga';
-import { Store, createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware, { Saga, SagaMiddleware } from 'redux-saga';
+import { Store, Middleware, createStore, applyMiddleware } from 'redux';
 
 import sagas from './sagas';
 import rootReducer from './reducers';
@@ -12,23 +13,23 @@ export interface RootStore {
 	counter: CounterState;
 }
 
-export const history = createHistory();
-export const sagaMiddleware = createSagaMiddleware();
+export const history: History = createHistory();
+export const sagaMiddleware: SagaMiddleware = createSagaMiddleware();
 
 export function configureStore(): Store<RootStore> {
-	const historyMiddleware = routerMiddleware(history);
+	const historyMiddleware: Middleware = routerMiddleware(history);
 
 	const store: Store<RootStore> = createStore(
 		rootReducer(history),
-		{},
+		{
+			// Initial state should be here
+		},
 		composeWithDevTools(applyMiddleware(sagaMiddleware, historyMiddleware))
-	) as Store<RootStore>;
+	);
 
-	if (process.env.NODE_ENV === 'development' && (module as any).hot) {
-		(module as any).hot.accept('./reducers', async () => {
-			const nextRootReducer = await import('./reducers').then((reducer: any) => reducer);
-
-			console.log('reloading reducer');
+	if (module.hot) {
+		module.hot.accept('./reducers', () => {
+			const nextRootReducer = require('./reducers').default;
 
 			store.replaceReducer(nextRootReducer(history));
 		});

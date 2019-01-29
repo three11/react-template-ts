@@ -7,14 +7,6 @@ import { App } from './app';
 
 import '@assets/favicon.ico';
 
-declare global {
-	interface Window {
-		__REACT_DEVTOOLS_GLOBAL_HOOK__: any;
-		__REDUX_DEVTOOLS_EXTENSION__: any;
-		__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
-	}
-}
-
 const node: HTMLElement | null = document.getElementById('app');
 const renderRoot = (app: JSX.Element) => render(app, node);
 
@@ -32,9 +24,9 @@ if (process.env.NODE_ENV === 'production') {
 		</AppContainer>
 	);
 
-	if ((module as any).hot) {
-		(module as any).hot.accept('./app', async () => {
-			const NextApp = await import('./app').then((comp: any) => comp.App);
+	if (module.hot) {
+		module.hot.accept('./app', () => {
+			const NextApp = require('./app').App;
 
 			renderRoot(
 				<AppContainer>

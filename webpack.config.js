@@ -19,12 +19,26 @@ const PATHS = {
 	nodeModules: resolve('./node_modules')
 };
 
-const tsConfig = isDev => ({
+const tsConfig = {
 	test: /\.tsx?$/,
-	loaders: ['react-hot-loader/webpack', 'awesome-typescript-loader'],
+	loaders: [
+		'react-hot-loader/webpack',
+		{
+			loader: 'ts-loader',
+			options: {
+				transpileOnly: true,
+				compilerOptions: {
+					sourceMap: true,
+					target: 'es5',
+					isolatedModules: true,
+					noEmitOnError: false
+				}
+			}
+		}
+	],
 	exclude: PATHS.nodeModules,
 	include: PATHS.src
-});
+};
 
 const htmlConfig = {
 	test: /\.html$/,
@@ -99,7 +113,6 @@ const imagesConfig = {
 			loader: 'image-webpack-loader',
 			options: {
 				mozjpeg: {
-					// If using on Linux, set disabled to false
 					enabled: true,
 					progressive: true
 				},
@@ -136,11 +149,12 @@ module.exports = (env = {}) => {
 		output: {
 			path: PATHS.dist,
 			filename: isDev ? '[name].js' : '[name].[chunkhash].bundle.js',
+			sourceMapFilename: isDev ? '[name].bundle.map' : '[name].[chunkhash].bundle.map',
 			chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash].chunk.js',
 			publicPath: '/'
 		},
 		module: {
-			rules: [tsConfig(isDev), htmlConfig, cssConfig, fontsConfig, svgConfig, imagesConfig, mediaConfig]
+			rules: [tsConfig, htmlConfig, cssConfig, fontsConfig, svgConfig, imagesConfig, mediaConfig]
 		},
 		resolve: {
 			alias: {
@@ -228,12 +242,13 @@ module.exports = (env = {}) => {
 		],
 		cache: true,
 		bail: false,
-		devtool: isDev ? 'eval-source-map' : false,
+		devtool: isDev ? 'eval-source-map' : 'source-map',
 		devServer: {
-			noInfo: true,
-			historyApiFallback: true,
-			contentBase: './dist',
-			hot: true
+			hot: true,
+			hotOnly: true,
+			overlay: true,
+			historyApiFallback: true
+			// host: '0.0.0.0'
 		},
 		stats: 'errors-only',
 		performance: {
