@@ -1,7 +1,7 @@
-[![GitHub issues](https://img.shields.io/github/issues/three11/react-template.svg)](https://github.com/three11/react-template/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/three11/react-template.svg)](https://github.com/three11/react-template/commits/master)
-[![Build Status](https://travis-ci.org/three11/react-template.svg?branch=master)](https://travis-ci.org/three11/react-template)
-[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/localga/README.md)](https://github.com/scriptex/localga/)
+[![GitHub issues](https://img.shields.io/github/issues/three11/react-template-ts.svg)](https://github.com/three11/react-template-ts/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/three11/react-template-ts.svg)](https://github.com/three11/react-template-ts/commits/master)
+[![Build Status](https://travis-ci.org/three11/react-template-ts.svg?branch=master)](https://travis-ci.org/three11/react-template-ts)
+[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/three11/react-template-ts/README.md)](https://github.com/three11/react-template-ts)
 
 # React Template
 
