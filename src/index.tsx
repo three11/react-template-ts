@@ -5,8 +5,6 @@ import { install, applyUpdate } from 'offline-plugin/runtime';
 
 import { App } from './app';
 
-import '@assets/favicon.ico';
-
 const node: HTMLElement | null = document.getElementById('app');
 const renderRoot = (app: JSX.Element) => render(app, node);
 
