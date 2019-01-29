@@ -1,6 +1,3 @@
-/* eslint-disable no-global-assign */
-
-// WOHOOO!!! It's New Year
 const constantDate = new Date('2017-12-31T23:59:59');
 
 /**
