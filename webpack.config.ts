@@ -14,7 +14,11 @@ interface IndexedList<T> {
 }
 
 interface Environment {
-	dev?: any;
+	dev?: boolean | undefined;
+}
+
+interface HotLoader extends webpack.NewLoader {
+	hot: boolean;
 }
 
 const resolve: (path: string) => string = path.resolve.bind(__dirname);
@@ -22,6 +26,7 @@ const resolve: (path: string) => string = path.resolve.bind(__dirname);
 const PATHS: IndexedList<string> = {
 	src: resolve('./src'),
 	root: resolve('./'),
+	dist: resolve('./dist'),
 	assets: resolve('./src/assets'),
 	utilities: resolve('./src/utilities'),
 	components: resolve('./src/components'),
@@ -29,7 +34,7 @@ const PATHS: IndexedList<string> = {
 	nodeModules: resolve('./node_modules')
 };
 
-const tsConfig: IndexedList<any> = {
+const tsConfig: webpack.Rule = {
 	test: /\.tsx?$/,
 	loaders: [
 		'react-hot-loader/webpack',
@@ -41,7 +46,8 @@ const tsConfig: IndexedList<any> = {
 					sourceMap: true,
 					target: 'es5',
 					isolatedModules: true,
-					noEmitOnError: false
+					noEmitOnError: false,
+					logInfoToStdOut: true
 				}
 			}
 		}
@@ -50,7 +56,7 @@ const tsConfig: IndexedList<any> = {
 	include: PATHS.src
 };
 
-const htmlConfig: IndexedList<any> = {
+const htmlConfig: webpack.Rule = {
 	test: /\.html$/,
 	use: [
 		{
@@ -62,7 +68,7 @@ const htmlConfig: IndexedList<any> = {
 	]
 };
 
-const postcssPlugins: any[] = [
+const postcssPlugins: string[] = [
 	require('postcss-easy-import'),
 	require('postcss-url')({
 		url: 'rebase'
@@ -72,45 +78,59 @@ const postcssPlugins: any[] = [
 	require('autoprefixer')()
 ];
 
-const cssConfig: IndexedList<any> = {
+const cssConfig: webpack.Rule = {
 	test: /(\.css|\.scss)$/,
-	use: ['css-hot-loader'].concat(
-		MiniCssExtractPlugin.loader as any,
+	use: [
+		'css-hot-loader',
+		MiniCssExtractPlugin.loader,
 		'css-loader',
 		{
 			loader: 'postcss-loader',
 			options: {
-				plugins: (loader: any) => {
-					if (!loader.hot) {
-						postcssPlugins.push(
-							require('cssnano')({
-								discardComments: {
-									removeAll: true
-								}
-							})
-						);
-					}
-
-					return postcssPlugins;
+				plugins: (loader: HotLoader): string[] => {
+					return loader.hot
+						? postcssPlugins
+						: [
+								...postcssPlugins,
+								require('cssnano')({
+									discardComments: {
+										removeAll: true
+									}
+								})
+						  ];
 				}
 			}
-		} as any,
+		},
 		'sass-loader'
-	)
+	]
 };
 
-const fontsConfig: IndexedList<any> = {
+const fontsConfig: webpack.Rule = {
 	test: /\.(eot|otf|ttf|woff|woff2)$/,
 	use: 'file-loader'
 };
 
-const svgConfig: IndexedList<any> = {
+const svgConfig: webpack.Rule = {
 	test: /\.svg$/,
+	issuer: /\.tsx?$/,
 	exclude: /node_modules/,
 	loader: 'svg-inline-loader'
 };
 
-const imagesConfig: IndexedList<any> = {
+const svgCSSConfig: webpack.Rule = {
+	test: /\.svg$/,
+	issuer: /\.s?css?$/,
+	use: [
+		{
+			loader: 'url-loader',
+			options: {
+				limit: 10 * 1024
+			}
+		}
+	]
+};
+
+const imagesConfig: webpack.Rule = {
 	test: /\.(jpg|png|gif|ico)$/,
 	use: [
 		{
@@ -141,7 +161,7 @@ const imagesConfig: IndexedList<any> = {
 	]
 };
 
-const mediaConfig: IndexedList<any> = {
+const mediaConfig: webpack.Rule = {
 	test: /\.(mp3|mp4|webm)$/,
 	use: {
 		loader: 'url-loader',
@@ -152,7 +172,7 @@ const mediaConfig: IndexedList<any> = {
 };
 
 module.exports = (env: Environment = {}): webpack.Configuration => {
-	const isDev = env.dev;
+	const isDev: boolean | undefined = env.dev;
 
 	return {
 		entry: ['react-hot-loader/patch', './src/index.tsx'],
@@ -164,7 +184,7 @@ module.exports = (env: Environment = {}): webpack.Configuration => {
 			publicPath: '/'
 		},
 		module: {
-			rules: [tsConfig, htmlConfig, cssConfig, fontsConfig, svgConfig, imagesConfig, mediaConfig]
+			rules: [tsConfig, htmlConfig, cssConfig, fontsConfig, svgConfig, svgCSSConfig, imagesConfig, mediaConfig]
 		},
 		resolve: {
 			alias: {
