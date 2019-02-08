@@ -1,6 +1,23 @@
 // import or declare global application styles here
 @import 'normalize.css';
 
+html,
+body,
+#app {
+	height: 100%;
+}
+
+body {
+	background: url('~@assets/react.svg') no-repeat 50% 50% / 20rem 20rem;
+}
+
+#app {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
 .c-svg-icon {
 	display: block;
 
