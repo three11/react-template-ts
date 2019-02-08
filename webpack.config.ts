@@ -46,8 +46,7 @@ const tsConfig: webpack.Rule = {
 					sourceMap: true,
 					target: 'es5',
 					isolatedModules: true,
-					noEmitOnError: false,
-					logInfoToStdOut: true
+					noEmitOnError: false
 				}
 			}
 		}
