@@ -633,10 +633,10 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
-"@types/webpack-dev-server@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-3.1.1.tgz#12ae26194b3e1b8a317559592659921f282583c2"
-  integrity sha512-TnEQPT+OZjWV2kRyNs0RPMDQmBCiLrr/ZhKSgFNF6aM4O/moUAfo2Yu3MIMUjoi3aE/02RH1iVR+Y6mWmXOlVA==
+"@types/webpack-dev-server@3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-3.1.2.tgz#e3b18045a50fdd6c8e9a3b490f8fb191432b2b85"
+  integrity sha512-DTDqnnfMWLLW4DqbLufIdZp9LYFDvX9jj8BGVSKEm7l81rBcgCyHj1pdVHDi6Tl6Jvzk6CAKKW/GSMHz/65toA==
   dependencies:
     "@types/express" "*"
     "@types/http-proxy-middleware" "*"
