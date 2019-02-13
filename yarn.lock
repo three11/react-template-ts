@@ -354,10 +354,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/copy-webpack-plugin@4.4.2":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-4.4.2.tgz#6dfac0dc8692378f76a20c6c1bbe01eec438f316"
-  integrity sha512-/L0m5kc7pKGpsu97TTgAP6YcVRmau2Wj0HpRPQBGEbZXT1DZkdozZPCZHGDWXpxcvWDFTxob2JmYJj3RC7CwFA==
+"@types/copy-webpack-plugin@4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-4.4.3.tgz#cb7bd1c45b835f7c862b795d7dc577b2877abf1b"
+  integrity sha512-Xp/8c/IgjWr5wNklQuIQSSS+mUbr9TYWQmjUqBm5mB/njfnzFqUuCkIrP1tRZN5Ap9jXdud16HbOMH/2VXqmKQ==
   dependencies:
     "@types/minimatch" "*"
     "@types/webpack" "*"
