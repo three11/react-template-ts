@@ -910,10 +910,10 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
-"@types/webpack-dev-server@3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-3.1.2.tgz#e3b18045a50fdd6c8e9a3b490f8fb191432b2b85"
-  integrity sha512-DTDqnnfMWLLW4DqbLufIdZp9LYFDvX9jj8BGVSKEm7l81rBcgCyHj1pdVHDi6Tl6Jvzk6CAKKW/GSMHz/65toA==
+"@types/webpack-dev-server@3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@types/webpack-dev-server/-/webpack-dev-server-3.1.4.tgz#a2f2ba6ea79e8075a17df20257c32096e1e9139f"
+  integrity sha512-m8uyss9sFsaFPKspg/XwqjaqYSh8E7o3dWnb1x7SVD/m+wU/QIRWOttE4UxJCDyHqMdNhQ2Vf8GUBvWiRQ646w==
   dependencies:
     "@types/express" "*"
     "@types/http-proxy-middleware" "*"
