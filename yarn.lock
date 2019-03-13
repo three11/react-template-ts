@@ -2678,10 +2678,10 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
-css-hot-loader@1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/css-hot-loader/-/css-hot-loader-1.4.3.tgz#69e8256ef85f2b3b3d89e37f7504c6e3431a70c9"
-  integrity sha512-akm6gN57sCirABQuT+BZIHWf/UZGX0y4zMnrbZIKOPyTdpg2+teP9kQ3StBi4d+bZbdJWGW78VmsgtXBYw4ukA==
+css-hot-loader@1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/css-hot-loader/-/css-hot-loader-1.4.4.tgz#ae784932cd8b7d092f7f15702af08b3ec9436052"
+  integrity sha512-J/qXHz+r7FOT92qMIJfxUk0LC9fecQNZVr0MswQ4FOpKLyOCBjofVMfc6R268bh/5ktkTShrweMr0wWqerC92g==
   dependencies:
     loader-utils "^1.1.0"
     lodash "^4.17.5"
