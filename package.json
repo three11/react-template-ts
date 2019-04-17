@@ -71,7 +71,7 @@
 		"@types/react-hot-loader": "4.1.0",
 		"@types/react-inlinesvg": "0.8.1",
 		"@types/react-loadable": "5.5.1",
-		"@types/react-redux": "7.0.6",
+		"@types/react-redux": "7.0.7",
 		"@types/react-router": "4.4.5",
 		"@types/react-router-dom": "4.3.2",
 		"@types/react-test-renderer": "16.8.1",
