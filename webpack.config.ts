@@ -6,6 +6,13 @@ import * as HtmlWebPackPlugin from 'html-webpack-plugin';
 import * as WebpackPwaManifest from 'webpack-pwa-manifest';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
+import { Configuration as WebpackConfiguration } from 'webpack';
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+
+interface Configuration extends WebpackConfiguration {
+	devServer?: WebpackDevServerConfiguration;
+}
+
 // because there are no type definitions available
 const OfflinePlugin: any = require('offline-plugin');
 
@@ -170,7 +177,7 @@ const mediaConfig: webpack.Rule = {
 	}
 };
 
-module.exports = (env: Environment = {}): webpack.Configuration => {
+module.exports = (env: Environment = {}): Configuration => {
 	const isDev: boolean | undefined = env.dev;
 
 	return {
