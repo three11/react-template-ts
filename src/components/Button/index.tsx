@@ -3,7 +3,7 @@ import * as React from 'react';
 import './index.scss';
 
 interface Props {
-	type?: string;
+	type?: 'submit' | 'reset' | 'button';
 	children?: any;
 	className?: string;
 	onClick?: any;
