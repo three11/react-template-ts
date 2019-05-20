@@ -72,7 +72,7 @@
 		"@types/react-inlinesvg": "0.8.1",
 		"@types/react-loadable": "5.5.1",
 		"@types/react-redux": "7.0.9",
-		"@types/react-router": "5.0.0",
+		"@types/react-router": "5.0.1",
 		"@types/react-router-dom": "4.3.3",
 		"@types/react-test-renderer": "16.8.1",
 		"@types/redux": "3.6.0",
