@@ -57,7 +57,7 @@
 		"react-router-dom": "5.0.1",
 		"redux": "4.0.1",
 		"redux-devtools-extension": "2.13.8",
-		"redux-saga": "1.0.4"
+		"redux-saga": "1.0.5"
 	},
 	"devDependencies": {
 		"@types/copy-webpack-plugin": "5.0.0",
