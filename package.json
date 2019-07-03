@@ -45,7 +45,7 @@
 	},
 	"homepage": "https://github.com/three11/react-template#readme",
 	"dependencies": {
-		"connected-react-router": "6.4.0",
+		"connected-react-router": "6.5.0",
 		"history": "4.9.0",
 		"normalize.css": "8.0.1",
 		"react": "16.8.6",
