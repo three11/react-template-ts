@@ -21,6 +21,7 @@
 		"typedef": [true, "call-signature", "parameter", "member-variable-declaration"],
 		"jsx-curly-spacing": [2, "always"],
 		"no-bitwise": false,
-		"max-classes-per-file": [true, 3, "exclude-class-expressions"]
+		"max-classes-per-file": [true, 3, "exclude-class-expressions"],
+		"no-var-requires": false
 	}
 }

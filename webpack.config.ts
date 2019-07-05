@@ -181,7 +181,7 @@ module.exports = (env: Environment = {}): Configuration => {
 	const isDev: boolean | undefined = env.dev;
 
 	return {
-		entry: ['react-hot-loader/patch', './src/index.tsx'],
+		entry: ['./src/index.tsx'],
 		output: {
 			path: PATHS.dist,
 			filename: isDev ? '[name].js' : '[name].[chunkhash].bundle.js',
@@ -199,7 +199,8 @@ module.exports = (env: Environment = {}): Configuration => {
 				'@assets': PATHS.assets,
 				'@utilities': PATHS.utilities,
 				'@components': PATHS.components,
-				'@containers': PATHS.containers
+				'@containers': PATHS.containers,
+				'react-dom': '@hot-loader/react-dom'
 			},
 			extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
 			modules: ['src', 'node_modules']
@@ -278,14 +279,12 @@ module.exports = (env: Environment = {}): Configuration => {
 		],
 		cache: true,
 		bail: false,
-		devtool: isDev ? 'eval-source-map' : 'source-map',
+		devtool: isDev ? 'eval-source-map' : false,
 		devServer: {
 			hot: true,
 			noInfo: true,
-			hotOnly: true,
-			overlay: true,
+			contentBase: './dist',
 			historyApiFallback: true
-			// host: '0.0.0.0'
 		},
 		stats: 'errors-only',
 		performance: {
