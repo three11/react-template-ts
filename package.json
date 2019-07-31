@@ -102,7 +102,7 @@
 		"postcss-flexbugs-fixes": "4.1.0",
 		"postcss-loader": "3.0.0",
 		"postcss-url": "8.0.0",
-		"postcss-utilities": "0.8.2",
+		"postcss-utilities": "0.8.4",
 		"prop-types": "15.7.2",
 		"react-hot-loader": "4.12.10",
 		"react-test-renderer": "16.8.6",
