@@ -3,7 +3,7 @@ import SVG from 'react-inlinesvg';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 
-import Button from '@components/Button';
+import Button from '@components/button';
 import { RootStore } from '@src/store';
 import { CounterState } from './reducer';
 import { increment, decrement } from './actions';

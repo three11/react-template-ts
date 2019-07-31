@@ -7,7 +7,7 @@ import { Store, Middleware, createStore, applyMiddleware } from 'redux';
 import sagas from './sagas';
 import rootReducer from './reducers';
 
-import { CounterState } from '@containers/Home/reducer';
+import { CounterState } from '@containers/home/reducer';
 
 export interface RootStore {
 	counter: CounterState;
