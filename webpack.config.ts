@@ -159,7 +159,7 @@ const imagesConfig: webpack.Rule = {
 					optimizationLevel: 7
 				},
 				pngquant: {
-					quality: '65-90',
+					quality: [0.65, 0.9],
 					speed: 4
 				}
 			}
