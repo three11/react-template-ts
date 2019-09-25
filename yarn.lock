@@ -618,10 +618,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.4.tgz#64db61e0359eb5a8d99b55e05c729f130a678b04"
   integrity sha512-W0+n1Y+gK/8G2P/piTkBBN38Qc5Q1ZSO6B5H3QmPCUewaiXOo2GCAWZ4ElZCcNhjJuBSUSLGFUJnmlCn5+nxOQ==
 
-"@types/node@12.7.5":
-  version "12.7.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.5.tgz#e19436e7f8e9b4601005d73673b6dc4784ffcc2f"
-  integrity sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+"@types/node@12.7.7":
+  version "12.7.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.7.tgz#f9bd8c00fa9e1a8129af910fc829f6139c397d6c"
+  integrity sha512-4jUncNe2tj1nmrO/34PsRpZqYVnRV1svbU78cKhuQKkMntKB/AmdLyGgswcZKjFHEHGpiY8pVD8CuVI55nP54w==
 
 "@types/prop-types@*":
   version "15.7.2"
@@ -668,10 +668,10 @@
     "@types/react" "*"
     "@types/webpack" "*"
 
-"@types/react-redux@7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-7.1.2.tgz#02303b77d87e54f327c09507cf80ee3ca3063898"
-  integrity sha512-Iim6UCtD0mZX9U3jBuT6ZObBZ8UlakoOgefiRgi5wakfbNnXd3TUwwUMgi3Ijc0fxsPLZ5ULoz0oDy15YIaLmQ==
+"@types/react-redux@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-7.1.3.tgz#7efc1e36267e9bf8b24ec89ac30a27a65c94cd25"
+  integrity sha512-coaQFfn6XrHF/4CSF8eBM9rUbi5TX6qVhS+KF89Z2nC9YdTKTckOpJLJyQocYLrXF0IFX+/ZUJwMvbZ0nNmkDg==
   dependencies:
     "@types/hoist-non-react-statics" "^3.3.0"
     "@types/react" "*"
@@ -710,10 +710,18 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@16.9.2":
+"@types/react@*":
   version "16.9.2"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.2.tgz#6d1765431a1ad1877979013906731aae373de268"
   integrity sha512-jYP2LWwlh+FTqGd9v7ynUKZzjj98T8x7Yclz479QdRhHfuW9yQ+0jjnD31eXSXutmBpppj5PYNLYLRfnZJvcfg==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@16.9.3":
+  version "16.9.3"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.3.tgz#6d13251e441a3e67fb60d719d1fc8785b984a2ec"
+  integrity sha512-Ogb2nSn+2qQv5opoCv7Ls5yFxtyrdUYxp5G+SWTrlGk7dmFKw331GiezCgEZj9U7QeXJi1CDtws9pdXU1zUL4g==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -8487,23 +8495,23 @@ react-redux@7.1.1:
     prop-types "^15.7.2"
     react-is "^16.9.0"
 
-react-router-dom@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.0.1.tgz#ee66f4a5d18b6089c361958e443489d6bab714be"
-  integrity sha512-zaVHSy7NN0G91/Bz9GD4owex5+eop+KvgbxXsP/O+iW1/Ln+BrJ8QiIR5a6xNPtrdTvLkxqlDClx13QO1uB8CA==
+react-router-dom@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.1.0.tgz#48ad018d71fb7835212587e4c90bd2e3d2417e31"
+  integrity sha512-OkxKbMKjO7IkYqnoaZNX19MnwgjhxwZE871cPUTq0YU2wpIw7QwGxSnSoNRMOa7wO1TwvJJMFpgiEB4C/gVhTw==
   dependencies:
     "@babel/runtime" "^7.1.2"
     history "^4.9.0"
     loose-envify "^1.3.1"
     prop-types "^15.6.2"
-    react-router "5.0.1"
+    react-router "5.1.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-router@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.0.1.tgz#04ee77df1d1ab6cb8939f9f01ad5702dbadb8b0f"
-  integrity sha512-EM7suCPNKb1NxcTZ2LEOWFtQBQRQXecLxVpdsP4DW4PbbqYWeRiLyV/Tt1SdCrvT2jcyXAXmVTmzvSzrPR63Bg==
+react-router@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.1.0.tgz#739d0f3a57476363374e20d6e33e97f5ce2e00a3"
+  integrity sha512-n9HXxaL/6yRlig9XPfGyagI8+bUNdqcu7FUAx0/Z+Us22Z8iHsbkyJ21Inebn9HOxI5Nxlfc8GNabkNSeXfhqw==
   dependencies:
     "@babel/runtime" "^7.1.2"
     history "^4.9.0"
@@ -10849,10 +10857,10 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@4.40.2:
-  version "4.40.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.40.2.tgz#d21433d250f900bf0facbabe8f50d585b2dc30a7"
-  integrity sha512-5nIvteTDCUws2DVvP9Qe+JPla7kWPPIDFZv55To7IycHWZ+Z5qBdaBYPyuXWdhggTufZkQwfIK+5rKQTVovm2A==
+webpack@4.41.0:
+  version "4.41.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.0.tgz#db6a254bde671769f7c14e90a1a55e73602fc70b"
+  integrity sha512-yNV98U4r7wX1VJAj5kyMsu36T8RPPQntcb5fJLOsMz/pt/WrKC0Vp1bAlqPLkA1LegSwQwf6P+kAbyhRKVQ72g==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
