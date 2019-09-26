@@ -8421,10 +8421,10 @@ react-hot-loader@4.12.14:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-inlinesvg@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-1.1.6.tgz#5553691d5b1e906648cd6aa395438654c2a38770"
-  integrity sha512-TkKXN3hmIIiCkuFw1fMyMvIS4+7X7ivIPBE9fj/d95+LAxeTbGfvUzvxapeaKaWYqfUj+sit6cYsiKkF0SPZIQ==
+react-inlinesvg@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-1.1.7.tgz#6b09e5c27d47be0c1a80f614c20906c616bad7b4"
+  integrity sha512-scDmCAErob7CyaUGKYPUo9tPL7yYL2o9NRqj/p+3I8XFR5rZYK9x2YHfNCY3BCleSqPVlhGjPsTKceRL3baJgA==
   dependencies:
     exenv "^1.2.2"
     react-from-dom "^0.2.3"
