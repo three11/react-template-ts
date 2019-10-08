@@ -8499,10 +8499,10 @@ react-from-dom@^0.2.3:
   resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.2.3.tgz#33f176684daa518cf083a527805830a87bce9574"
   integrity sha512-ApFBEi/Ksd9d4X51EP9xwmLz+hJvizw/voBfXhIY696Oy7GmkC5uIOjddYJ3i12xEDRxPmIMzOjiVdEXVGaH2w==
 
-react-hot-loader@4.12.14:
-  version "4.12.14"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.14.tgz#81ca06ffda0b90aad15d6069339f73ed6428340a"
-  integrity sha512-ecxH4eBvEaJ9onT8vkEmK1FAAJUh1PqzGqds9S3k+GeihSp7nKAp4fOxytO+Ghr491LiBD38jaKyDXYnnpI9pQ==
+react-hot-loader@4.12.15:
+  version "4.12.15"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.15.tgz#6bf3984e52edbdf02ea8952777f53da1b3c68c95"
+  integrity sha512-sgkN6g+tgPE6xZzD0Ysqll7KUFYJbMX0DrczT5OxD6S7hZlSnmqSC3ceudwCkiDd65ZTtm+Ayk4Y9k5xxCvpOw==
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
