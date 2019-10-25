@@ -95,7 +95,7 @@
 		"mini-css-extract-plugin": "0.8.0",
 		"node-sass": "4.13.0",
 		"offline-plugin": "5.0.7",
-		"postcss": "7.0.18",
+		"postcss": "7.0.20",
 		"postcss-easy-import": "3.0.0",
 		"postcss-flexbugs-fixes": "4.1.0",
 		"postcss-loader": "3.0.0",
