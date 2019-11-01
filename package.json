@@ -79,7 +79,7 @@
 		"@types/terser-webpack-plugin": "1.2.1",
 		"@types/webpack": "4.39.7",
 		"@types/webpack-dev-server": "3.4.0",
-		"autoprefixer": "9.7.0",
+		"autoprefixer": "9.7.1",
 		"copy-webpack-plugin": "5.0.4",
 		"css-hot-loader": "1.4.4",
 		"css-loader": "3.2.0",
