@@ -1,177 +1,177 @@
 {
-  "name": "@three11/react-template",
-  "version": "1.0.0",
-  "description": "Scalable starter boilerplate for React applications",
-  "main": "./src/index.js",
-  "scripts": {
-    "start": "webpack-dev-server --mode development --open --env.dev",
-    "build": "rm -rf ./dist && webpack --mode production",
-    "lint": "npm run lint:ts && npm run lint:scss",
-    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
-    "lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:three11/react-template.git"
-  },
-  "keywords": [
-    "React",
-    "Starter",
-    "Template",
-    "SPA",
-    "JavaScript"
-  ],
-  "authors": [
-    {
-      "name": "Three 11 Ltd",
-      "email": "hello@three-11.com",
-      "role": "Developer"
-    },
-    {
-      "name": "Alexander Panayotov",
-      "email": "alexander.panayotov@gmail.com",
-      "role": "Developer"
-    },
-    {
-      "name": "Atanas Atanasov",
-      "email": "scriptex.bg@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/three11/react-template/issues"
-  },
-  "homepage": "https://github.com/three11/react-template#readme",
-  "dependencies": {
-    "connected-react-router": "6.5.2",
-    "history": "4.10.1",
-    "normalize.css": "8.0.1",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-inlinesvg": "1.1.7",
-    "react-loadable": "5.5.0",
-    "react-redux": "7.1.3",
-    "react-router": "5.1.2",
-    "react-router-dom": "5.1.2",
-    "redux": "4.0.4",
-    "redux-devtools-extension": "2.13.8",
-    "redux-saga": "1.1.3"
-  },
-  "devDependencies": {
-    "@hot-loader/react-dom": "16.11.0",
-    "@types/copy-webpack-plugin": "5.0.0",
-    "@types/enzyme": "3.10.3",
-    "@types/html-webpack-plugin": "3.2.1",
-    "@types/jest": "24.0.23",
-    "@types/mini-css-extract-plugin": "0.8.0",
-    "@types/node": "12.12.8",
-    "@types/react": "16.9.11",
-    "@types/react-dom": "16.9.4",
-    "@types/react-hot-loader": "4.1.1",
-    "@types/react-inlinesvg": "1.0.0",
-    "@types/react-loadable": "5.5.2",
-    "@types/react-redux": "7.1.5",
-    "@types/react-router": "5.1.3",
-    "@types/react-router-dom": "5.1.2",
-    "@types/react-test-renderer": "16.9.1",
-    "@types/terser-webpack-plugin": "2.2.0",
-    "@types/webpack": "4.39.9",
-    "@types/webpack-dev-server": "3.4.0",
-    "@typescript-eslint/eslint-plugin": "^2.7.0",
-    "@typescript-eslint/parser": "^2.7.0",
-    "autoprefixer": "9.7.1",
-    "copy-webpack-plugin": "5.0.5",
-    "css-hot-loader": "1.4.4",
-    "css-loader": "3.2.0",
-    "cssnano": "4.1.10",
-    "enzyme": "3.10.0",
-    "enzyme-adapter-react-16": "1.15.1",
-    "enzyme-to-json": "3.4.3",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-react": "^7.16.0",
-    "file-loader": "4.2.0",
-    "html-loader": "0.5.5",
-    "html-webpack-plugin": "3.2.0",
-    "image-webpack-loader": "6.0.0",
-    "jest": "24.9.0",
-    "mini-css-extract-plugin": "0.8.0",
-    "node-sass": "4.13.0",
-    "offline-plugin": "5.0.7",
-    "postcss": "7.0.21",
-    "postcss-easy-import": "3.0.0",
-    "postcss-flexbugs-fixes": "4.1.0",
-    "postcss-loader": "3.0.0",
-    "postcss-url": "8.0.0",
-    "postcss-utilities": "0.8.4",
-    "prop-types": "15.7.2",
-    "react-hot-loader": "4.12.18",
-    "react-test-renderer": "16.12.0",
-    "sass-loader": "8.0.0",
-    "style-loader": "1.0.0",
-    "stylelint": "12.0.0",
-    "stylelint-config-recommended": "3.0.0",
-    "svg-inline-loader": "0.8.0",
-    "terser-webpack-plugin": "2.2.1",
-    "ts-jest": "24.1.0",
-    "ts-loader": "6.2.1",
-    "ts-node": "8.5.2",
-    "typescript": "3.7.2",
-    "url-loader": "2.2.0",
-    "webpack": "4.41.2",
-    "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.9.0",
-    "webpack-hot-middleware": "2.25.0",
-    "webpack-pwa-manifest": "4.1.1"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "moduleNameMapper": {
-      "^@src/(.*)$": "<rootDir>/src/$1",
-      "^@root/(.*)$": "<rootDir>/$1",
-      "^@assets/(.*)$": "<rootDir>/src/assets/$1",
-      "^@utilities/(.*)$": "<rootDir>/src/utilities/$1",
-      "^@components/(.*)$": "<rootDir>/src/components/$1",
-      "^@containers/(.*)$": "<rootDir>/src/containers/$1",
-      "\\.(css|less|sass|scss)$": "<rootDir>/test-config/StyleMock.js",
-      "\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/FileMock.js"
-    },
-    "setupFiles": [
-      "<rootDir>/test-config/index.js",
-      "<rootDir>/test-config/LocalStorageMock.js"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "\\.(css|less|sass|scss)$": "<rootDir>/test-config/StyleMock.js",
-      "\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/FileMock.js"
-    },
-    "verbose": false,
-    "testRegex": ".*\\.(test|spec)\\.(j|tsx?)$",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/dist/",
-      "<rootDir>/test-config/"
-    ]
-  },
-  "private": true
+	"name": "@three11/react-template",
+	"version": "1.0.0",
+	"description": "Scalable starter boilerplate for React applications",
+	"main": "./src/index.js",
+	"scripts": {
+		"start": "webpack-dev-server --mode development --open --env.dev",
+		"build": "rm -rf ./dist && webpack --mode production",
+		"lint": "npm run lint:ts && npm run lint:scss",
+		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:three11/react-template.git"
+	},
+	"keywords": [
+		"React",
+		"Starter",
+		"Template",
+		"SPA",
+		"JavaScript"
+	],
+	"authors": [
+		{
+			"name": "Three 11 Ltd",
+			"email": "hello@three-11.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Alexander Panayotov",
+			"email": "alexander.panayotov@gmail.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Atanas Atanasov",
+			"email": "scriptex.bg@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/three11/react-template/issues"
+	},
+	"homepage": "https://github.com/three11/react-template#readme",
+	"dependencies": {
+		"connected-react-router": "6.5.2",
+		"history": "4.10.1",
+		"normalize.css": "8.0.1",
+		"react": "16.12.0",
+		"react-dom": "16.12.0",
+		"react-inlinesvg": "1.1.7",
+		"react-loadable": "5.5.0",
+		"react-redux": "7.1.3",
+		"react-router": "5.1.2",
+		"react-router-dom": "5.1.2",
+		"redux": "4.0.4",
+		"redux-devtools-extension": "2.13.8",
+		"redux-saga": "1.1.3"
+	},
+	"devDependencies": {
+		"@hot-loader/react-dom": "16.11.0",
+		"@types/copy-webpack-plugin": "5.0.0",
+		"@types/enzyme": "3.10.3",
+		"@types/html-webpack-plugin": "3.2.1",
+		"@types/jest": "24.0.23",
+		"@types/mini-css-extract-plugin": "0.8.0",
+		"@types/node": "12.12.8",
+		"@types/react": "16.9.11",
+		"@types/react-dom": "16.9.4",
+		"@types/react-hot-loader": "4.1.1",
+		"@types/react-inlinesvg": "1.0.0",
+		"@types/react-loadable": "5.5.2",
+		"@types/react-redux": "7.1.5",
+		"@types/react-router": "5.1.3",
+		"@types/react-router-dom": "5.1.2",
+		"@types/react-test-renderer": "16.9.1",
+		"@types/terser-webpack-plugin": "2.2.0",
+		"@types/webpack": "4.39.9",
+		"@types/webpack-dev-server": "3.4.0",
+		"@typescript-eslint/eslint-plugin": "^2.7.0",
+		"@typescript-eslint/parser": "^2.7.0",
+		"autoprefixer": "9.7.1",
+		"copy-webpack-plugin": "5.0.5",
+		"css-hot-loader": "1.4.4",
+		"css-loader": "3.2.0",
+		"cssnano": "4.1.10",
+		"enzyme": "3.10.0",
+		"enzyme-adapter-react-16": "1.15.1",
+		"enzyme-to-json": "3.4.3",
+		"eslint": "^6.6.0",
+		"eslint-config-prettier": "^6.5.0",
+		"eslint-plugin-react": "^7.16.0",
+		"file-loader": "4.2.0",
+		"html-loader": "0.5.5",
+		"html-webpack-plugin": "3.2.0",
+		"image-webpack-loader": "6.0.0",
+		"jest": "24.9.0",
+		"mini-css-extract-plugin": "0.8.0",
+		"node-sass": "4.13.0",
+		"offline-plugin": "5.0.7",
+		"postcss": "7.0.21",
+		"postcss-easy-import": "3.0.0",
+		"postcss-flexbugs-fixes": "4.1.0",
+		"postcss-loader": "3.0.0",
+		"postcss-url": "8.0.0",
+		"postcss-utilities": "0.8.4",
+		"prop-types": "15.7.2",
+		"react-hot-loader": "4.12.18",
+		"react-test-renderer": "16.12.0",
+		"sass-loader": "8.0.0",
+		"style-loader": "1.0.0",
+		"stylelint": "12.0.0",
+		"stylelint-config-recommended": "3.0.0",
+		"svg-inline-loader": "0.8.0",
+		"terser-webpack-plugin": "2.2.1",
+		"ts-jest": "24.1.0",
+		"ts-loader": "6.2.1",
+		"ts-node": "8.5.2",
+		"typescript": "3.7.2",
+		"url-loader": "2.2.0",
+		"webpack": "4.41.2",
+		"webpack-cli": "3.3.10",
+		"webpack-dev-server": "3.9.0",
+		"webpack-hot-middleware": "2.25.0",
+		"webpack-pwa-manifest": "4.1.1"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
+	"jest": {
+		"moduleDirectories": [
+			"node_modules",
+			"src"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		],
+		"moduleNameMapper": {
+			"^@src/(.*)$": "<rootDir>/src/$1",
+			"^@root/(.*)$": "<rootDir>/$1",
+			"^@assets/(.*)$": "<rootDir>/src/assets/$1",
+			"^@utilities/(.*)$": "<rootDir>/src/utilities/$1",
+			"^@components/(.*)$": "<rootDir>/src/components/$1",
+			"^@containers/(.*)$": "<rootDir>/src/containers/$1",
+			"\\.(css|less|sass|scss)$": "<rootDir>/test-config/StyleMock.js",
+			"\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/FileMock.js"
+		},
+		"setupFiles": [
+			"<rootDir>/test-config/index.js",
+			"<rootDir>/test-config/LocalStorageMock.js"
+		],
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		],
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest",
+			"\\.(css|less|sass|scss)$": "<rootDir>/test-config/StyleMock.js",
+			"\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/FileMock.js"
+		},
+		"verbose": false,
+		"testRegex": ".*\\.(test|spec)\\.(j|tsx?)$",
+		"testPathIgnorePatterns": [
+			"<rootDir>/node_modules/",
+			"<rootDir>/dist/",
+			"<rootDir>/test-config/"
+		]
+	},
+	"private": true
 }
