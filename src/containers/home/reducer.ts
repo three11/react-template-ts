@@ -6,20 +6,20 @@ export interface CounterState {
 
 export interface CounterAction {
 	type: string;
-	payload: number;
+	payload?: number;
 }
 
 export const homeInitialState: CounterState = {
 	count: 0
 };
 
-export default (state = homeInitialState, { type, payload }: CounterAction) => {
+export default (state = homeInitialState, { type, payload }: CounterAction): CounterState => {
 	switch (type) {
 		case INCREMENT:
 		case DECREMENT:
 			return {
 				...state,
-				count: state.count + payload
+				count: state.count + (payload || 0)
 			};
 
 		default:

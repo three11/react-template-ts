@@ -5,8 +5,8 @@ import { Dispatch } from 'redux';
 
 import Button from '@components/button';
 import { RootStore } from '@src/store';
-import { CounterState } from './reducer';
 import { increment, decrement } from './actions';
+import { CounterState, CounterAction } from './reducer';
 import { INCREMENT_ASYNC, DECREMENT_ASYNC } from './constants';
 
 import './index.scss';
@@ -27,27 +27,23 @@ export const Home = ({ counter, dispatch }: Props): React.ReactElement<any> => (
 		<SVG src="assets/react.svg" className="c-svg-icon" />
 
 		<div className="o-wrapper">
-			<Button onClick={() => dispatch(decrement())}>-</Button>
+			<Button onClick={(): CounterAction => dispatch(decrement())}>-</Button>
 
-			<Button onClick={() => dispatch({ type: DECREMENT_ASYNC })}>Async -</Button>
+			<Button onClick={(): CounterAction => dispatch({ type: DECREMENT_ASYNC })}>Async -</Button>
 
 			<small>{counter.count}</small>
 
-			<Button onClick={() => dispatch({ type: INCREMENT_ASYNC })}>Async +</Button>
+			<Button onClick={(): CounterAction => dispatch({ type: INCREMENT_ASYNC })}>Async +</Button>
 
-			<Button onClick={() => dispatch(increment())}>+</Button>
+			<Button onClick={(): CounterAction => dispatch(increment())}>+</Button>
 		</div>
 
 		<img src={ReduxSagaLogo as any} alt="Redux Saga Logo" style={{ display: 'block', margin: 'auto' }} />
 	</React.Fragment>
 );
 
-export default connect(
-	(
-		store: RootStore
-	): {
-		readonly counter: CounterState;
-	} => ({
-		counter: store.counter
-	})
-)(Home);
+export default connect((store: RootStore): {
+	readonly counter: CounterState;
+} => ({
+	counter: store.counter
+}))(Home);
