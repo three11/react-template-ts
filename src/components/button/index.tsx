@@ -4,9 +4,9 @@ import './index.scss';
 
 interface Props {
 	type?: 'submit' | 'reset' | 'button';
-	children?: any;
+	children?: React.ReactChild[] | React.ReactText;
 	className?: string;
-	onClick?: any;
+	onClick?: (...args: any[]) => any;
 }
 
 export const Button = (props: Props): React.ReactElement<HTMLButtonElement> => {
