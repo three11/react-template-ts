@@ -1,12 +1,9 @@
-image: node:8.16.2
-
+image: node:12.13.1
 before_script:
     - npm install
-
 cache:
     paths:
         - node_modules/
-
 build:
     script:
         - npm run build
