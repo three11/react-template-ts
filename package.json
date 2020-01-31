@@ -78,7 +78,7 @@
 		"@types/react-test-renderer": "16.9.2",
 		"@types/terser-webpack-plugin": "2.2.0",
 		"@types/webpack": "4.41.3",
-		"@types/webpack-dev-server": "3.9.0",
+		"@types/webpack-dev-server": "3.10.0",
 		"@typescript-eslint/eslint-plugin": "2.18.0",
 		"@typescript-eslint/parser": "2.18.0",
 		"autoprefixer": "9.7.4",
