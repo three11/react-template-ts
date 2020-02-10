@@ -124,7 +124,7 @@
 		"webpack-cli": "3.3.10",
 		"webpack-dev-server": "3.10.3",
 		"webpack-hot-middleware": "2.25.0",
-		"webpack-pwa-manifest": "4.1.1"
+		"webpack-pwa-manifest": "4.2.0"
 	},
 	"browserslist": [
 		"> 1%",
