@@ -1,4 +1,4 @@
-image: node:12.15.0
+image: node:12.16.0
 before_script:
     - npm install
 cache:
