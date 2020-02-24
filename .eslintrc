@@ -10,6 +10,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["@typescript-eslint"],
+	"ignorePatterns": ["webpack.config.ts"],
 	"rules": {
 		"@typescript-eslint/no-explicit-any": "off",
 		"react/display-name": "off"
