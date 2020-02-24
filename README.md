@@ -53,6 +53,26 @@ yarn build
 npm run build
 ```
 
+## Lint
+
+```sh
+yarn lint
+
+# or
+
+npm run lint
+```
+
+## Test
+
+```sh
+yarn test
+
+# or
+
+npm run test
+```
+
 ## Details
 
 1.  Folder structure:
