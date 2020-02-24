@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component should render successfully 1`] = `
+<form
+  className="c-form c-form--login"
+  onSubmit={[Function]}
+>
+  <h2>
+    Login
+  </h2>
+  <Component
+    label="Email Address"
+    name="email"
+    placeholder="someone@example.com"
+    register={[Function]}
+    type="email"
+  />
+  <Component
+    label="Password"
+    name="password"
+    placeholder="********"
+    register={[Function]}
+    type="password"
+  />
+  <Component
+    className=""
+    disabled={false}
+    type="submit"
+  >
+    Login
+  </Component>
+</form>
+`;

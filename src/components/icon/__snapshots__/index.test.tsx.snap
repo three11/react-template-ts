@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component should render successfully 1`] = `
+<InlineSVG
+  cacheRequests={true}
+  className="c-svg-icon"
+  src="@assets/logo.svg"
+  uniquifyIDs={false}
+/>
+`;

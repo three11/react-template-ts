@@ -1,20 +1,31 @@
+@import '@src/settings';
+
 .c-btn {
 	font-family: sans-serif;
-	font-size: 1rem;
-	line-height: 1.25;
-	color: black;
-	min-width: 2.5rem;
-	padding: 0.5rem;
-	border: 2px solid black;
-	margin: 0.5rem;
-	background: white;
-	border-radius: 0.125rem;
+	font-size: 1.25rem;
+	line-height: 1.875;
+	color: $color-white;
+	min-width: 10rem;
+	padding: 0.5rem 1.5rem;
+	border: 1px solid $color-action;
+	background: $color-action;
+	border-radius: 0.3125rem;
 	box-shadow: none;
 	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+	transition: all $timing $easing;
 
-	&:hover {
-		color: white;
-		background: black;
+	@include hover {
+		color: $color-action;
+		background: $color-white;
+	}
+
+	&--outline {
+		color: $color-action;
+		background-color: transparent;
+
+		@include hover {
+			color: $color-white;
+			background-color: $color-action;
+		}
 	}
 }

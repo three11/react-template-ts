@@ -1,0 +1,175 @@
+@import '@src/settings';
+
+.o-main {
+	width: 100%;
+	flex: 1;
+}
+
+.o-shell {
+	max-width: 75.125rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-right: auto;
+	margin-left: auto;
+
+	&--flex {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.o-wrapper {
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.c-form {
+	max-width: 25rem;
+	flex: 0 0 25rem;
+	padding: 2rem 0;
+	margin: auto;
+
+	&--signup {
+		max-width: 51rem;
+		flex: 0 0 51rem;
+	}
+
+	h2 {
+		text-align: center;
+		font-weight: 600;
+		margin: 0 0 2rem;
+	}
+
+	&__col {
+		flex: 0 0 calc(50% - 0.5rem);
+
+		&s {
+			@include flex-row(nowrap, flex-start, space-between);
+		}
+	}
+
+	&__hint {
+		text-align: center;
+
+		a {
+			color: $color-action;
+			text-decoration: underline;
+
+			@include hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__error {
+		color: $color-error;
+		margin: 0;
+
+		&--api {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__field {
+		margin-bottom: 1rem;
+
+		&--error {
+			input,
+			select,
+			textarea {
+				background-color: rgba($color-error, 0.05);
+				border-color: $color-error;
+			}
+		}
+
+		&--select {
+			position: relative;
+
+			select {
+				padding-right: 2.5rem;
+			}
+
+			&::after {
+				content: '';
+				width: 0;
+				height: 0;
+				display: block;
+				position: absolute;
+				bottom: 1.25rem;
+				right: 1.25rem;
+				z-index: 2;
+				border-width: 0.5rem 0.325rem 0 0.325rem;
+				border-style: solid;
+				border-color: currentColor transparent transparent;
+			}
+		}
+
+		label,
+		input,
+		select,
+		textarea {
+			display: block;
+		}
+
+		label {
+			font-size: 100%;
+			display: block;
+
+			&[for] {
+				cursor: pointer;
+			}
+		}
+
+		select {
+			appearance: none;
+		}
+
+		textarea {
+			height: 200px;
+			resize: none;
+			overflow-x: hidden;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		input,
+		select,
+		textarea {
+			font-size: 0.875rem;
+			line-height: 1.2857142857142858;
+			width: 100%;
+			height: 48px;
+			padding: 0.875rem 1rem;
+			border: 1px solid lighten($color-black, 20%);
+			border-radius: 0.5rem;
+			background-color: $color-white;
+			box-shadow: none;
+			transition: all $timing $easing;
+
+			&:focus {
+				border-color: lighten($color-black, 40%);
+				outline: 0 none;
+				box-shadow: 0 0 0.5rem rgba($color-black, 0.25);
+			}
+		}
+
+		&-head {
+			font-size: 0.75rem;
+			line-height: 1.5;
+			margin-bottom: 0.25rem;
+			@include flex-row(nowrap, center, space-between);
+		}
+	}
+
+	.c-btn {
+		font-size: 1.125rem;
+		max-width: 12rem;
+		display: block;
+		margin: 1rem auto 2rem;
+	}
+}

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PasswordReset component should render successfully 1`] = `
+<Component
+  className="o-wrapper--fancy"
+>
+  <Component
+    onSubmit={[Function]}
+  >
+    <p
+      className="c-form__hint"
+    >
+      You can also 
+      <Link
+        to="/signup"
+      >
+        Sign up
+      </Link>
+       or 
+      <Link
+        to="/login"
+      >
+        Login
+      </Link>
+    </p>
+  </Component>
+</Component>
+`;

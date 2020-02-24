@@ -1,7 +1,10 @@
+@import '@src/settings';
+
 .c-not-found {
-	font-family: monospace;
 	font-size: 3rem;
 	line-height: 1.5;
-	color: red;
+	color: $color-error;
 	text-align: center;
+	height: 100%;
+	@include flex-row(wrap, center, center);
 }

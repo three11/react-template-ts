@@ -1,0 +1,48 @@
+@import 'normalize.css';
+@import '@src/settings';
+
+.c-header {
+	width: 100%;
+}
+
+.c-nav {
+	ul {
+		@include flex-row(nowrap, center, flex-start);
+		padding: 0;
+		margin: 0;
+		list-style: none outside none;
+	}
+
+	li {
+		+ li {
+			padding-left: 1rem;
+		}
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		@include hover {
+			&:not(.c-btn) {
+				color: $color-action;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.c-btn {
+		font-size: 100%;
+		min-width: 0;
+	}
+}
+
+.c-logo {
+	width: 4rem;
+
+	svg {
+		width: 100%;
+		height: 3.625rem;
+		display: block;
+	}
+}

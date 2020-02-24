@@ -1,3 +1,3 @@
-import { incrementSaga, decrementSaga } from '@containers/home/sagas';
+import { loginSaga, logoutSaga, passwordResetSaga } from '@containers/auth';
 
-export default [incrementSaga, decrementSaga];
+export default [loginSaga, logoutSaga, passwordResetSaga];

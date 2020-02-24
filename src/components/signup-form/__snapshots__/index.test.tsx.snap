@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignupForm component should render successfully 1`] = `
+<form
+  className="c-form c-form--signup"
+  onSubmit={[Function]}
+>
+  <h2>
+    Signup
+  </h2>
+  <div
+    className="c-form__cols"
+  >
+    <div
+      className="c-form__col"
+    >
+      <Component
+        label="Email Address"
+        name="email"
+        placeholder="someone@example.com"
+        register={[Function]}
+        type="email"
+      />
+      <Component
+        label="Password"
+        name="password"
+        placeholder="********"
+        register={[Function]}
+        type="password"
+      />
+      <Component
+        label="Confirm password"
+        name="confirm"
+        placeholder="********"
+        register={[Function]}
+        type="password"
+      />
+      <Component
+        label="Username"
+        name="username"
+        placeholder="ShortWhale"
+        register={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="c-form__col"
+    >
+      <Component
+        label="First name"
+        name="first_name"
+        placeholder="John"
+        register={[Function]}
+        type="text"
+      />
+      <Component
+        label="Last name"
+        name="last_name"
+        placeholder="Smith"
+        register={[Function]}
+        type="text"
+      />
+      <Component
+        label="Gender"
+        name="gender"
+        options={
+          Array [
+            "Unspecified",
+            "Male",
+            "Female",
+          ]
+        }
+        register={[Function]}
+        type="select"
+      />
+      <Component
+        label="Avatar image URL"
+        name="image_url"
+        placeholder="https://images.com/john-smith.jpg"
+        register={[Function]}
+        type="url"
+      />
+    </div>
+  </div>
+  <Component
+    className=""
+    disabled={false}
+    type="submit"
+  >
+    Sign up
+  </Component>
+</form>
+`;

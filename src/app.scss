@@ -1,29 +1,39 @@
-// import or declare global application styles here
 @import 'normalize.css';
+
+@import '@src/settings';
+
+* {
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
 
 html,
 body,
-#app {
+#app,
+.o-wrapper {
 	height: 100%;
 }
 
 body {
-	background: url('~@assets/react.svg') no-repeat 50% 50% / 20rem 20rem;
+	font-family: 'Open Sans', Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.25;
+	color: $color-base;
+	background: #fff;
 }
 
-#app {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	justify-content: center;
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all $timing $easing;
 }
 
-.c-svg-icon {
-	display: block;
-
-	svg {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
+img {
+	border: 0;
+	display: inline-block;
+	vertical-align: top;
 }

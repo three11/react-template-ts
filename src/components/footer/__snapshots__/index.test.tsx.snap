@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render successfully 1`] = `
+<footer
+  className="c-footer"
+>
+  <div
+    className="o-shell"
+  >
+    <p>
+      © 
+      2020
+      . All rights reserved.
+    </p>
+  </div>
+</footer>
+`;

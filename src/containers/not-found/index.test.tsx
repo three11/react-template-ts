@@ -1,11 +1,11 @@
 import * as React from 'react';
-import * as renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 import { NotFound } from '.';
 
 describe('NotFound component', () => {
 	it('should render successfully', () => {
-		const tree = renderer.create(<NotFound />).toJSON();
+		const tree = shallow(<NotFound />);
 
 		expect(tree).toMatchSnapshot();
 	});

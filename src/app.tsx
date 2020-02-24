@@ -2,15 +2,28 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader/root';
 
 import { Route } from 'react-router-dom';
-import { Switch } from 'react-router';
+import { Switch, Redirect } from 'react-router';
 
 import 'app.scss';
 
 import * as Loadables from './loadables';
+import { Routes, isLoggedIn } from './utilities';
+
+export const PrivateRoute = ({ component: Component, ...rest }: any): JSX.Element => (
+	<Route
+		{...rest}
+		render={(props: any): React.ReactNode =>
+			isLoggedIn() ? <Component {...props} {...rest} /> : <Redirect to={Routes.LOGIN} />
+		}
+	/>
+);
 
 export const App = hot(() => (
 	<Switch>
-		<Route path="/" component={Loadables.LoadableHomeComponent} />
-		<Route component={Loadables.LoadableNotFoundComponent} />
+		<Route path={Routes.LOGIN} exact={true} component={Loadables.Login} />
+		<Route path={Routes.SIGNUP} exact={true} component={Loadables.Signup} />
+		<Route path={Routes.PASSWORD_RESET} exact={true} component={Loadables.PasswordReset} />
+		<PrivateRoute path={Routes.BASE} exact={true} component={Loadables.Home} />
+		<Route component={Loadables.NotFound} />
 	</Switch>
 ));

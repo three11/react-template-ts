@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PasswordResetForm component should render successfully 1`] = `
+<form
+  className="c-form c-form--login"
+  onSubmit={[Function]}
+>
+  <h2>
+    Reset your account"s password
+  </h2>
+  <Component
+    label="Email Address"
+    name="email"
+    placeholder="someone@example.com"
+    register={[Function]}
+    type="email"
+  />
+  <Component
+    label="New password"
+    name="password"
+    placeholder="********"
+    register={[Function]}
+    type="password"
+  />
+  <Component
+    label="Confirm new password"
+    name="confirm"
+    placeholder="********"
+    register={[Function]}
+    type="password"
+  />
+  <Component
+    className=""
+    disabled={false}
+    type="submit"
+  >
+    Reset password
+  </Component>
+</form>
+`;

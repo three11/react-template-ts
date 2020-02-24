@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper component should render successfully 1`] = `
+<div
+  className="o-wrapper"
+>
+  <Component />
+  <main
+    className="o-main"
+  >
+    Test content
+  </main>
+  <Component />
+</div>
+`;

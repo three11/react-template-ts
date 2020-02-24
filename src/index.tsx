@@ -10,7 +10,7 @@ import { RootStore, configureStore, history } from './store';
 
 export const store: Store<RootStore> = configureStore();
 
-const node: HTMLElement | null = document.getElementById('app');
+const node: HTMLElement | null = document.getElementById('app') || document.createElement('div');
 const renderRoot = (app: JSX.Element): void => render(app, node);
 const router = (Application: any): JSX.Element => (
 	<Provider store={store}>

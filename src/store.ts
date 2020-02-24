@@ -7,10 +7,10 @@ import { Store, Middleware, createStore, applyMiddleware } from 'redux';
 import sagas from './sagas';
 import rootReducer from './reducers';
 
-import { CounterState } from '@containers/home/reducer';
+import { AuthState, initialState as authInitialState } from '@containers/auth';
 
 export interface RootStore {
-	counter: CounterState;
+	auth: AuthState;
 }
 
 export const history: History = createBrowserHistory();
@@ -22,7 +22,7 @@ export function configureStore(): Store<RootStore> {
 	const store: Store<RootStore> = createStore(
 		rootReducer(history),
 		{
-			// Initial state should be here
+			auth: authInitialState
 		},
 		composeWithDevTools(applyMiddleware(sagaMiddleware, historyMiddleware))
 	);

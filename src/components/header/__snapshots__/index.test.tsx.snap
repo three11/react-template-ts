@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render successfully 1`] = `
+<header
+  className="c-header"
+>
+  <div
+    className="o-shell o-shell--flex"
+  >
+    <Link
+      className="c-logo"
+      to="/"
+    >
+      <Component
+        src="assets/react.svg"
+      />
+    </Link>
+    <Nav />
+  </div>
+</header>
+`;
