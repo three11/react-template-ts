@@ -21,14 +21,14 @@ In order to use this setup you need to have installed the following dependencies
 
 You can download this setup [directly](https://github.com/three11/react-template-ts/archive/master.zip) and extract it.
 
-Then navigate to the `react-template` folder and proceed with the rest of the instructions.
+Then navigate to the `react-template-ts` folder and proceed with the rest of the instructions.
 
 ## Install
 
 ```sh
 yarn
 
-#or
+# or
 
 npm i
 ```
@@ -55,15 +55,18 @@ npm run build
 
 ## Details
 
-### JS
-
 1.  Folder structure:
 
     -   `assets/` - all fonts, images, videos, etc.
     -   `components/` - stateless components.
-    -   `containers/` - statefull components.
+    -   `containers/` - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`).
+        -   `enums.ts` - each container has its own enums
+        -   `interfaces.ts` - each container has its own interfaces
+        -   `reducer.ts` - the container reducer
+        -   `sagas.ts` - the container sagas
     -   `utilities/` - helpers and utility functions
     -   `app.scss` - Application's global SCSS entry point
+    -   `settings.scss` - Application's SCSS settings (variables, mixins, etc)
     -   `app.tsx` - Application's main component
     -   `custom.d.ts` - Custom type definitions
     -   `index.html` - Application's HTML file
@@ -82,8 +85,8 @@ npm run build
 
 3.  Webpack aliases: Checkout the aliases property in the `webpack.config.ts` file.
 4.  SCSS usage.
-5.  Lint your files: ESLint and Stylelint included
-6.  Tests using Jest. The Test environment has been configured so you don't have to
+5.  Lint your files: ESLint (with TypeScript ESLint installed and configured) and Stylelint included
+6.  Tests using Jest and Enzyme. The Test environment has been configured so you don't have to
 7.  Offline first - using Offline Plugin to cache important files and assets
 8.  PWA ready - Install as a native app on Android and iOS
 9.  Code splitting and lazy loading
@@ -103,6 +106,12 @@ The default list of supported browsers is listed in the `package.json` file:
 This means that supported browsers vary based on current usage data and current browser versions.
 
 In general, this setup supports the two most recent versions of all browsers.
+
+## Bonus
+
+The start template contains a ready-to-use auth flow with Login, Logout, Sign up and Forgotten password forms with validation included. The auth flow includes also route guarding and redirects based on auth status. Please take a look at the `/src/containers/auth` folder for more details.
+
+The starting files also include ready-to-use layout components such as `Header`, `Footer`, `Wrapper`, `Button`, `Icon` and form `Field`s.
 
 ## LICENSE
 
