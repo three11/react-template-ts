@@ -110,7 +110,7 @@
 		"postcss-url": "8.0.0",
 		"postcss-utilities": "0.8.4",
 		"prop-types": "15.7.2",
-		"react-hot-loader": "4.12.19",
+		"react-hot-loader": "4.12.20",
 		"sass-loader": "8.0.2",
 		"style-loader": "1.1.3",
 		"stylelint": "13.2.1",
