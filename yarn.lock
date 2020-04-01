@@ -833,6 +833,11 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
 
+"@types/html-minifier-terser@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-5.0.0.tgz#7532440c138605ced1b555935c3115ddd20e8bef"
+  integrity sha512-q95SP4FdkmF0CwO0F2q0H6ZgudsApaY/yCtAQNRn1gduef5fGpyEphzy0YCq/N0UFvDSnLg5V8jFK/YGXlDiCw==
+
 "@types/html-minifier@*":
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/@types/html-minifier/-/html-minifier-3.5.3.tgz#5276845138db2cebc54c789e0aaf87621a21e84f"
@@ -1057,7 +1062,7 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/tapable@*":
+"@types/tapable@*", "@types/tapable@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.5.tgz#9adbc12950582aa65ead76bffdf39fe0c27a3c02"
   integrity sha512-/gG2M/Imw7cQFp8PGvz/SwocNrmKFjFsm5Pb8HdbHkZ1K8pmuPzOX4VeVoiEecFCVf4CsN1r3/BRvx+6sNqwtQ==
@@ -1130,7 +1135,7 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@types/webpack@4.41.8":
+"@types/webpack@4.41.8", "@types/webpack@^4.41.8":
   version "4.41.8"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.8.tgz#d2244f5f612ee30230a5c8c4ae678bce90d27277"
   integrity sha512-mh4litLHTlDG84TGCFv1pZldndI34vkrW9Mks++Zx4KET7DRMoCXUvLbTISiuF4++fMgNnhV9cc1nCXJQyBYbQ==
@@ -5261,11 +5266,14 @@ html-tags@^3.1.0:
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-3.1.0.tgz#7b5e6f7e665e9fb41f30007ed9e0d41e97fb2140"
   integrity sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg==
 
-html-webpack-plugin@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-4.0.2.tgz#c96a48d0ee53d33dcc909d6b65ad28f3d627efd4"
-  integrity sha512-dCyjg2dEBf0Azni2byDcwfk5l5XKNEnA3OU4cejovqkKGc4ZixC6Aw6+U2sAG/ellHIjoiQhyU4oKMO6fQFaYA==
+html-webpack-plugin@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-4.0.3.tgz#70659c8836210249cb6fa9dd6706a957547666d5"
+  integrity sha512-XCm5MGK6Yv/ey30fbhqjKIGm1r6G1HxmNorJ/xUdL/Zj3mOLtb9ZHEEIw0e4h3VzgyUrp8szCJh3VN9z1LNx7A==
   dependencies:
+    "@types/html-minifier-terser" "^5.0.0"
+    "@types/tapable" "^1.0.5"
+    "@types/webpack" "^4.41.8"
     html-minifier-terser "^5.0.1"
     loader-utils "^1.2.3"
     lodash "^4.17.15"
