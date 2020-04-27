@@ -105,7 +105,7 @@
 		"offline-plugin": "5.0.7",
 		"postcss": "7.0.27",
 		"postcss-easy-import": "3.0.0",
-		"postcss-flexbugs-fixes": "4.2.0",
+		"postcss-flexbugs-fixes": "4.2.1",
 		"postcss-loader": "3.0.0",
 		"postcss-url": "8.0.0",
 		"postcss-utilities": "0.8.4",
