@@ -1,27 +1,39 @@
 import * as React from 'react';
 import * as Loadable from 'react-loadable';
 
+interface ESModule {
+	readonly default: (...args: any[]) => any;
+}
+
+export const render = (module: ESModule): any => module.default;
+export const loading = (): any => <div className="c-loader" />;
+
 export const Login: any = Loadable({
-	loader: () => import('@containers/auth').then(({ Login }: any) => Login),
-	loading: () => <div className="c-loader" />
+	// prettier-ignore
+	loader: () => import('@containers/auth/login' /* webpackChunkName: 'login' */).then(render),
+	loading
 });
 
 export const Signup: any = Loadable({
-	loader: () => import('@containers/auth').then(({ Signup }: any) => Signup),
-	loading: () => <div className="c-loader" />
+	// prettier-ignore
+	loader: () => import('@containers/auth/signup' /* webpackChunkName: 'signup' */).then(render),
+	loading
 });
 
 export const PasswordReset: any = Loadable({
-	loader: () => import('@containers/auth').then(({ PasswordReset }: any) => PasswordReset),
-	loading: () => <div className="c-loader" />
+	// prettier-ignore
+	loader: () => import('@containers/auth/password-reset' /* webpackChunkName: 'password-reset' */).then(render),
+	loading
 });
 
 export const Home: any = Loadable({
-	loader: () => import('@containers/home').then((comp: any) => comp),
-	loading: () => <div className="c-loader" />
+	// prettier-ignore
+	loader: () => import('@containers/home' /* webpackChunkName: 'home' */).then(render),
+	loading
 });
 
 export const NotFound: any = Loadable({
-	loader: () => import('@containers/not-found').then((comp: any) => comp),
-	loading: () => <div className="c-loader" />
+	// prettier-ignore
+	loader: () => import('@containers/not-found' /* webpackChunkName: 'not-found' */).then(render),
+	loading
 });

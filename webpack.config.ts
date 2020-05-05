@@ -317,10 +317,9 @@ module.exports = (env: Environment = {}): Configuration => {
 						})
 					],
 					nodeEnv: 'production',
-					sideEffects: true,
-					concatenateModules: true,
+					concatenateModules: false,
 					splitChunks: {
-						chunks: 'all',
+						chunks: 'async',
 						minSize: 30000,
 						minChunks: 1,
 						maxAsyncRequests: 5,
