@@ -85,7 +85,7 @@
 		"@typescript-eslint/eslint-plugin": "2.33.0",
 		"@typescript-eslint/parser": "2.33.0",
 		"autoprefixer": "9.7.6",
-		"copy-webpack-plugin": "5.1.1",
+		"copy-webpack-plugin": "6.0.1",
 		"css-hot-loader": "1.4.4",
 		"css-loader": "3.5.3",
 		"cssnano": "4.1.10",
