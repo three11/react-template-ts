@@ -19,3 +19,6 @@ Thumbs.db
 
 # Build
 /dist
+
+# Coverage
+/coverage
