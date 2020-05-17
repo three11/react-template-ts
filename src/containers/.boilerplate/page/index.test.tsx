@@ -11,7 +11,7 @@ jest.mock('react-redux', () => ({
 }));
 
 describe('Page component', () => {
-	xit('should render successfully', () => {
+	it('should render successfully', () => {
 		const tree = shallow(<Page />);
 
 		expect(tree).toMatchSnapshot();
