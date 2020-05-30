@@ -1243,10 +1243,22 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@types/webpack@*", "@types/webpack@4.41.13", "@types/webpack@^4.41.8":
+"@types/webpack@*", "@types/webpack@^4.41.8":
   version "4.41.13"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.13.tgz#988d114c8913d039b8a0e0502a7fe4f1f84f3d5e"
   integrity sha512-RYmIHOWSxnTTa765N6jJBVE45pd2SYNblEYshVDduLw6RhocazNmRzE5/ytvBD8IkDMH6DI+bcrqxh8NILimBA==
+  dependencies:
+    "@types/anymatch" "*"
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+    "@types/webpack-sources" "*"
+    source-map "^0.6.0"
+
+"@types/webpack@4.41.15":
+  version "4.41.15"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.15.tgz#9395e759c26056637e716d197607f5ce16b29033"
+  integrity sha512-JP9plf6b9BkAFRV71JXaqsbritf7P14EnLYu6s6tepW5Ci0wD9EisyJpOOAdNy0fOWuPMnWAY+vUgI0pz0klOw==
   dependencies:
     "@types/anymatch" "*"
     "@types/node" "*"
