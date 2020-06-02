@@ -1,3 +1,4 @@
+import { AnyAction } from 'redux';
 import { put, call, takeLatest, CallEffect, PutEffect, ForkEffect } from 'redux-saga/effects';
 
 import { login, logout, setItems, removeItems, passwordReset } from '@utilities';
@@ -8,7 +9,7 @@ import { AuthActionType } from './enums';
 type AuthSafaEffect = Generator<CallEffect<any> | PutEffect<AuthAction>>;
 type AuthSagaForEffect = Generator<ForkEffect<void>>;
 
-export function* loginEffect(action: any): AuthSafaEffect {
+export function* loginEffect(action: AnyAction): AuthSafaEffect {
 	try {
 		const { email, password, redirect } = action.payload;
 		const data: any = yield call(login, { email, password });
@@ -39,7 +40,7 @@ export function* loginSaga(): AuthSagaForEffect {
 	yield takeLatest(AuthActionType.LOGIN_REQUEST, loginEffect);
 }
 
-export function* logoutEffect(action: any): AuthSafaEffect {
+export function* logoutEffect(action: AnyAction): AuthSafaEffect {
 	try {
 		yield call(logout);
 
@@ -67,7 +68,7 @@ export function* logoutSaga(): AuthSagaForEffect {
 	yield takeLatest(AuthActionType.LOGOUT_REQUEST, logoutEffect);
 }
 
-export function* passwordResetEffect(action: any): AuthSafaEffect {
+export function* passwordResetEffect(action: AnyAction): AuthSafaEffect {
 	try {
 		const { email, password, redirect } = action.payload;
 
@@ -91,7 +92,7 @@ export function* passwordResetSaga(): AuthSagaForEffect {
 	yield takeLatest(AuthActionType.LOGIN_REQUEST, loginEffect);
 }
 
-export function* signupEffect(action: any): AuthSafaEffect {
+export function* signupEffect(action: AnyAction): AuthSafaEffect {
 	try {
 		const { redirect, ...signupData } = action.payload;
 		const data: any = yield call(login, signupData);

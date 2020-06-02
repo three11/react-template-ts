@@ -30,6 +30,7 @@ export function configureStore(): Store<RootStore> {
 	if (module.hot) {
 		module.hot.accept();
 
+		// eslint-disable-next-line
 		store.replaceReducer(require('./reducers').default(history));
 	}
 

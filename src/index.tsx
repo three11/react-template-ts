@@ -25,6 +25,7 @@ renderRoot(router(App));
 if (module.hot) {
 	module.hot.accept();
 
+	// eslint-disable-next-line
 	renderRoot(router(require('./app').App));
 }
 

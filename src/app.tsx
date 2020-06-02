@@ -9,7 +9,12 @@ import 'app.scss';
 import * as Loadables from './loadables';
 import { Routes, isLoggedIn } from './utilities';
 
-export const PrivateRoute = ({ component: Component, ...rest }: any): JSX.Element => (
+interface Props {
+	readonly component: React.ComponentType;
+	readonly [x: string]: any;
+}
+
+export const PrivateRoute = ({ component: Component, ...rest }: Props): JSX.Element => (
 	<Route
 		{...rest}
 		render={(props: any): React.ReactNode =>
