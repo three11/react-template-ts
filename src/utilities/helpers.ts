@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import { getUnixTime } from 'date-fns';
 
 import { Routes } from './enums';
 import { removeItems } from './local-storage';
@@ -13,7 +13,7 @@ export const isLoggedIn = (): boolean => {
 		return false;
 	}
 
-	const now = moment().unix();
+	const now = getUnixTime(new Date());
 
 	if (now >= threshold) {
 		removeItems();

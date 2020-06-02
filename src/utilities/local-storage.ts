@@ -1,12 +1,14 @@
-import * as moment from 'moment';
+import { add, getUnixTime } from 'date-fns';
 
+import { AuthAction } from '@containers/auth';
 import { TOKEN_KEY, TOKEN_THRESHOLD_KEY, REFRESH_TOKEN_KEY } from './constants';
 
 export const setThreshold = (time: number): string =>
-	moment()
-		.add(time || 3600, 'seconds')
-		.unix()
-		.toString();
+	getUnixTime(
+		add(new Date(), {
+			seconds: time || 3600
+		})
+	).toString();
 
 export const handleItem = (key: string, value?: string): void => {
 	if (value) {
@@ -16,11 +18,13 @@ export const handleItem = (key: string, value?: string): void => {
 	}
 };
 
-export const setItems = (data: any): void => {
-	handleItem(TOKEN_KEY, data.token);
-	handleItem(TOKEN_THRESHOLD_KEY, setThreshold(data.threshold));
-	handleItem(REFRESH_TOKEN_KEY, data.refreshToken);
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+export const setItems = (data: AuthAction['payload']): void => {
+	handleItem(TOKEN_KEY, data!.token);
+	handleItem(TOKEN_THRESHOLD_KEY, setThreshold(data!.threshold!));
+	handleItem(REFRESH_TOKEN_KEY, data!.refreshToken);
 };
+/* eslint-enable @typescript-eslint/no-non-null-assertion */
 
 export const removeItems = (): void => {
 	handleItem(TOKEN_KEY);
