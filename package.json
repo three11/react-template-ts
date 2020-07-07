@@ -79,7 +79,7 @@
 		"@types/react-router": "5.1.8",
 		"@types/react-router-dom": "5.1.5",
 		"@types/terser-webpack-plugin": "3.0.0",
-		"@types/webpack": "4.41.19",
+		"@types/webpack": "4.41.20",
 		"@types/webpack-dev-server": "3.11.0",
 		"@typescript-eslint/eslint-plugin": "3.6.0",
 		"@typescript-eslint/parser": "3.6.0",
