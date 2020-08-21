@@ -1,36 +1,17 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
-import * as TerserPlugin from 'terser-webpack-plugin';
-import * as CopyWebpackPlugin from 'copy-webpack-plugin';
-import * as HtmlWebPackPlugin from 'html-webpack-plugin';
-import * as WebpackPwaManifest from 'webpack-pwa-manifest';
-import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
+// @ts-nocheck
 
-import { Configuration as WebpackConfiguration } from 'webpack';
-import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+const path = require('path');
+const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-interface Configuration extends WebpackConfiguration {
-	devServer?: WebpackDevServerConfiguration;
-}
+const resolve = path.resolve.bind(__dirname);
 
-// because there are no type definitions available
-const OfflinePlugin: any = require('offline-plugin');
-
-interface IndexedList<T> {
-	[key: string]: T;
-}
-
-interface Environment {
-	dev?: boolean | undefined;
-}
-
-interface HotLoader extends webpack.NewLoader {
-	hot: boolean;
-}
-
-const resolve: (path: string) => string = path.resolve.bind(__dirname);
-
-const PATHS: IndexedList<string> = {
+const PATHS = {
 	src: resolve('./src'),
 	root: resolve('./'),
 	dist: resolve('./dist'),
@@ -41,7 +22,7 @@ const PATHS: IndexedList<string> = {
 	nodeModules: resolve('./node_modules')
 };
 
-const tsConfig: webpack.Rule = {
+const tsConfig = {
 	test: /\.tsx?$/,
 	loaders: [
 		'react-hot-loader/webpack',
@@ -62,7 +43,7 @@ const tsConfig: webpack.Rule = {
 	include: PATHS.src
 };
 
-const htmlConfig: webpack.Rule = {
+const htmlConfig = {
 	test: /\.html$/,
 	use: [
 		{
@@ -74,7 +55,7 @@ const htmlConfig: webpack.Rule = {
 	]
 };
 
-const postcssPlugins: string[] = [
+const postcssPlugins = [
 	require('postcss-easy-import'),
 	require('postcss-url')({
 		url: 'rebase'
@@ -84,7 +65,7 @@ const postcssPlugins: string[] = [
 	require('autoprefixer')()
 ];
 
-const cssConfig: webpack.Rule = {
+const cssConfig = {
 	test: /(\.css|\.scss)$/,
 	use: [
 		'css-hot-loader',
@@ -93,7 +74,7 @@ const cssConfig: webpack.Rule = {
 		{
 			loader: 'postcss-loader',
 			options: {
-				plugins: (loader: HotLoader): string[] => {
+				plugins: loader => {
 					return loader.hot
 						? postcssPlugins
 						: [
@@ -111,19 +92,19 @@ const cssConfig: webpack.Rule = {
 	]
 };
 
-const fontsConfig: webpack.Rule = {
+const fontsConfig = {
 	test: /\.(eot|otf|ttf|woff|woff2)$/,
 	use: 'file-loader'
 };
 
-const svgConfig: webpack.Rule = {
+const svgConfig = {
 	test: /\.svg$/,
 	issuer: /\.tsx?$/,
 	exclude: /node_modules/,
 	loader: 'svg-inline-loader'
 };
 
-const svgCSSConfig: webpack.Rule = {
+const svgCSSConfig = {
 	test: /\.svg$/,
 	issuer: /\.s?css?$/,
 	use: [
@@ -136,7 +117,7 @@ const svgCSSConfig: webpack.Rule = {
 	]
 };
 
-const imagesConfig: webpack.Rule = {
+const imagesConfig = {
 	test: /\.(jpg|png|gif|ico)$/,
 	use: [
 		{
@@ -167,7 +148,7 @@ const imagesConfig: webpack.Rule = {
 	]
 };
 
-const mediaConfig: webpack.Rule = {
+const mediaConfig = {
 	test: /\.(mp3|mp4|webm)$/,
 	use: {
 		loader: 'url-loader',
@@ -177,8 +158,8 @@ const mediaConfig: webpack.Rule = {
 	}
 };
 
-module.exports = (env: Environment = {}): Configuration => {
-	const isDev: boolean | undefined = env.dev;
+module.exports = (env = {}) => {
+	const isDev = env.dev;
 
 	return {
 		entry: ['./src/index.tsx'],

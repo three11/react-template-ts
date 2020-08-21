@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import { Wrapper } from '@components';
-
-jest.mock('react-inlinesvg');
+import { Wrapper } from '.';
 
 describe('Wrapper component', () => {
 	it('should render successfully', () => {

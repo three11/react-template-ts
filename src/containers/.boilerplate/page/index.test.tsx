@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 
 import { Page } from '.';
 
-jest.mock('react-inlinesvg');
 jest.mock('react-redux', () => ({
 	connect: (): jest.Mock => jest.fn(),
 	useSelector: jest.fn(),

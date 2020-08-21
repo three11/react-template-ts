@@ -7,7 +7,8 @@ import { Store, Middleware, createStore, applyMiddleware } from 'redux';
 import sagas from './sagas';
 import rootReducer from './reducers';
 
-import { AuthState, initialState as authInitialState } from '@containers/auth';
+import { AuthState } from '@containers/auth/interfaces';
+import { initialState as authInitialState } from '@containers/auth/reducer';
 
 export interface RootStore {
 	auth: AuthState;

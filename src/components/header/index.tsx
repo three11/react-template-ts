@@ -2,10 +2,12 @@ import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Routes } from '@utilities';
-import { Icon, Button } from '@components';
+import { Icon } from '@components/icon';
+import { Routes } from '@utilities/enums';
+import { Button } from '@components/button';
+import { AuthState } from '@containers/auth/interfaces';
+import { AuthActionType } from '@containers/auth/enums';
 import { history, RootStore } from '@src/store';
-import { AuthState, AuthActionType } from '@containers/auth';
 
 import './index.scss';
 

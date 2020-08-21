@@ -2,10 +2,12 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+import { Routes } from '@utilities/enums';
 import { history } from '@src/store';
-import { AuthActionType } from '@containers/auth';
-import { Routes, removeItems } from '@utilities';
-import { Wrapper, PasswordResetForm } from '@components';
+import { Wrapper } from '@components/wrapper';
+import { removeItems } from '@utilities/local-storage';
+import { AuthActionType } from '@containers/auth/enums';
+import { PasswordResetForm } from '@components/password-reset-form';
 
 export const PasswordReset: React.FunctionComponent = () => {
 	const dispatch = useDispatch();

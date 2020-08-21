@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import { Icon } from '@components';
-
-jest.mock('react-inlinesvg');
+import { Icon } from '.';
 
 describe('Icon component', () => {
 	it('should render successfully', () => {
