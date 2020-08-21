@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import { Field } from '@components';
-
-jest.mock('react-inlinesvg');
+import { Field } from '.';
 
 describe('Field component', () => {
 	it('should render successfully', () => {

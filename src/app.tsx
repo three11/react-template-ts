@@ -4,10 +4,12 @@ import { hot } from 'react-hot-loader/root';
 import { Route } from 'react-router-dom';
 import { Switch, Redirect } from 'react-router';
 
-import 'app.scss';
-
 import * as Loadables from './loadables';
-import { Routes, isLoggedIn } from './utilities';
+
+import { Routes } from '@utilities/enums';
+import { isLoggedIn } from '@utilities/helpers';
+
+import './app.scss';
 
 interface Props {
 	readonly component: React.ComponentType;

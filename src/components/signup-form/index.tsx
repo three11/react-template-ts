@@ -2,16 +2,17 @@ import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 
+import { Field } from '@components/field';
+import { Button } from '@components/button';
 import { RootStore } from '@src/store';
-import { Field, Button } from '@components';
-import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities';
+import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities/constants';
 
 interface Props {
 	readonly onSubmit: (values: any) => void;
 	readonly children?: React.ReactNode | React.ReactNode[];
 }
 
-export const RegisterForm: React.FunctionComponent<Props> = (props: Props) => {
+export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { loading, signupError } = useSelector((store: RootStore) => store.auth);
 	const { watch, errors, register, handleSubmit } = useForm({
 		mode: 'onBlur'
@@ -132,4 +133,4 @@ export const RegisterForm: React.FunctionComponent<Props> = (props: Props) => {
 	);
 };
 
-export default RegisterForm;
+export default SignupForm;

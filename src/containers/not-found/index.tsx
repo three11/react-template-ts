@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Wrapper } from '@components';
+import { Wrapper } from '@components/wrapper';
 
 import './index.scss';
 

@@ -2,10 +2,12 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+import { Routes } from '@utilities/enums';
 import { history } from '@src/store';
-import { AuthActionType } from '@containers/auth';
-import { Wrapper, LoginForm } from '@components';
-import { Routes, removeItems } from '@utilities';
+import { Wrapper } from '@components/wrapper';
+import { LoginForm } from '@components/login-form';
+import { removeItems } from '@utilities/local-storage';
+import { AuthActionType } from '@containers/auth/enums';
 
 export const Login: React.FunctionComponent = () => {
 	const dispatch = useDispatch();

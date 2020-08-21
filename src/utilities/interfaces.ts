@@ -1,7 +1,3 @@
-export interface IndexedList<T> {
-	[key: string]: T;
-}
-
 export interface AuthRequest {
 	email: string;
 	password: string;

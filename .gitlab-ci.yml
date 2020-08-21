@@ -6,6 +6,6 @@ cache:
         - node_modules/
 build:
     script:
-        - yarn build
         - yarn lint
         - yarn test
+        - yarn build

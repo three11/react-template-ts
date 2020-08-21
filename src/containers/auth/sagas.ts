@@ -1,7 +1,8 @@
 import { AnyAction } from 'redux';
 import { put, call, takeLatest, CallEffect, PutEffect, ForkEffect } from 'redux-saga/effects';
 
-import { login, logout, setItems, removeItems, passwordReset } from '@utilities';
+import { setItems, removeItems } from '@utilities/local-storage';
+import { login, logout, passwordReset } from '@utilities/api';
 
 import { AuthAction } from './interfaces';
 import { AuthActionType } from './enums';

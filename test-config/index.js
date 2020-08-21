@@ -9,3 +9,5 @@ Enzyme.configure({
 global.shallow = Enzyme.shallow;
 global.render = Enzyme.render;
 global.mount = Enzyme.mount;
+
+jest.mock('react-inlinesvg');

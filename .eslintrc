@@ -11,7 +11,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["@typescript-eslint", "jest"],
-	"ignorePatterns": ["webpack.config.ts"],
+	"ignorePatterns": ["webpack.config.js", "test-config/*"],
 	"rules": {
 		"@typescript-eslint/no-explicit-any": "off",
 		"react/display-name": "off"
