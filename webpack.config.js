@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 const path = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -75,16 +73,7 @@ const cssConfig = {
 			loader: 'postcss-loader',
 			options: {
 				plugins: loader => {
-					return loader.hot
-						? postcssPlugins
-						: [
-								...postcssPlugins,
-								require('cssnano')({
-									discardComments: {
-										removeAll: true
-									}
-								})
-						  ];
+					return loader.hot ? postcssPlugins : [...postcssPlugins, require('cssnano')()];
 				}
 			}
 		},

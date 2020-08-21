@@ -22,7 +22,7 @@
 		"jsx": "react",
 		"lib": ["dom", "esNext"],
 		"target": "es5",
-		"module": "esnext",
+		"module": "esNext",
 		"moduleResolution": "node",
 		"noEmit": false,
 		"noEmitOnError": true,
