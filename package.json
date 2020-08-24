@@ -111,7 +111,7 @@
 		"postcss-utilities": "0.8.4",
 		"prop-types": "15.7.2",
 		"react-hot-loader": "4.12.21",
-		"sass-loader": "9.0.3",
+		"sass-loader": "10.0.0",
 		"style-loader": "1.2.1",
 		"stylelint": "13.6.1",
 		"stylelint-config-recommended": "3.0.0",
