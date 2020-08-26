@@ -9540,10 +9540,10 @@ react-from-dom@^0.4.2:
   resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.4.2.tgz#bef41428172ca570b492b5e12ae7b592587437e0"
   integrity sha512-cVa4/w0xAyd/bbTu+xu2KKrGc+KDKvR8sSQKodd5pPrN03bN1V3JOLPW+PIzh698LzQ4aL1dfWXpsKx3ZkpT+A==
 
-react-hook-form@6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.5.2.tgz#b357f708ebdcfb61735fc3790a9a939fa8e3af5d"
-  integrity sha512-bmVTOlk8L3tdSmNjsNCcTZ9MOzxQY3rb9a3KLJncygdVuns7GNNCKKJ0ESHSJUzkQ7abCr/C9VywDkIxxniaGQ==
+react-hook-form@6.5.3:
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-6.5.3.tgz#77c153731a96950ea1875a934b2e5d39a5673087"
+  integrity sha512-ID0z1udMQueWta3cceQUBaWLqZZLwSNWkxXYcuxa0nbII+mnggmGiEQW7PuWBBkEXv6GdHlu4PNqRj/FoeDpRg==
 
 react-hot-loader@4.12.21:
   version "4.12.21"
