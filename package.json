@@ -106,7 +106,7 @@
 		"postcss": "7.0.32",
 		"postcss-easy-import": "3.0.0",
 		"postcss-flexbugs-fixes": "4.2.1",
-		"postcss-loader": "3.0.0",
+		"postcss-loader": "4.0.0",
 		"postcss-url": "8.0.0",
 		"postcss-utilities": "0.8.4",
 		"prop-types": "15.7.2",

@@ -72,9 +72,9 @@ const cssConfig = {
 		{
 			loader: 'postcss-loader',
 			options: {
-				plugins: loader => {
-					return loader.hot ? postcssPlugins : [...postcssPlugins, require('cssnano')()];
-				}
+				postcssOptions: loader => ({
+					plugins: loader.hot ? postcssPlugins : [...postcssPlugins, require('cssnano')()]
+				})
 			}
 		},
 		'sass-loader'
