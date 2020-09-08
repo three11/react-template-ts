@@ -1,10 +1,10 @@
 {
-	"name": "create-awesome-react-app",
-	"version": "1.0.0",
+	"name": "create-react-app-ts",
+	"version": "1.1.0",
 	"description": "Scalable starter boilerplate for React applications",
 	"main": "./src/index.tsx",
 	"bin": {
-		"create-awesome-react-app": "./bin/cli.js"
+		"create-react-app-ts": "./bin/cli.js"
 	},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open --env.dev",

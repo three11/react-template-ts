@@ -20,7 +20,7 @@ In order to use this setup you need to have installed the following dependencies
 ## One line zero config installation
 
 ```sh
-npx create-awesome-react-app && yarn && yarn start
+npx create-react-app-ts && yarn && yarn start
 ```
 
 ## Download
