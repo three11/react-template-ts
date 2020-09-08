@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/three11/react-template-ts.svg?branch=master)](https://travis-ci.org/three11/react-template-ts)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/three11/react-template-ts/README.md)](https://github.com/three11/react-template-ts)
 
-# React Template
+# Create Awesome React Application
 
-Opinionated React starter template using TypeScript, Redux, React Router, Redux Saga, SCSS, PostCSS and more, offering PWA and offline capabilities and many more.
+> Opinionated React starter template using TypeScript, Redux, React Router, Redux Saga, SCSS, PostCSS and more, offering PWA and offline capabilities and many more.
 
 ## Dependencies
 
@@ -16,6 +16,12 @@ In order to use this setup you need to have installed the following dependencies
     or
 3.  Yarn - min v1.3.2
 4.  Bash terminal (Default on OSX/Linux, GitBash or similar on Windows)
+
+## One line zero config installation
+
+```sh
+npx create-react-app-ts && yarn && yarn start
+```
 
 ## Download
 

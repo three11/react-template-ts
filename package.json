@@ -1,8 +1,11 @@
 {
-	"name": "@three11/react-template",
-	"version": "1.0.0",
+	"name": "create-react-app-ts",
+	"version": "1.1.0",
 	"description": "Scalable starter boilerplate for React applications",
-	"main": "./src/index.js",
+	"main": "./src/index.tsx",
+	"bin": {
+		"create-react-app-ts": "./bin/cli.js"
+	},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open --env.dev",
 		"build": "rm -rf ./dist && webpack --mode production",
@@ -173,6 +176,5 @@
 			"<rootDir>/dist/",
 			"<rootDir>/test-config/"
 		]
-	},
-	"private": true
+	}
 }
