@@ -1,3 +1,8 @@
+<div align="center">
+	<img src="https://raw.githubusercontent.com/three11/react-template-ts/master/readme.svg" alt="Zero config and fast installation: Run `npx create-react-app-ts && yarn && yarn start` in your terminal.">
+	
+</div>
+
 [![GitHub issues](https://img.shields.io/github/issues/three11/react-template-ts.svg)](https://github.com/three11/react-template-ts/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/three11/react-template-ts.svg)](https://github.com/three11/react-template-ts/commits/master)
 [![Build Status](https://travis-ci.org/three11/react-template-ts.svg?branch=master)](https://travis-ci.org/three11/react-template-ts)
