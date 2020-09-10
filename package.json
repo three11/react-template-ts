@@ -1,6 +1,6 @@
 {
 	"name": "create-react-app-ts",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "Scalable starter boilerplate for React applications",
 	"main": "./src/index.tsx",
 	"bin": {
@@ -9,11 +9,16 @@
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open --env.dev",
 		"build": "rm -rf ./dist && webpack --mode production",
+		"tsc": "tsc --noEmit --skipLibCheck",
 		"lint": "npm run lint:ts && npm run lint:scss",
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
 		"test": "jest",
-		"test:coverage": "jest --coverage"
+		"test:coverage": "jest --coverage",
+		"locale:scan": "i18next-scanner --config ./src/i18n/scanner-config.ts './src/**/*.{ts,tsx}'",
+		"locale:pot": "node ./src/i18n/gettext-converter.ts jsonToPot",
+		"locale:po": "node ./src/i18n/gettext-converter.ts poToJson",
+		"locale": "yarn locale:scan && yarn locale:pot && yarn locale:po"
 	},
 	"repository": {
 		"type": "git",
@@ -53,10 +58,13 @@
 		"connected-react-router": "6.8.0",
 		"date-fns": "2.16.1",
 		"history": "4.10.1",
+		"i18next": "19.7.0",
+		"i18next-browser-languagedetector": "6.0.1",
 		"normalize.css": "8.0.1",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
 		"react-hook-form": "6.8.1",
+		"react-i18next": "11.7.2",
 		"react-inlinesvg": "2.1.0",
 		"react-loadable": "5.5.0",
 		"react-redux": "7.2.1",
@@ -101,6 +109,8 @@
 		"file-loader": "6.1.0",
 		"html-loader": "1.3.0",
 		"html-webpack-plugin": "4.4.1",
+		"i18next-conv": "10.0.2",
+		"i18next-scanner": "2.11.0",
 		"image-webpack-loader": "6.0.0",
 		"jest": "26.4.2",
 		"mini-css-extract-plugin": "0.11.1",
@@ -150,6 +160,8 @@
 		"moduleNameMapper": {
 			"^@src/(.*)$": "<rootDir>/src/$1",
 			"^@root/(.*)$": "<rootDir>/$1",
+			"^@i18n": "<rootDir>/src/i18n",
+			"^@store": "<rootDir>/src/store",
 			"^@assets/(.*)$": "<rootDir>/src/assets/$1",
 			"^@utilities/(.*)$": "<rootDir>/src/utilities/$1",
 			"^@components/(.*)$": "<rootDir>/src/components/$1",

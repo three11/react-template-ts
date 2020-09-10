@@ -1,19 +1,17 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { Routes } from '@utilities/enums';
-import { history } from '@src/store';
+import { history } from '@store';
 import { Wrapper } from '@components/wrapper';
 import { LoginForm } from '@components/login-form';
-import { removeItems } from '@utilities/local-storage';
 import { AuthActionType } from '@containers/auth/enums';
 
 export const Login: React.FunctionComponent = () => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
-
-	removeItems();
-	dispatch({ type: AuthActionType.RESET_AUTH });
 
 	return (
 		<Wrapper className="o-wrapper--fancy">
@@ -29,11 +27,11 @@ export const Login: React.FunctionComponent = () => {
 				}}
 			>
 				<p className="c-form__hint">
-					Don&apos;t have an account? <Link to={Routes.SIGNUP}>Sign up</Link>
+					{t("Don't have an account?")} <Link to={Routes.SIGNUP}>{t('Sign up')}</Link>
 				</p>
 
 				<p className="c-form__hint">
-					Forgot password? <Link to={Routes.PASSWORD_RESET}>Reset password</Link>
+					{t('Forgot password?')} <Link to={Routes.PASSWORD_RESET}>{t('Reset password')}</Link>
 				</p>
 			</LoginForm>
 		</Wrapper>

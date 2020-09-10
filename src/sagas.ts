@@ -1,3 +1,3 @@
-import { loginSaga, logoutSaga, passwordResetSaga } from '@containers/auth/sagas';
+import { loginSaga, logoutSaga, localeSaga, passwordResetSaga } from '@containers/auth/sagas';
 
-export default [loginSaga, logoutSaga, passwordResetSaga];
+export default [loginSaga, logoutSaga, localeSaga, passwordResetSaga];

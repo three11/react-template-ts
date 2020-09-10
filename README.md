@@ -86,7 +86,8 @@ npm run test
 
 1.  Folder structure:
 
-    -   `assets/` - all fonts, images, videos, etc.
+    -   `assets/` - all fonts, images, videos, translation files, etc.
+    -   `i18n` - configuration settings for i18n (internationalization).
     -   `components/` - stateless components.
     -   `containers/` - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`).
         -   `enums.ts` - each container has its own enums
@@ -119,6 +120,11 @@ npm run test
 7.  Offline first - using Offline Plugin to cache important files and assets
 8.  PWA ready - Install as a native app on Android and iOS
 9.  Code splitting and lazy loading
+10. i18n included:
+    1.  add your locales in `/src/i18n/locales`
+    2.  add your po files which are based on the `translations.pot` file located in `/src/assets/locale`
+    3.  run `yarn locale` to generate `${locale}.json` file from your `${locale}.po` file.
+    4.  update your UI to reflect the newly added locale
 
 ## Supported Browsers
 

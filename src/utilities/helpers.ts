@@ -25,3 +25,7 @@ export const isLoggedIn = (): boolean => {
 
 	return !!getAccessToken() && window.location.pathname !== Routes.LOGIN;
 };
+
+export const saveLocale = (locale: string): void => localStorage.setItem('locale', locale);
+
+export const setDocumentLang = (locale: string): void => document.documentElement.setAttribute('lang', locale);

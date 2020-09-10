@@ -6,6 +6,8 @@ import { ConnectedRouter } from 'connected-react-router';
 import { install, applyUpdate } from 'offline-plugin/runtime';
 
 import { App } from './app';
+import { removeItems } from '@utilities/local-storage';
+import { AuthActionType } from '@containers/auth/enums';
 import { RootStore, configureStore, history } from './store';
 
 export const store: Store<RootStore> = configureStore();
@@ -19,6 +21,10 @@ const router = (Application: any): JSX.Element => (
 		</ConnectedRouter>
 	</Provider>
 );
+
+removeItems();
+
+store.dispatch({ type: AuthActionType.RESET_AUTH });
 
 renderRoot(router(App));
 

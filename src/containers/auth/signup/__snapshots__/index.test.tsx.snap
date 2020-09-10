@@ -10,7 +10,8 @@ exports[`Signup component should render successfully 1`] = `
     <p
       className="c-form__hint"
     >
-      Already have an account? 
+      Already have an account?
+       
       <Link
         to="/login"
       >

@@ -2,6 +2,7 @@ import { AuthActionType } from './enums';
 
 export interface AuthState {
 	token: string;
+	locale: string;
 	loading: boolean;
 	threshold: number;
 	loginError: string;

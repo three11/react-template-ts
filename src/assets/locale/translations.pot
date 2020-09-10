@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2020-09-10T12:54:19.745Z\n"
+"PO-Revision-Date: 2020-09-10T12:54:19.745Z\n"
+
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+msgid "About"
+msgstr "About"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "This field is required."
+msgstr "This field is required."
+
+msgid "Invalid email address."
+msgstr "Invalid email address."
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "The password should contain least 8 characters."
+msgstr "The password should contain least 8 characters."
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "New password"
+msgstr "New password"
+
+msgid "The passwords do not match"
+msgstr "The passwords do not match"
+
+msgid "Confirm new password"
+msgstr "Confirm new password"
+
+msgid "Reset password"
+msgstr "Reset password"
+
+msgid "Confirm password"
+msgstr "Confirm password"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "First name"
+msgstr "First name"
+
+msgid "Last name"
+msgstr "Last name"
+
+msgid "Unspecified"
+msgstr "Unspecified"
+
+msgid "Male"
+msgstr "Male"
+
+msgid "Female"
+msgstr "Female"
+
+msgid "Gender"
+msgstr "Gender"
+
+msgid "Avatar image URL"
+msgstr "Avatar image URL"
+
+msgid "Sign up"
+msgstr "Sign up"
+
+msgid "Don't have an account?"
+msgstr "Don't have an account?"
+
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+msgid "You can also"
+msgstr "You can also"
+
+msgid "or"
+msgstr "or"
+
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+msgid "Homepage"
+msgstr "Homepage"
+
+msgid "Page not found"
+msgstr "Page not found"

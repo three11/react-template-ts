@@ -4,11 +4,13 @@ import { put, call, takeLatest, CallEffect, PutEffect, ForkEffect } from 'redux-
 import { setItems, removeItems } from '@utilities/local-storage';
 import { login, logout, passwordReset } from '@utilities/api';
 
+import { i18n } from '@i18n';
 import { AuthAction } from './interfaces';
 import { AuthActionType } from './enums';
+import { saveLocale, setDocumentLang } from '@utilities/helpers';
 
 type AuthSafaEffect = Generator<CallEffect<any> | PutEffect<AuthAction>>;
-type AuthSagaForEffect = Generator<ForkEffect<void>>;
+type AuthSagaForkEffect = Generator<ForkEffect<void>>;
 
 export function* loginEffect(action: AnyAction): AuthSafaEffect {
 	try {
@@ -37,7 +39,7 @@ export function* loginEffect(action: AnyAction): AuthSafaEffect {
 	}
 }
 
-export function* loginSaga(): AuthSagaForEffect {
+export function* loginSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.LOGIN_REQUEST, loginEffect);
 }
 
@@ -65,7 +67,7 @@ export function* logoutEffect(action: AnyAction): AuthSafaEffect {
 	}
 }
 
-export function* logoutSaga(): AuthSagaForEffect {
+export function* logoutSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.LOGOUT_REQUEST, logoutEffect);
 }
 
@@ -89,7 +91,7 @@ export function* passwordResetEffect(action: AnyAction): AuthSafaEffect {
 	}
 }
 
-export function* passwordResetSaga(): AuthSagaForEffect {
+export function* passwordResetSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.LOGIN_REQUEST, loginEffect);
 }
 
@@ -120,6 +122,37 @@ export function* signupEffect(action: AnyAction): AuthSafaEffect {
 	}
 }
 
-export function* signupSaga(): AuthSagaForEffect {
+export function* signupSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.SIGNUP_REQUEST, signupEffect);
+}
+
+export function* localeEffect(action: AuthAction): AuthSafaEffect {
+	try {
+		const locale = action.payload?.locale;
+
+		if (!locale) {
+			yield put({
+				type: AuthActionType.SET_LOCALE_FAILED
+			});
+
+			return;
+		}
+
+		i18n.changeLanguage(locale);
+		saveLocale(locale);
+		setDocumentLang(locale);
+
+		yield put({
+			type: AuthActionType.SET_LOCALE_SUCCESS,
+			payload: { locale }
+		});
+	} catch (error) {
+		yield put({
+			type: AuthActionType.SET_LOCALE_FAILED
+		});
+	}
+}
+
+export function* localeSaga(): AuthSagaForkEffect {
+	yield takeLatest(AuthActionType.SET_LOCALE_REQUEST, localeEffect);
 }

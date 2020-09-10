@@ -10,7 +10,8 @@ exports[`Login component should render successfully 1`] = `
     <p
       className="c-form__hint"
     >
-      Don't have an account? 
+      Don't have an account?
+       
       <Link
         to="/signup"
       >
@@ -20,7 +21,8 @@ exports[`Login component should render successfully 1`] = `
     <p
       className="c-form__hint"
     >
-      Forgot password? 
+      Forgot password?
+       
       <Link
         to="/reset-password"
       >
