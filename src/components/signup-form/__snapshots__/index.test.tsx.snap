@@ -38,7 +38,7 @@ exports[`SignupForm component should render successfully 1`] = `
       <Component
         label="Username"
         name="username"
-        placeholder="ShortWhale"
+        placeholder="JohnSmith"
         register={[Function]}
         type="text"
       />

@@ -5,6 +5,7 @@ import { AuthState, AuthAction } from './interfaces';
 
 export const initialState: AuthState = {
 	token: localStorage.getItem(TOKEN_KEY) || '',
+	locale: 'en',
 	loading: false,
 	threshold: Number(localStorage.getItem(TOKEN_THRESHOLD_KEY)) || 0,
 	loginError: '',
@@ -19,6 +20,7 @@ export default (state = initialState, { type, payload }: AuthAction): AuthState 
 		case AuthActionType.LOGIN_REQUEST:
 		case AuthActionType.LOGOUT_REQUEST:
 		case AuthActionType.SIGNUP_REQUEST:
+		case AuthActionType.SET_LOCALE_REQUEST:
 		case AuthActionType.PASSWORD_RESET_REQUEST:
 			return {
 				...state,
@@ -27,6 +29,7 @@ export default (state = initialState, { type, payload }: AuthAction): AuthState 
 		case AuthActionType.LOGIN_FAILED:
 		case AuthActionType.LOGOUT_FAILED:
 		case AuthActionType.SIGNUP_FAILED:
+		case AuthActionType.SET_LOCALE_FAILED:
 		case AuthActionType.PASSWORD_RESET_FAILED:
 			return {
 				...state,
@@ -36,6 +39,7 @@ export default (state = initialState, { type, payload }: AuthAction): AuthState 
 		case AuthActionType.LOGIN_SUCCESS:
 		case AuthActionType.LOGOUT_SUCCESS:
 		case AuthActionType.SIGNUP_SUCCESS:
+		case AuthActionType.SET_LOCALE_SUCCESS:
 		case AuthActionType.PASSWORD_RESET_SUCCESS:
 			return {
 				...state,

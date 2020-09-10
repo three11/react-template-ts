@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { Field } from '@components/field';
 import { Button } from '@components/button';
-import { RootStore } from '@src/store';
+import { RootStore } from '@store';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities/constants';
 
 interface Props {
@@ -13,8 +14,9 @@ interface Props {
 }
 
 export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
+	const { t } = useTranslation();
+	const required = t('This field is required.');
 	const { loading, loginError } = useSelector((store: RootStore) => store.auth);
-
 	const { handleSubmit, register, errors } = useForm({
 		mode: 'onBlur'
 	});
@@ -25,30 +27,30 @@ export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
 
 			<Field
 				register={register({
-					required: 'This field is required.',
+					required,
 					pattern: {
 						value: EMAIL_REGEX,
-						message: 'Invalid email address.'
+						message: t('Invalid email address.')
 					}
 				})}
 				type="email"
 				name="email"
-				label="Email Address"
+				label={t('Email Address')}
 				error={errors.email}
 				placeholder="someone@example.com"
 			/>
 
 			<Field
 				register={register({
-					required: 'This field is required.',
+					required,
 					pattern: {
 						value: PASSWORD_REGEX,
-						message: 'The password should contain least 8 characters.'
+						message: t('The password should contain least 8 characters.')
 					}
 				})}
 				type="password"
 				name="password"
-				label="Password"
+				label={t('Password')}
 				error={errors.password}
 				placeholder="********"
 			/>
@@ -56,7 +58,7 @@ export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
 			{!!loginError && <p className="c-form__error c-form__error--api">{loginError}</p>}
 
 			<Button type="submit" disabled={loading} className={loading ? 'c-btn--loading' : ''}>
-				Login
+				{t('Login')}
 			</Button>
 
 			{props.children}

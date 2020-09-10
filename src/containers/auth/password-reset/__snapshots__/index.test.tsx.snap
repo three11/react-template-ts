@@ -10,13 +10,16 @@ exports[`PasswordReset component should render successfully 1`] = `
     <p
       className="c-form__hint"
     >
-      You can also 
+      You can also
+       
       <Link
         to="/signup"
       >
         Sign up
       </Link>
-       or 
+       
+      or
+       
       <Link
         to="/login"
       >

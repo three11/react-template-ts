@@ -10,7 +10,25 @@ exports[`Footer component should render successfully 1`] = `
     <p>
       © 
       2020
-      . All rights reserved.
+      . 
+      All rights reserved.
+    </p>
+    <p>
+      Change language:
+      <button
+        disabled={false}
+        key="0"
+        onClick={[Function]}
+      >
+        de
+      </button>
+      <button
+        disabled={true}
+        key="1"
+        onClick={[Function]}
+      >
+        en
+      </button>
     </p>
   </div>
 </footer>

@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { Field } from '@components/field';
 import { Button } from '@components/button';
-import { RootStore } from '@src/store';
+import { RootStore } from '@store';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities/constants';
 
 interface Props {
@@ -13,8 +14,9 @@ interface Props {
 }
 
 export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) => {
+	const { t } = useTranslation();
+	const required = t('This field is required.');
 	const { loading, passwordResetError } = useSelector((store: RootStore) => store.auth);
-
 	const { handleSubmit, register, errors, watch } = useForm({
 		mode: 'onBlur'
 	});
@@ -25,41 +27,42 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 
 			<Field
 				register={register({
-					required: 'This field is required.',
+					required,
 					pattern: {
 						value: EMAIL_REGEX,
-						message: 'Invalid email address.'
+						message: t('Invalid email address.')
 					}
 				})}
 				type="email"
 				name="email"
-				label="Email Address"
+				label={t('Email Address')}
 				error={errors.email}
 				placeholder="someone@example.com"
 			/>
 
 			<Field
 				register={register({
-					required: 'This field is required.',
+					required,
 					pattern: {
 						value: PASSWORD_REGEX,
-						message: 'The password should contain least 8 characters.'
+						message: t('The password should contain least 8 characters.')
 					}
 				})}
 				type="password"
 				name="password"
-				label="New password"
+				label={t('New password')}
 				error={errors.password}
 				placeholder="********"
 			/>
 
 			<Field
 				register={register({
-					validate: (value: string) => value === watch('password') || 'The passwords do not match'
+					// prettier-ignore
+					validate: (value: string) => value === watch('password') || (t('The passwords do not match') as string)
 				})}
 				type="password"
 				name="confirm"
-				label="Confirm new password"
+				label={t('Confirm new password')}
 				error={errors.confirm}
 				placeholder="********"
 			/>
@@ -67,7 +70,7 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 			{!!passwordResetError && <p className="c-form__error c-form__error--api">{passwordResetError}</p>}
 
 			<Button type="submit" disabled={loading} className={loading ? 'c-btn--loading' : ''}>
-				Reset password
+				{t('Reset password')}
 			</Button>
 
 			{props.children}

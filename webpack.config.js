@@ -13,6 +13,8 @@ const PATHS = {
 	src: resolve('./src'),
 	root: resolve('./'),
 	dist: resolve('./dist'),
+	i18n: resolve('./src/i18n'),
+	store: resolve('./src/store'),
 	assets: resolve('./src/assets'),
 	utilities: resolve('./src/utilities'),
 	components: resolve('./src/components'),
@@ -166,6 +168,8 @@ module.exports = (env = {}) => {
 			alias: {
 				'@src': PATHS.src,
 				'@root': PATHS.root,
+				'@i18n': PATHS.i18n,
+				'@store': PATHS.store,
 				'@assets': PATHS.assets,
 				'@utilities': PATHS.utilities,
 				'@components': PATHS.components,

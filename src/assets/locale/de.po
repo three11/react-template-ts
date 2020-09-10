@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: 2020-09-10T12:35:09.604Z\n"
+"PO-Revision-Date: 2020-09-10 15:37+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: en\n"
+
+msgid "All rights reserved."
+msgstr "Alle Rechte vorbehalten."
+
+msgid "About"
+msgstr "Über"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Logout"
+msgstr "Abmeldung"
+
+msgid "This field is required."
+msgstr "Dieses Feld muss ausgefüllt werden."
+
+msgid "Invalid email address."
+msgstr "Ungültige E-Mail-Adresse."
+
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+msgid "The password should contain least 8 characters."
+msgstr "Das Passwort sollte mindestens 8 Zeichen enthalten."
+
+msgid "Password"
+msgstr "Passwort"
+
+msgid "Login"
+msgstr "Anmeldung"
+
+msgid "New password"
+msgstr "Neues Passwort"
+
+msgid "The passwords do not match"
+msgstr "Die Passwörter stimmen nicht überein"
+
+msgid "Confirm new password"
+msgstr "Neues Passwort bestätigen"
+
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Confirm password"
+msgstr "Passwort bestätigen"
+
+msgid "Username"
+msgstr "Benutzername"
+
+msgid "First name"
+msgstr "Vorname"
+
+msgid "Last name"
+msgstr "Nachname"
+
+msgid "Unspecified"
+msgstr "Nicht spezifiziert"
+
+msgid "Male"
+msgstr "Mann"
+
+msgid "Female"
+msgstr "Frau"
+
+msgid "Gender"
+msgstr "Geschlecht"
+
+msgid "Avatar image URL"
+msgstr "URL des Avatar-Bildes"
+
+msgid "Sign up"
+msgstr "Anmelden"
+
+msgid "Don't have an account?"
+msgstr "Sie haben kein Konto?"
+
+msgid "Forgot password?"
+msgstr "Haben Sie Ihr Passwort vergessen?"
+
+msgid "You can also"
+msgstr "Sie können auch"
+
+msgid "or"
+msgstr "oder"
+
+msgid "Already have an account?"
+msgstr "Haben Sie bereits ein Konto?"
+
+msgid "Homepage"
+msgstr "Startseite"
+
+msgid "Page not found"
+msgstr "Seite nicht gefunden"

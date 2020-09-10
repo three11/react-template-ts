@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { Icon } from '@components/icon';
@@ -7,11 +8,12 @@ import { Routes } from '@utilities/enums';
 import { Button } from '@components/button';
 import { AuthState } from '@containers/auth/interfaces';
 import { AuthActionType } from '@containers/auth/enums';
-import { history, RootStore } from '@src/store';
+import { history, RootStore } from '@store';
 
 import './index.scss';
 
 export const Header: React.FunctionComponent = () => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const authState: AuthState = useSelector((store: RootStore) => store.auth);
 
@@ -19,13 +21,13 @@ export const Header: React.FunctionComponent = () => {
 		<nav className="c-nav">
 			<ul>
 				<li>
-					<NavLink to={Routes.ABOUT}>About</NavLink>
+					<NavLink to={Routes.ABOUT}>{t('About')}</NavLink>
 				</li>
 
 				{!!authState.token && (
 					<>
 						<li>
-							<NavLink to={Routes.SETTINGS}>Settings</NavLink>
+							<NavLink to={Routes.SETTINGS}>{t('Settings')}</NavLink>
 						</li>
 
 						<li>
@@ -40,7 +42,7 @@ export const Header: React.FunctionComponent = () => {
 								}}
 								className="c-btn--outline"
 							>
-								Logout
+								{t('Logout')}
 							</Button>
 						</li>
 					</>
