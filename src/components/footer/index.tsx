@@ -8,6 +8,7 @@ import './index.scss';
 import { i18n, locales } from '@i18n';
 import { AuthActionType } from '@containers/auth/enums';
 
+// codebeat:disable[LOC]
 export const Footer: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
@@ -39,5 +40,6 @@ export const Footer: React.FunctionComponent = () => {
 		</footer>
 	);
 };
+// codebeat:enable[LOC]
 
 export default Footer;

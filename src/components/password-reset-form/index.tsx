@@ -13,6 +13,7 @@ interface Props {
 	readonly children?: React.ReactNode | React.ReactNode[];
 }
 
+// codebeat:disable[LOC]
 export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
@@ -77,5 +78,6 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 		</form>
 	);
 };
+// codebeat:enable[LOC]
 
 export default PasswordResetForm;

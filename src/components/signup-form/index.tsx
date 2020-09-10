@@ -13,6 +13,7 @@ interface Props {
 	readonly children?: React.ReactNode | React.ReactNode[];
 }
 
+// codebeat:disable[LOC]
 export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
@@ -128,5 +129,6 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 		</form>
 	);
 };
+// codebeat:enable[LOC]
 
 export default SignupForm;
