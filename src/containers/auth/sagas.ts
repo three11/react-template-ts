@@ -139,7 +139,7 @@ export function* localeEffect(action: AuthAction): AuthSafaEffect {
 		}
 
 		i18n.changeLanguage(locale);
-		saveLocale(locale || '');
+		saveLocale(locale);
 		setDocumentLang(locale);
 
 		yield put({
