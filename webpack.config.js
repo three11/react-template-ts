@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -201,6 +202,8 @@ module.exports = (env = {}) => {
 							}
 					  })
 			}),
+			// @ts-ignore
+			new LoadablePlugin(),
 			new webpack.DefinePlugin({
 				'process.env': {
 					NODE_ENV: JSON.stringify(isDev ? 'development' : 'production')

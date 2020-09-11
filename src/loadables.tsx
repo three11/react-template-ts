@@ -1,39 +1,19 @@
 import * as React from 'react';
-import * as Loadable from 'react-loadable';
+import loadable, { LoadableComponent } from '@loadable/component';
 
-interface ESModule {
-	readonly default: (...args: any[]) => any;
-}
+const fallback = <div className="c-loader" />;
 
-export const render = (module: ESModule): any => module.default;
-export const loading = (): any => <div className="c-loader" />;
+// prettier-ignore
+export const Login: LoadableComponent<any> = loadable(() => import('@containers/auth/login'), { fallback });
 
-export const Login: any = Loadable({
-	// prettier-ignore
-	loader: () => import('@containers/auth/login' /* webpackChunkName: 'login' */).then(render),
-	loading
-});
+// prettier-ignore
+export const Signup: LoadableComponent<any> = loadable(() => import('@containers/auth/signup'), { fallback });
 
-export const Signup: any = Loadable({
-	// prettier-ignore
-	loader: () => import('@containers/auth/signup' /* webpackChunkName: 'signup' */).then(render),
-	loading
-});
+// prettier-ignore
+export const PasswordReset: LoadableComponent<any> = loadable(() => import('@containers/auth/password-reset'), { fallback });
 
-export const PasswordReset: any = Loadable({
-	// prettier-ignore
-	loader: () => import('@containers/auth/password-reset' /* webpackChunkName: 'password-reset' */).then(render),
-	loading
-});
+// prettier-ignore
+export const Home: LoadableComponent<any> = loadable(() => import('@containers/home'), { fallback });
 
-export const Home: any = Loadable({
-	// prettier-ignore
-	loader: () => import('@containers/home' /* webpackChunkName: 'home' */).then(render),
-	loading
-});
-
-export const NotFound: any = Loadable({
-	// prettier-ignore
-	loader: () => import('@containers/not-found' /* webpackChunkName: 'not-found' */).then(render),
-	loading
-});
+// prettier-ignore
+export const NotFound: LoadableComponent<any> = loadable(() => import('@containers/not-found'), { fallback });
