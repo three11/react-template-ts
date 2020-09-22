@@ -125,7 +125,7 @@
 		"postcss-url": "8.0.0",
 		"postcss-utilities": "0.8.4",
 		"prop-types": "15.7.2",
-		"react-hot-loader": "4.12.21",
+		"react-hot-loader": "4.13.0",
 		"sass-loader": "10.0.2",
 		"style-loader": "1.2.1",
 		"stylelint": "13.7.1",
