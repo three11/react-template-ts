@@ -6,9 +6,12 @@ const LoadablePlugin = require('@loadable/webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const resolve = path.resolve.bind(__dirname);
+
+const { Routes } = require('./src/utilities/enums');
 
 const PATHS = {
 	src: resolve('./src'),
@@ -255,7 +258,12 @@ module.exports = (env = {}) => {
 								}
 							]
 						})
-				  ])
+				  ]),
+			new PrerenderSPAPlugin({
+				staticDir: path.join(__dirname, 'dist'),
+				// @ts-ignore
+				routes: Object.values(Routes)
+			})
 		],
 		cache: true,
 		bail: false,
