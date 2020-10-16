@@ -125,6 +125,7 @@ npm run test
     2.  add your po files which are based on the `translations.pot` file located in `/src/assets/locale`
     3.  run `yarn locale` to generate `${locale}.json` file from your `${locale}.po` file.
     4.  update your UI to reflect the newly added locale
+11. Prerendering - All pages are prerendered based on defined routes. This is included in the build step and needs **no additional configuration**.
 
 ## Supported Browsers
 
