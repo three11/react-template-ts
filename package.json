@@ -78,7 +78,7 @@
 		"scss-goodies": "1.2.0"
 	},
 	"devDependencies": {
-		"@hot-loader/react-dom": "16.13.0",
+		"@hot-loader/react-dom": "16.14.0",
 		"@loadable/webpack-plugin": "5.14.0",
 		"@types/copy-webpack-plugin": "6.0.0",
 		"@types/enzyme": "3.10.7",
