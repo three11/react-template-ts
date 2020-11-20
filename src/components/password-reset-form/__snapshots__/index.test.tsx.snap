@@ -8,33 +8,33 @@ exports[`PasswordResetForm component should render successfully 1`] = `
   <h2>
     Reset your account"s password
   </h2>
-  <Component
+  <Field
     label="Email Address"
     name="email"
     placeholder="someone@example.com"
     register={[Function]}
     type="email"
   />
-  <Component
+  <Field
     label="New password"
     name="password"
     placeholder="********"
     register={[Function]}
     type="password"
   />
-  <Component
+  <Field
     label="Confirm new password"
     name="confirm"
     placeholder="********"
     register={[Function]}
     type="password"
   />
-  <Component
+  <Button
     className=""
     disabled={false}
     type="submit"
   >
     Reset password
-  </Component>
+  </Button>
 </form>
 `;

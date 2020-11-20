@@ -8,26 +8,26 @@ exports[`LoginForm component should render successfully 1`] = `
   <h2>
     Login
   </h2>
-  <Component
+  <Field
     label="Email Address"
     name="email"
     placeholder="someone@example.com"
     register={[Function]}
     type="email"
   />
-  <Component
+  <Field
     label="Password"
     name="password"
     placeholder="********"
     register={[Function]}
     type="password"
   />
-  <Component
+  <Button
     className=""
     disabled={false}
     type="submit"
   >
     Login
-  </Component>
+  </Button>
 </form>
 `;

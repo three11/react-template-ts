@@ -14,28 +14,28 @@ exports[`SignupForm component should render successfully 1`] = `
     <div
       className="c-form__col"
     >
-      <Component
+      <Field
         label="Email Address"
         name="email"
         placeholder="someone@example.com"
         register={[Function]}
         type="email"
       />
-      <Component
+      <Field
         label="Password"
         name="password"
         placeholder="********"
         register={[Function]}
         type="password"
       />
-      <Component
+      <Field
         label="Confirm password"
         name="confirm"
         placeholder="********"
         register={[Function]}
         type="password"
       />
-      <Component
+      <Field
         label="Username"
         name="username"
         placeholder="JohnSmith"
@@ -46,21 +46,21 @@ exports[`SignupForm component should render successfully 1`] = `
     <div
       className="c-form__col"
     >
-      <Component
+      <Field
         label="First name"
         name="first_name"
         placeholder="John"
         register={[Function]}
         type="text"
       />
-      <Component
+      <Field
         label="Last name"
         name="last_name"
         placeholder="Smith"
         register={[Function]}
         type="text"
       />
-      <Component
+      <Field
         label="Gender"
         name="gender"
         options={
@@ -73,7 +73,7 @@ exports[`SignupForm component should render successfully 1`] = `
         register={[Function]}
         type="select"
       />
-      <Component
+      <Field
         label="Avatar image URL"
         name="image_url"
         placeholder="https://images.com/john-smith.jpg"
@@ -82,12 +82,12 @@ exports[`SignupForm component should render successfully 1`] = `
       />
     </div>
   </div>
-  <Component
+  <Button
     className=""
     disabled={false}
     type="submit"
   >
     Sign up
-  </Component>
+  </Button>
 </form>
 `;

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PasswordReset component should render successfully 1`] = `
-<Component
+<Wrapper
   className="o-wrapper--fancy"
 >
-  <Component
+  <PasswordResetForm
     onSubmit={[Function]}
   >
     <p
@@ -26,6 +26,6 @@ exports[`PasswordReset component should render successfully 1`] = `
         Login
       </Link>
     </p>
-  </Component>
-</Component>
+  </PasswordResetForm>
+</Wrapper>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotFound component should render successfully 1`] = `
-<Component>
+<Wrapper>
   <div
     className="c-not-found"
   >
@@ -9,5 +9,5 @@ exports[`NotFound component should render successfully 1`] = `
     <br />
     Page not found
   </div>
-</Component>
+</Wrapper>
 `;

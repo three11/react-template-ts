@@ -11,7 +11,7 @@ exports[`Header component should render successfully 1`] = `
       className="c-logo"
       to="/"
     >
-      <Component
+      <Icon
         src="assets/react.svg"
       />
     </Link>

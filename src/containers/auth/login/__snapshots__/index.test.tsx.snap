@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login component should render successfully 1`] = `
-<Component
+<Wrapper
   className="o-wrapper--fancy"
 >
-  <Component
+  <LoginForm
     onSubmit={[Function]}
   >
     <p
@@ -29,6 +29,6 @@ exports[`Login component should render successfully 1`] = `
         Reset password
       </Link>
     </p>
-  </Component>
-</Component>
+  </LoginForm>
+</Wrapper>
 `;

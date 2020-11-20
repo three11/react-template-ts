@@ -4,12 +4,12 @@ exports[`Wrapper component should render successfully 1`] = `
 <div
   className="o-wrapper"
 >
-  <Component />
+  <Header />
   <main
     className="o-main"
   >
     Test content
   </main>
-  <Component />
+  <Footer />
 </div>
 `;
