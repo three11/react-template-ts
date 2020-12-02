@@ -9921,10 +9921,10 @@ react-i18next@11.7.3:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
 
-react-inlinesvg@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-2.1.1.tgz#2ae3fab62f5aba11a5c1be142eeb0357e7098e74"
-  integrity sha512-B4CMMuPXzWF02iX9sDeR6OuCAVgrovomg4J26E+2ltc+Zs0dPXBBrW1siBXq9NENsX1rsqPbti0L8AEMpmaVPw==
+react-inlinesvg@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-2.2.0.tgz#fde6343293d4fcebe15e2c5b6494b7948cd8220a"
+  integrity sha512-VyHGnyxBkGW632/voNCZ5E7OvRRAZqYyqubLsshtZmCvsR1v0TyDiE3wHklCXNt9I+BsS3olKfKluyOo+P0+NA==
   dependencies:
     exenv "^1.2.2"
     react-from-dom "^0.5.0"
