@@ -99,7 +99,7 @@
 		"@typescript-eslint/eslint-plugin": "4.10.0",
 		"@typescript-eslint/parser": "4.10.0",
 		"autoprefixer": "10.1.0",
-		"copy-webpack-plugin": "6.4.0",
+		"copy-webpack-plugin": "6.4.1",
 		"css-hot-loader": "1.4.4",
 		"css-loader": "5.0.1",
 		"cssnano": "4.1.10",
