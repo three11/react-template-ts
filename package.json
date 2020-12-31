@@ -92,7 +92,7 @@
 		"@types/react-loadable": "5.5.4",
 		"@types/react-redux": "7.1.14",
 		"@types/react-router": "5.1.9",
-		"@types/react-router-dom": "5.1.6",
+		"@types/react-router-dom": "5.1.7",
 		"@types/terser-webpack-plugin": "4.2.0",
 		"@types/webpack": "4.41.25",
 		"@types/webpack-dev-server": "3.11.1",
