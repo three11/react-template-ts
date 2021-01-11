@@ -129,7 +129,7 @@
 		"prerender-spa-plugin": "3.4.0",
 		"prop-types": "15.7.2",
 		"react-hot-loader": "4.13.0",
-		"sass-loader": "10.1.0",
+		"sass-loader": "10.1.1",
 		"style-loader": "2.0.0",
 		"stylelint": "13.8.0",
 		"stylelint-config-recommended": "3.0.0",
