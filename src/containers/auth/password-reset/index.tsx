@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import { Routes } from '@utilities/enums';
+import { Routes } from '@utilities';
 import { history } from '@store';
-import { Wrapper } from '@components/wrapper';
 import { AuthActionType } from '@containers/auth/enums';
-import { PasswordResetForm } from '@components/password-reset-form';
+import { Wrapper, PasswordResetForm } from '@components';
 
 export const PasswordReset: React.FunctionComponent = () => {
 	const { t } = useTranslation();

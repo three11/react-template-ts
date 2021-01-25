@@ -1,4 +1,4 @@
-import { TOKEN_KEY, REFRESH_TOKEN_KEY, TOKEN_THRESHOLD_KEY } from '@utilities/constants';
+import { TOKEN_KEY, REFRESH_TOKEN_KEY, TOKEN_THRESHOLD_KEY } from '@utilities';
 
 import { AuthActionType } from './enums';
 import { AuthState, AuthAction } from './interfaces';

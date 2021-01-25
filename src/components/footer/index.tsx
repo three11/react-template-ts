@@ -3,10 +3,10 @@ import { format } from 'date-fns';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import './index.scss';
-
 import { i18n, locales } from '@i18n';
 import { AuthActionType } from '@containers/auth/enums';
+
+import './index.scss';
 
 // codebeat:disable[LOC]
 export const Footer: React.FunctionComponent = () => {

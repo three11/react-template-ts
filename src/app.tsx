@@ -1,13 +1,10 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader/root';
-
 import { Route } from 'react-router-dom';
 import { Switch, Redirect } from 'react-router';
 
 import * as Loadables from './loadables';
-
-import { Routes } from '@utilities/enums';
-import { isLoggedIn } from '@utilities/helpers';
+import { Routes, isLoggedIn } from '@utilities';
 
 import './app.scss';
 

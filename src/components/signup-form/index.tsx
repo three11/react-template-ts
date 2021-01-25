@@ -3,10 +3,9 @@ import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import { Field } from '@components/field';
-import { Button } from '@components/button';
 import { RootStore } from '@store';
-import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities/constants';
+import { Field, Button } from '@components';
+import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities';
 
 interface Props {
 	readonly onSubmit: (values: any) => void;

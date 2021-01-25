@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Wrapper } from '@components/wrapper';
+import { Wrapper } from '@components';
 
 import './index.scss';
 

@@ -3,10 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Icon } from '@components/icon';
-import { Routes } from '@utilities/enums';
-import { Button } from '@components/button';
+import { Routes } from '@utilities';
 import { AuthState } from '@containers/auth/interfaces';
+import { Icon, Button } from '@components';
 import { AuthActionType } from '@containers/auth/enums';
 import { history, RootStore } from '@store';
 
