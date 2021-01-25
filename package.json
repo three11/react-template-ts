@@ -171,7 +171,7 @@
 			"^@src/(.*)$": "<rootDir>/src/$1",
 			"^@root/(.*)$": "<rootDir>/$1",
 			"^@i18n": "<rootDir>/src/i18n",
-			"^@store": "<rootDir>/src/store",
+			"^@store/(.*)$": "<rootDir>/src/store/$1",
 			"^@assets/(.*)$": "<rootDir>/src/assets/$1",
 			"^@utilities": "<rootDir>/src/utilities",
 			"^@components": "<rootDir>/src/components",

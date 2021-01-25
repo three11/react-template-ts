@@ -7,8 +7,8 @@ import { install, applyUpdate } from 'offline-plugin/runtime';
 
 import { App } from './app';
 import { removeItems } from '@utilities';
-import { AuthActionType } from '@containers/auth/enums';
-import { history, RootStore, configureStore } from './store';
+import { AuthActionType } from '@store/auth';
+import { history, RootStore, configureStore } from '@store/index';
 
 export const store: Store<RootStore> = configureStore();
 

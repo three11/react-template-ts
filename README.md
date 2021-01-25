@@ -92,10 +92,6 @@ npm run test
     -   `i18n` - configuration settings for i18n (internationalization).
     -   `components/` - stateless components.
     -   `containers/` - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`).
-        -   `enums.ts` - each container has its own enums
-        -   `interfaces.ts` - each container has its own interfaces
-        -   `reducer.ts` - the container reducer
-        -   `sagas.ts` - the container sagas
     -   `utilities/` - helpers and utility functions
     -   `app.scss` - Application's global SCSS entry point
     -   `settings.scss` - Application's SCSS settings (variables, mixins, etc)
@@ -104,9 +100,15 @@ npm run test
     -   `index.html` - Application's HTML file
     -   `index.tsx` - The main entry point
     -   `loadables.tsx` - Code split and lazy loaded components
-    -   `reducers.js` - Application's root reducer
-    -   `sagas.js` - Application's sagas
-    -   `store.js` - Application's Redux store
+    -   `store` - The application Redux store
+        -   `reducers.ts` - Application's root reducer
+        -   `sagas.ts` - Application's sagas
+        -   `index.ts` - Application's Redux store
+        -   `$BRANCH` - A branch in the Redux store
+            -   `enums.ts` - each container has its own enums
+            -   `interfaces.ts` - each container has its own interfaces
+            -   `reducer.ts` - the container reducer
+            -   `sagas.ts` - the container sagas
 
 2.  Latest EcmaScript support
 

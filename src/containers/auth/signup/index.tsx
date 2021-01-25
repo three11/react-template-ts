@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import { Routes } from '@utilities';
-import { history } from '@store';
-import { AuthActionType } from '@containers/auth/enums';
+import { history } from '@store/index';
+import { AuthActionType } from '@store/auth';
 import { Wrapper, SignupForm } from '@components';
 
 export const Signup: React.FunctionComponent = () => {

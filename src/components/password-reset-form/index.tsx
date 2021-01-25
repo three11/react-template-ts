@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import { RootStore } from '@store';
+import { RootStore } from '@store/index';
 import { Field, Button } from '@components';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities';
 

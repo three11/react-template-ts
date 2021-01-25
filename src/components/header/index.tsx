@@ -4,10 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { Routes } from '@utilities';
-import { AuthState } from '@containers/auth/interfaces';
 import { Icon, Button } from '@components';
-import { AuthActionType } from '@containers/auth/enums';
-import { history, RootStore } from '@store';
+import { history, RootStore } from '@store/index';
+import { AuthState, AuthActionType } from '@store/auth';
 
 import './index.scss';
 
