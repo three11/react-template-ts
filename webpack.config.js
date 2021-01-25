@@ -1,4 +1,5 @@
-const path = require('path');
+const { join, resolve } = require('path');
+
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
@@ -9,21 +10,25 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const resolve = path.resolve.bind(__dirname);
+const r = resolve.bind(__dirname);
+
+const dotenv = require('dotenv').config({
+	path: join(__dirname, '.env')
+});
 
 const { Routes } = require('./src/utilities/enums');
 
 const PATHS = {
-	src: resolve('./src'),
-	root: resolve('./'),
-	dist: resolve('./dist'),
-	i18n: resolve('./src/i18n'),
-	store: resolve('./src/store'),
-	assets: resolve('./src/assets'),
-	utilities: resolve('./src/utilities'),
-	components: resolve('./src/components'),
-	containers: resolve('./src/containers'),
-	nodeModules: resolve('./node_modules')
+	src: r('./src'),
+	root: r('./'),
+	dist: r('./dist'),
+	i18n: r('./src/i18n'),
+	store: r('./src/store'),
+	assets: r('./src/assets'),
+	utilities: r('./src/utilities'),
+	components: r('./src/components'),
+	containers: r('./src/containers'),
+	nodeModules: r('./node_modules')
 };
 
 const tsConfig = {
@@ -87,7 +92,7 @@ const cssConfig = {
 		{
 			loader: 'sass-resources-loader',
 			options: {
-				resources: ['./src/settings.scss']
+				resources: process.env.SCSS_IMPORTS.split(',')
 			}
 		}
 	]
@@ -190,6 +195,12 @@ module.exports = (env = {}) => {
 			modules: ['src', 'node_modules']
 		},
 		plugins: [
+			new webpack.DefinePlugin({
+				'process.env': {
+					...dotenv.parsed,
+					NODE_ENV: JSON.stringify(isDev ? 'development' : 'production')
+				}
+			}),
 			new HtmlWebPackPlugin({
 				template: './src/index.html',
 				filename: './index.html',
@@ -213,11 +224,6 @@ module.exports = (env = {}) => {
 			}),
 			// @ts-ignore
 			new LoadablePlugin(),
-			new webpack.DefinePlugin({
-				'process.env': {
-					NODE_ENV: JSON.stringify(isDev ? 'development' : 'production')
-				}
-			}),
 			new CopyWebpackPlugin({
 				// @ts-ignore
 				patterns: [
@@ -245,27 +251,27 @@ module.exports = (env = {}) => {
 							safeToUseOptionalCaches: true
 						}),
 						new WebpackPwaManifest({
-							name: 'React Template',
-							short_name: 'React TPL',
-							description: 'A React application!',
-							background_color: '#cccccc',
-							theme_color: '#333333',
+							name: process.env.APP_NAME,
+							short_name: process.env.APP_SHORT_NAME,
+							description: process.env.APP_DESCRIPTION,
+							background_color: process.env.APP_BACKGROUND_COLOR,
+							theme_color: process.env.APP_THEME_COLOR,
 							inject: true,
 							ios: true,
 							icons: [
 								{
-									src: resolve('src/assets/icon-512x512.png'),
+									src: r(process.env.APP_ICON),
 									sizes: [72, 96, 128, 144, 192, 384, 512]
 								},
 								{
-									src: resolve('src/assets/icon-512x512.png'),
+									src: r(process.env.APP_ICON),
 									sizes: [120, 152, 167, 180],
 									ios: true
 								}
 							]
 						}),
 						new PrerenderSPAPlugin({
-							staticDir: path.join(__dirname, 'dist'),
+							staticDir: join(__dirname, 'dist'),
 							// @ts-ignore
 							routes: Object.values(Routes)
 						})
