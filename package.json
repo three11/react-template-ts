@@ -7,6 +7,7 @@
 		"create-react-app-ts": "./bin/cli.js"
 	},
 	"scripts": {
+		"svg": "svgo-viewbox -i ./src/assets",
 		"start": "yarn tsc:enums && webpack-dev-server --mode development --open --env.dev",
 		"build": "yarn tsc:enums && webpack --mode production",
 		"tsc": "tsc --noEmit --skipLibCheck",
@@ -136,6 +137,7 @@
 		"stylelint": "13.9.0",
 		"stylelint-config-recommended": "3.0.0",
 		"svg-inline-loader": "0.8.2",
+		"svgo-viewbox": "1.0.1",
 		"terser-webpack-plugin": "4.2.3",
 		"ts-jest": "26.4.4",
 		"ts-loader": "8.0.14",
