@@ -26,6 +26,8 @@ In order to use this setup you need to have installed the following dependencies
 npx create-react-app-ts && yarn && yarn start
 ```
 
+**Just a quick note:** You should manually create a `.gitignore` file if you plan on keeping your project's version control in Git.
+
 ## Download
 
 You can download this setup [directly](https://github.com/three11/react-template-ts/archive/master.zip) and extract it.
