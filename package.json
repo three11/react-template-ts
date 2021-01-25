@@ -7,10 +7,10 @@
 		"create-react-app-ts": "./bin/cli.js"
 	},
 	"scripts": {
-		"start": "webpack-dev-server --mode development --open --env.dev",
-		"build": "rm -rf ./dist && yarn tsc:enums && webpack --mode production",
+		"start": "yarn tsc:enums && webpack-dev-server --mode development --open --env.dev",
+		"build": "yarn tsc:enums && webpack --mode production",
 		"tsc": "tsc --noEmit --skipLibCheck",
-		"tsc:enums": "tsc --project tsconfig-enums.json --skipLibCheck",
+		"tsc:enums": "rm -rf ./dist && tsc --project tsconfig-enums.json --skipLibCheck",
 		"lint": "npm run lint:ts && npm run lint:scss",
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
@@ -130,6 +130,7 @@
 		"prop-types": "15.7.2",
 		"react-hot-loader": "4.13.0",
 		"sass-loader": "10.1.1",
+		"sass-resources-loader": "2.1.1",
 		"style-loader": "2.0.0",
 		"stylelint": "13.9.0",
 		"stylelint-config-recommended": "3.0.0",

@@ -83,7 +83,13 @@ const cssConfig = {
 				})
 			}
 		},
-		'sass-loader'
+		'sass-loader',
+		{
+			loader: 'sass-resources-loader',
+			options: {
+				resources: ['./src/settings.scss']
+			}
+		}
 	]
 };
 
@@ -257,13 +263,13 @@ module.exports = (env = {}) => {
 									ios: true
 								}
 							]
+						}),
+						new PrerenderSPAPlugin({
+							staticDir: path.join(__dirname, 'dist'),
+							// @ts-ignore
+							routes: Object.values(Routes)
 						})
-				  ]),
-			new PrerenderSPAPlugin({
-				staticDir: path.join(__dirname, 'dist'),
-				// @ts-ignore
-				routes: Object.values(Routes)
-			})
+				  ])
 		],
 		cache: true,
 		bail: false,
