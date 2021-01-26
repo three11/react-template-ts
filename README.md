@@ -26,7 +26,7 @@ In order to use this setup you need to have installed the following dependencies
 npx create-react-app-ts && yarn && yarn start
 ```
 
-**Just a quick note:** You should manually create a `.gitignore` file if you plan on keeping your project's version control in Git.
+**Just a quick note:** You should manually create a `.gitignore` file if you plan on keeping your project in Git.
 
 ## Download
 
@@ -88,27 +88,33 @@ npm run test
 
 1.  Folder structure:
 
-    -   `assets/` - all fonts, images, videos, translation files, etc.
-    -   `i18n` - configuration settings for i18n (internationalization).
-    -   `components/` - stateless components.
-    -   `containers/` - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`).
-    -   `utilities/` - helpers and utility functions
-    -   `app.scss` - Application's global SCSS entry point
-    -   `settings.scss` - Application's SCSS settings (variables, mixins, etc)
-    -   `app.tsx` - Application's main component
-    -   `custom.d.ts` - Custom type definitions
-    -   `index.html` - Application's HTML file
-    -   `index.tsx` - The main entry point
-    -   `loadables.tsx` - Code split and lazy loaded components
-    -   `store` - The application Redux store
-        -   `reducers.ts` - Application's root reducer
-        -   `sagas.ts` - Application's sagas
-        -   `index.ts` - Application's Redux store
-        -   `$BRANCH` - A branch in the Redux store
-            -   `enums.ts` - each container has its own enums
-            -   `interfaces.ts` - each container has its own interfaces
-            -   `reducer.ts` - the container reducer
-            -   `sagas.ts` - the container sagas
+    ```
+    📦 project
+    ┣ 📂 assets - all fonts, images, videos, translation files, etc
+    ┣ 📂 components - stateless components
+    ┣ 📂 containers - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`)
+    ┣ 📂 i18n - configuration settings for i18n (internationalization)
+    ┣ 📂 store - The application Redux store
+    ┣ ┣ 📂 $BRANCH - A branch in the Redux store
+    ┃ ┃ ┗ 📜 enums.ts - Each branch has its own enums
+    ┃ ┃ ┗ 📜 index.ts - Branch's exports
+    ┃ ┃ ┗ 📜 interfaces.ts - Each branch has its own interfaces
+    ┃ ┃ ┗ 📜 reducer.ts - The branch reducer
+    ┃ ┃ ┗ 📜 sagas.ts - The branch sagas
+    ┃ ┗ 📜 index.ts - Application's main store
+    ┃ ┗ 📜 reducers.ts - Application's root reducer
+    ┃ ┗ 📜 sagas.ts - Application's sagas
+    ┃ ┗ 📜 file.pptx
+    ┣ 📂 utilities - helpers and utility functions
+    ┗ 📜 app.scss - Application's global SCSS entry point
+    ┗ 📜 app.tsx - Application's main component
+    ┗ 📜 settings.scss - Application's SCSS settings (variables, mixins, etc)
+    ┗ 📜 custom.d.ts - Custom type definitions
+    ┗ 📜 index.html - Application's HTML file
+    ┗ 📜 index.tsx - The main entry point
+    ┗ 📜 loadables.tsx - Custom type definitions
+    ┗ 📜 custom.d.ts - Code split and lazy loaded components
+    ```
 
 2.  Latest EcmaScript support
 
