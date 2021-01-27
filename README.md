@@ -104,7 +104,6 @@ npm run test
     ┃ ┗ 📜 index.ts - Application's main store
     ┃ ┗ 📜 reducers.ts - Application's root reducer
     ┃ ┗ 📜 sagas.ts - Application's sagas
-    ┃ ┗ 📜 file.pptx
     ┣ 📂 utilities - helpers and utility functions
     ┗ 📜 app.scss - Application's global SCSS entry point
     ┗ 📜 app.tsx - Application's main component
