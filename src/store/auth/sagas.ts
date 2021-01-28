@@ -1,13 +1,10 @@
 import { AnyAction } from 'redux';
 import { put, call, takeLatest, CallEffect, PutEffect, ForkEffect } from 'redux-saga/effects';
 
-import { setItems, removeItems } from '@utilities/local-storage';
-import { login, logout, passwordReset } from '@utilities/api';
-
 import { i18n } from '@i18n';
 import { AuthAction } from './interfaces';
 import { AuthActionType } from './enums';
-import { saveLocale, setDocumentLang } from '@utilities/helpers';
+import { login, logout, setItems, saveLocale, removeItems, passwordReset, setDocumentLang } from '@utilities';
 
 type AuthSafaEffect = Generator<CallEffect<any> | PutEffect<AuthAction>>;
 type AuthSagaForkEffect = Generator<ForkEffect<void>>;

@@ -6,9 +6,9 @@ import { ConnectedRouter } from 'connected-react-router';
 import { install, applyUpdate } from 'offline-plugin/runtime';
 
 import { App } from './app';
-import { removeItems } from '@utilities/local-storage';
-import { AuthActionType } from '@containers/auth/enums';
-import { RootStore, configureStore, history } from './store';
+import { removeItems } from '@utilities';
+import { AuthActionType } from '@store/auth';
+import { history, RootStore, configureStore } from '@store/index';
 
 export const store: Store<RootStore> = configureStore();
 

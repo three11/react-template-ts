@@ -5,10 +5,10 @@
 			"@src/*": ["./src/*"],
 			"@root/*": ["./*"],
 			"@i18n": ["./src/i18n"],
-			"@store": ["./src/store"],
+			"@store/*": ["./src/store/*"],
 			"@assets/*": ["./src/assets/*"],
-			"@utilities/*": ["./src/utilities/*"],
-			"@components/*": ["./src/components/*"],
+			"@utilities": ["./src/utilities"],
+			"@components": ["./src/components"],
 			"@containers/*": ["./src/containers/*"]
 		},
 		"alwaysStrict": true,

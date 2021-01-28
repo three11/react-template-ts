@@ -10,6 +10,7 @@ export interface AuthState {
 	signupError: string;
 	refreshToken: string;
 	passwordResetError: string;
+	[x: string]: any;
 }
 
 export interface AuthAction {

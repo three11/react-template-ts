@@ -15,7 +15,7 @@ jest.mock('react-inlinesvg');
 jest.mock('react-i18next', () => ({
 	Trans: ({ children }) => children,
 	useTranslation: () => ({ t: key => key }),
-	withTranslation: x => y => y
+	withTranslation: () => y => y
 }));
 
 jest.mock('i18next', () => ({

@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import { Routes } from '@utilities/enums';
-import { history } from '@store';
-import { Wrapper } from '@components/wrapper';
-import { LoginForm } from '@components/login-form';
-import { AuthActionType } from '@containers/auth/enums';
+import { Routes } from '@utilities';
+import { history } from '@store/index';
+import { AuthActionType } from '@store/auth';
+import { Wrapper, LoginForm } from '@components';
 
 export const Login: React.FunctionComponent = () => {
 	const { t } = useTranslation();
