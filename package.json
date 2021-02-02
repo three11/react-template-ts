@@ -62,7 +62,7 @@
 		"connected-react-router": "6.8.0",
 		"date-fns": "2.16.1",
 		"history": "4.10.1",
-		"i18next": "19.8.6",
+		"i18next": "19.8.7",
 		"i18next-browser-languagedetector": "6.0.1",
 		"normalize.css": "8.0.1",
 		"react": "17.0.1",
