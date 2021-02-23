@@ -59,7 +59,7 @@
 	"dependencies": {
 		"@loadable/component": "5.14.1",
 		"axios": "0.21.1",
-		"connected-react-router": "6.8.0",
+		"connected-react-router": "6.9.1",
 		"date-fns": "2.17.0",
 		"history": "4.10.1",
 		"i18next": "19.8.9",
