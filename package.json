@@ -142,7 +142,7 @@
 		"ts-jest": "26.5.2",
 		"ts-loader": "8.0.17",
 		"tslib": "2.1.0",
-		"typescript": "4.1.5",
+		"typescript": "4.2.2",
 		"url-loader": "4.1.1",
 		"webpack": "4.46.0",
 		"webpack-cli": "3.3.12",
