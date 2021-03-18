@@ -1,16 +1,17 @@
 const { join, resolve } = require('path');
 
 const webpack = require('webpack');
+const { argv } = require('yargs');
 const TerserPlugin = require('terser-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const PrerenderSPAPlugin = require('@dreysolano/prerender-spa-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const r = resolve.bind(__dirname);
+const { mode } = argv;
 
 const dotenv = require('dotenv').config({
 	path: join(__dirname, '.env')
@@ -33,7 +34,7 @@ const PATHS = {
 
 const tsConfig = {
 	test: /\.tsx?$/,
-	loaders: [
+	use: [
 		'react-hot-loader/webpack',
 		{
 			loader: 'ts-loader',
@@ -164,10 +165,11 @@ const mediaConfig = {
 	}
 };
 
-module.exports = (env = {}) => {
-	const isDev = env.dev;
+module.exports = () => {
+	const isDev = mode === 'development';
 
 	return {
+		mode,
 		entry: ['./src/index.tsx'],
 		output: {
 			path: PATHS.dist,
@@ -240,16 +242,6 @@ module.exports = (env = {}) => {
 			...(isDev
 				? [new webpack.HotModuleReplacementPlugin()]
 				: [
-						new OfflinePlugin({
-							relativePaths: false,
-							publicPath: '/',
-							appShell: '/',
-							caches: {
-								main: [':rest:'],
-								additional: ['*.chunk.js']
-							},
-							safeToUseOptionalCaches: true
-						}),
 						new WebpackPwaManifest({
 							name: process.env.APP_NAME,
 							short_name: process.env.APP_SHORT_NAME,
@@ -301,7 +293,6 @@ module.exports = (env = {}) => {
 					minimizer: [
 						new TerserPlugin({
 							terserOptions: {
-								warnings: false,
 								compress: {
 									comparisons: false
 								},
@@ -311,9 +302,7 @@ module.exports = (env = {}) => {
 									ascii_only: true
 								}
 							},
-							parallel: true,
-							cache: true,
-							sourceMap: true
+							parallel: true
 						})
 					],
 					nodeEnv: 'production',
@@ -321,21 +310,22 @@ module.exports = (env = {}) => {
 					splitChunks: {
 						chunks: 'async',
 						minSize: 30000,
+						minRemainingSize: 0,
+						maxSize: 0,
 						minChunks: 1,
-						maxAsyncRequests: 5,
-						maxInitialRequests: 3,
-						name: true,
+						maxAsyncRequests: 30,
+						maxInitialRequests: 30,
+						enforceSizeThreshold: 50000,
 						cacheGroups: {
-							commons: {
+							defaultVendors: {
 								test: /[\\/]node_modules[\\/]/,
-								name: 'vendor',
-								chunks: 'all'
+								priority: -10,
+								reuseExistingChunk: true
 							},
-							main: {
-								chunks: 'all',
+							default: {
 								minChunks: 2,
-								reuseExistingChunk: true,
-								enforce: true
+								priority: -20,
+								reuseExistingChunk: true
 							}
 						}
 					},

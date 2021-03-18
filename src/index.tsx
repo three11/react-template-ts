@@ -3,7 +3,6 @@ import { Store } from 'redux';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import { install, applyUpdate } from 'offline-plugin/runtime';
 
 import { App } from './app';
 import { removeItems } from '@utilities';
@@ -35,9 +34,8 @@ if (module.hot) {
 	renderRoot(router(require('./app').App));
 }
 
-if (process.env.NODE_ENV === 'production') {
-	install({
-		onUpdateReady: () => applyUpdate(),
-		onUpdated: () => window.location.reload()
+if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('/service-worker.js');
 	});
 }

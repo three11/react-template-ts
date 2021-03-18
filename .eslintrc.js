@@ -8,14 +8,14 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		project: './tsconfig.json',
-		tsconfigRootDir: __dirname,
-		sourceType: 'module'
+		sourceType: 'module',
+		tsconfigRootDir: __dirname
 	},
-	plugins: ['@typescript-eslint', 'jest'],
-	ignorePatterns: ['webpack.config.js', 'test-config/*', 'bin/*', '.eslintrc.js'],
+	plugins: ['jest', '@typescript-eslint'],
+	ignorePatterns: ['bin/*', '.eslintrc.js', 'test-config/*', 'workbox-config.js', 'webpack.config.js'],
 	rules: {
-		'@typescript-eslint/no-explicit-any': 'off',
-		'react/display-name': 'off'
+		'react/display-name': 'off',
+		'@typescript-eslint/no-explicit-any': 'off'
 	},
 	settings: {
 		react: {
