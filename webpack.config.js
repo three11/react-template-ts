@@ -59,7 +59,11 @@ const htmlConfig = {
 		{
 			loader: 'html-loader',
 			options: {
-				minimize: true
+				sources: {
+					list: [{ tag: 'link', attribute: 'href', type: 'src' }]
+				},
+				esModule: false,
+				minimize: false
 			}
 		}
 	]
