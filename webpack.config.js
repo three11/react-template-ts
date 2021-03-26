@@ -1,16 +1,18 @@
 const { join, resolve } = require('path');
 
 const webpack = require('webpack');
+const { argv } = require('yargs');
 const TerserPlugin = require('terser-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const PrerenderSPAPlugin = require('@dreysolano/prerender-spa-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const r = resolve.bind(__dirname);
+const { mode } = argv;
 
 const dotenv = require('dotenv').config({
 	path: join(__dirname, '.env')
@@ -33,8 +35,7 @@ const PATHS = {
 
 const tsConfig = {
 	test: /\.tsx?$/,
-	loaders: [
-		'react-hot-loader/webpack',
+	use: [
 		{
 			loader: 'ts-loader',
 			options: {
@@ -58,7 +59,11 @@ const htmlConfig = {
 		{
 			loader: 'html-loader',
 			options: {
-				minimize: true
+				sources: {
+					list: [{ tag: 'link', attribute: 'href', type: 'src' }]
+				},
+				esModule: false,
+				minimize: false
 			}
 		}
 	]
@@ -164,10 +169,21 @@ const mediaConfig = {
 	}
 };
 
-module.exports = (env = {}) => {
-	const isDev = env.dev;
+module.exports = () => {
+	const isDev = mode === 'development';
+
+	if (isDev) {
+		tsConfig.use.splice(0, 0, {
+			loader: require.resolve('babel-loader'),
+			// @ts-ignore
+			options: {
+				plugins: [require.resolve('react-refresh/babel')]
+			}
+		});
+	}
 
 	return {
+		mode,
 		entry: ['./src/index.tsx'],
 		output: {
 			path: PATHS.dist,
@@ -238,18 +254,8 @@ module.exports = (env = {}) => {
 				chunkFilename: isDev ? '[id].css' : '[id].[hash].css'
 			}),
 			...(isDev
-				? [new webpack.HotModuleReplacementPlugin()]
+				? [new webpack.HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()]
 				: [
-						new OfflinePlugin({
-							relativePaths: false,
-							publicPath: '/',
-							appShell: '/',
-							caches: {
-								main: [':rest:'],
-								additional: ['*.chunk.js']
-							},
-							safeToUseOptionalCaches: true
-						}),
 						new WebpackPwaManifest({
 							name: process.env.APP_NAME,
 							short_name: process.env.APP_SHORT_NAME,
@@ -279,6 +285,7 @@ module.exports = (env = {}) => {
 		],
 		cache: true,
 		bail: false,
+		target: 'web',
 		devtool: isDev ? 'eval-source-map' : false,
 		devServer: {
 			hot: true,
@@ -301,7 +308,6 @@ module.exports = (env = {}) => {
 					minimizer: [
 						new TerserPlugin({
 							terserOptions: {
-								warnings: false,
 								compress: {
 									comparisons: false
 								},
@@ -311,9 +317,7 @@ module.exports = (env = {}) => {
 									ascii_only: true
 								}
 							},
-							parallel: true,
-							cache: true,
-							sourceMap: true
+							parallel: true
 						})
 					],
 					nodeEnv: 'production',
@@ -321,21 +325,22 @@ module.exports = (env = {}) => {
 					splitChunks: {
 						chunks: 'async',
 						minSize: 30000,
+						minRemainingSize: 0,
+						maxSize: 0,
 						minChunks: 1,
-						maxAsyncRequests: 5,
-						maxInitialRequests: 3,
-						name: true,
+						maxAsyncRequests: 30,
+						maxInitialRequests: 30,
+						enforceSizeThreshold: 50000,
 						cacheGroups: {
-							commons: {
+							defaultVendors: {
 								test: /[\\/]node_modules[\\/]/,
-								name: 'vendor',
-								chunks: 'all'
+								priority: -10,
+								reuseExistingChunk: true
 							},
-							main: {
-								chunks: 'all',
+							default: {
 								minChunks: 2,
-								reuseExistingChunk: true,
-								enforce: true
+								priority: -20,
+								reuseExistingChunk: true
 							}
 						}
 					},

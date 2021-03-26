@@ -6,7 +6,7 @@ import { Switch, Redirect } from 'react-router';
 import * as Loadables from './loadables';
 import { Routes, isLoggedIn } from '@utilities';
 
-import './app.scss';
+import './assets/styles/app.scss';
 
 interface Props {
 	readonly component: React.ComponentType;
@@ -22,12 +22,21 @@ export const PrivateRoute = ({ component: Component, ...rest }: Props): JSX.Elem
 	/>
 );
 
+export const GuestRoute = ({ component: Component, ...rest }: Props): JSX.Element => (
+	<Route
+		{...rest}
+		render={(props: any): React.ReactNode =>
+			!isLoggedIn() ? <Component {...props} {...rest} /> : <Redirect to={Routes.BASE} />
+		}
+	/>
+);
+
 export const App = hot(() => (
 	<Switch>
-		<Route path={Routes.LOGIN} exact={true} component={Loadables.Login} />
-		<Route path={Routes.SIGNUP} exact={true} component={Loadables.Signup} />
-		<Route path={Routes.PASSWORD_RESET} exact={true} component={Loadables.PasswordReset} />
-		<PrivateRoute path={Routes.BASE} exact={true} component={Loadables.Home} />
+		<Route path={Routes.BASE} exact={true} component={Loadables.Home} />
+		<GuestRoute path={Routes.LOGIN} exact={true} component={Loadables.Login} />
+		<GuestRoute path={Routes.SIGNUP} exact={true} component={Loadables.Signup} />
+		<GuestRoute path={Routes.PASSWORD_RESET} exact={true} component={Loadables.PasswordReset} />
 		<Route component={Loadables.NotFound} />
 	</Switch>
 ));

@@ -12,7 +12,7 @@ exports[`Header component should render successfully 1`] = `
       to="/"
     >
       <Icon
-        src="assets/react.svg"
+        src="/assets/react.svg"
       />
     </Link>
     <Nav />

@@ -53,7 +53,7 @@ export const Header: React.FunctionComponent = () => {
 		<header className="c-header">
 			<div className="o-shell o-shell--flex">
 				<Link to={Routes.BASE} className="c-logo">
-					<Icon src="assets/react.svg" />
+					<Icon src="/assets/react.svg" />
 				</Link>
 
 				<Nav />
