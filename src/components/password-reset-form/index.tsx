@@ -23,7 +23,7 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 
 	return (
 		<form className="c-form c-form--login" onSubmit={handleSubmit(props.onSubmit)}>
-			<h2>Reset your account&quot;s password</h2>
+			<h2>Reset your account&apos;s password</h2>
 
 			<Field
 				register={register({

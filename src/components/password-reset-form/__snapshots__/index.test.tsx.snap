@@ -6,7 +6,7 @@ exports[`PasswordResetForm component should render successfully 1`] = `
   onSubmit={[Function]}
 >
   <h2>
-    Reset your account"s password
+    Reset your account's password
   </h2>
   <Field
     label="Email Address"
