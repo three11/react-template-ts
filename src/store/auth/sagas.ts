@@ -6,10 +6,10 @@ import { AuthAction } from './interfaces';
 import { AuthActionType } from './enums';
 import { login, logout, setItems, saveLocale, removeItems, passwordReset, setDocumentLang } from '@utilities';
 
-type AuthSafaEffect = Generator<CallEffect<any> | PutEffect<AuthAction>>;
+type AuthSagaEffect = Generator<CallEffect<any> | PutEffect<AuthAction>>;
 type AuthSagaForkEffect = Generator<ForkEffect<void>>;
 
-export function* loginEffect(action: AnyAction): AuthSafaEffect {
+export function* loginEffect(action: AnyAction): AuthSagaEffect {
 	try {
 		const { email, password, redirect } = action.payload;
 		const data: any = yield call(login, { email, password });
@@ -40,7 +40,7 @@ export function* loginSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.LOGIN_REQUEST, loginEffect);
 }
 
-export function* logoutEffect(action: AnyAction): AuthSafaEffect {
+export function* logoutEffect(action: AnyAction): AuthSagaEffect {
 	try {
 		yield call(logout);
 
@@ -68,7 +68,7 @@ export function* logoutSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.LOGOUT_REQUEST, logoutEffect);
 }
 
-export function* passwordResetEffect(action: AnyAction): AuthSafaEffect {
+export function* passwordResetEffect(action: AnyAction): AuthSagaEffect {
 	try {
 		const { email, password, redirect } = action.payload;
 
@@ -92,7 +92,7 @@ export function* passwordResetSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.LOGIN_REQUEST, loginEffect);
 }
 
-export function* signupEffect(action: AnyAction): AuthSafaEffect {
+export function* signupEffect(action: AnyAction): AuthSagaEffect {
 	try {
 		const { redirect, ...signupData } = action.payload;
 		const data: any = yield call(login, signupData);
@@ -123,7 +123,7 @@ export function* signupSaga(): AuthSagaForkEffect {
 	yield takeLatest(AuthActionType.SIGNUP_REQUEST, signupEffect);
 }
 
-export function* localeEffect(action: AuthAction): AuthSafaEffect {
+export function* localeEffect(action: AuthAction): AuthSagaEffect {
 	try {
 		const locale = action.payload?.locale;
 
