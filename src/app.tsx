@@ -6,7 +6,7 @@ import { Switch, Redirect } from 'react-router';
 import * as Loadables from './loadables';
 import { Routes, isLoggedIn } from '@utilities';
 
-import './app.scss';
+import './assets/styles/app.scss';
 
 interface Props {
 	readonly component: React.ComponentType;

@@ -1,13 +1,3 @@
-$color-base: #333;
-$color-white: #fff;
-$color-black: #000;
-$color-error: #f00;
-$color-action: #00f;
-$color-warning: #ff0;
-
-$timing: 0.4s;
-$easing: ease-in-out;
-
 @mixin flex($align, $justify) {
 	display: flex;
 	align-items: $align;
@@ -81,4 +71,19 @@ $easing: ease-in-out;
 	bottom: 0;
 	left: 0;
 	margin: auto;
+}
+
+@mixin transition($properties, $will-change: true, $timing: $timing, $easing: $easing) {
+	$transition: '';
+
+	@each $property in str-split($properties, ',') {
+		$single: $property + ' ' + $timing + ' ' + $easing + ',';
+		$transition: $transition + $single;
+	}
+
+	transition: unquote($transition);
+
+	@if ($will-change == true) {
+		will-change: unquote($properties);
+	}
 }

@@ -1,0 +1,12 @@
+@function str-split($string, $separator) {
+	$i: str-index($string, $separator);
+
+	@if $i != null {
+		@return append(
+			str-slice($string, 1, $i - 1),
+			str-split(str-slice($string, $i + str-length($separator)), $separator)
+		);
+	}
+
+	@return $string;
+}

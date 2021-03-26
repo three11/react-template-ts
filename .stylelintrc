@@ -7,11 +7,12 @@
 			true,
 			{
 				"ignoreAtRules": [
-					"function",
 					"if",
 					"each",
+					"mixin",
+					"return",
 					"include",
-					"mixin"
+					"function"
 				]
 			}
 		]

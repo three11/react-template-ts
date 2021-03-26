@@ -9,6 +9,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const PrerenderSPAPlugin = require('@dreysolano/prerender-spa-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const r = resolve.bind(__dirname);
 const { mode } = argv;
@@ -35,7 +36,6 @@ const PATHS = {
 const tsConfig = {
 	test: /\.tsx?$/,
 	use: [
-		'react-hot-loader/webpack',
 		{
 			loader: 'ts-loader',
 			options: {
@@ -172,6 +172,16 @@ const mediaConfig = {
 module.exports = () => {
 	const isDev = mode === 'development';
 
+	if (isDev) {
+		tsConfig.use.splice(0, 0, {
+			loader: require.resolve('babel-loader'),
+			// @ts-ignore
+			options: {
+				plugins: [require.resolve('react-refresh/babel')]
+			}
+		});
+	}
+
 	return {
 		mode,
 		entry: ['./src/index.tsx'],
@@ -244,7 +254,7 @@ module.exports = () => {
 				chunkFilename: isDev ? '[id].css' : '[id].[hash].css'
 			}),
 			...(isDev
-				? [new webpack.HotModuleReplacementPlugin()]
+				? [new webpack.HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()]
 				: [
 						new WebpackPwaManifest({
 							name: process.env.APP_NAME,
@@ -275,6 +285,7 @@ module.exports = () => {
 		],
 		cache: true,
 		bail: false,
+		target: 'web',
 		devtool: isDev ? 'eval-source-map' : false,
 		devServer: {
 			hot: true,

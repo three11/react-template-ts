@@ -91,6 +91,12 @@ npm run test
     ```
     📦 project
     ┣ 📂 assets - all fonts, images, videos, translation files, etc
+    ┣ ┣ 📂 locale - all translations
+    ┣ ┣ 📂 styles - all shared stylesheets
+    ┃ ┃ ┗ 📜 app.scss - Application's global SCSS entry point
+    ┃ ┃ ┗ 📜 mixins.scss - Application's SCSS mixins
+    ┃ ┃ ┗ 📜 functions.scss - Application's SCSS functions
+    ┃ ┃ ┗ 📜 settings.scss - Application's SCSS settings (variables, etc)
     ┣ 📂 components - stateless components
     ┣ 📂 containers - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`)
     ┣ 📂 i18n - configuration settings for i18n (internationalization)
@@ -105,9 +111,7 @@ npm run test
     ┃ ┗ 📜 reducers.ts - Application's root reducer
     ┃ ┗ 📜 sagas.ts - Application's sagas
     ┣ 📂 utilities - helpers and utility functions
-    ┗ 📜 app.scss - Application's global SCSS entry point
     ┗ 📜 app.tsx - Application's main component
-    ┗ 📜 settings.scss - Application's SCSS settings (variables, mixins, etc)
     ┗ 📜 custom.d.ts - Custom type definitions
     ┗ 📜 index.html - Application's HTML file
     ┗ 📜 index.tsx - The main entry point
