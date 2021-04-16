@@ -18,28 +18,56 @@ exports[`SignupForm component should render successfully 1`] = `
         label="Email Address"
         name="email"
         placeholder="someone@example.com"
-        register={[Function]}
+        register={
+          Object {
+            "name": "email",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="email"
       />
       <Field
         label="Password"
         name="password"
         placeholder="********"
-        register={[Function]}
+        register={
+          Object {
+            "name": "password",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="password"
       />
       <Field
         label="Confirm password"
         name="confirm"
         placeholder="********"
-        register={[Function]}
+        register={
+          Object {
+            "name": "confirm",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="password"
       />
       <Field
         label="Username"
         name="username"
         placeholder="JohnSmith"
-        register={[Function]}
+        register={
+          Object {
+            "name": "username",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="text"
       />
     </div>
@@ -50,14 +78,28 @@ exports[`SignupForm component should render successfully 1`] = `
         label="First name"
         name="first_name"
         placeholder="John"
-        register={[Function]}
+        register={
+          Object {
+            "name": "first_name",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="text"
       />
       <Field
         label="Last name"
         name="last_name"
         placeholder="Smith"
-        register={[Function]}
+        register={
+          Object {
+            "name": "last_name",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="text"
       />
       <Field
@@ -70,14 +112,28 @@ exports[`SignupForm component should render successfully 1`] = `
             "Female",
           ]
         }
-        register={[Function]}
+        register={
+          Object {
+            "name": "gender",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="select"
       />
       <Field
         label="Avatar image URL"
         name="image_url"
         placeholder="https://images.com/john-smith.jpg"
-        register={[Function]}
+        register={
+          Object {
+            "name": "image_url",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "ref": [Function],
+          }
+        }
         type="url"
       />
     </div>

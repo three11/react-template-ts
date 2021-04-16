@@ -12,21 +12,42 @@ exports[`PasswordResetForm component should render successfully 1`] = `
     label="Email Address"
     name="email"
     placeholder="someone@example.com"
-    register={[Function]}
+    register={
+      Object {
+        "name": "email",
+        "onBlur": [Function],
+        "onChange": [Function],
+        "ref": [Function],
+      }
+    }
     type="email"
   />
   <Field
     label="New password"
     name="password"
     placeholder="********"
-    register={[Function]}
+    register={
+      Object {
+        "name": "password",
+        "onBlur": [Function],
+        "onChange": [Function],
+        "ref": [Function],
+      }
+    }
     type="password"
   />
   <Field
     label="Confirm new password"
     name="confirm"
     placeholder="********"
-    register={[Function]}
+    register={
+      Object {
+        "name": "confirm",
+        "onBlur": [Function],
+        "onChange": [Function],
+        "ref": [Function],
+      }
+    }
     type="password"
   />
   <Button

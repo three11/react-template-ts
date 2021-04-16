@@ -17,7 +17,11 @@ export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
 	const { loading, loginError } = useSelector((store: RootStore) => store.auth);
-	const { handleSubmit, register, errors } = useForm({
+	const {
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm({
 		mode: 'onBlur'
 	});
 
@@ -26,7 +30,7 @@ export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
 			<h2>Login</h2>
 
 			<Field
-				register={register({
+				register={register('email', {
 					required,
 					pattern: {
 						value: EMAIL_REGEX,
@@ -41,7 +45,7 @@ export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
 			/>
 
 			<Field
-				register={register({
+				register={register('password', {
 					required,
 					pattern: {
 						value: PASSWORD_REGEX,

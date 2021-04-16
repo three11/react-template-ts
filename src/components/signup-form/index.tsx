@@ -17,7 +17,12 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
 	const { loading, signupError } = useSelector((store: RootStore) => store.auth);
-	const { watch, errors, register, handleSubmit } = useForm({
+	const {
+		watch,
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm({
 		mode: 'onBlur'
 	});
 
@@ -28,7 +33,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 			<div className="c-form__cols">
 				<div className="c-form__col">
 					<Field
-						register={register({
+						register={register('email', {
 							required,
 							pattern: {
 								value: EMAIL_REGEX,
@@ -43,7 +48,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 					/>
 
 					<Field
-						register={register({
+						register={register('password', {
 							required,
 							pattern: {
 								value: PASSWORD_REGEX,
@@ -58,7 +63,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 					/>
 
 					<Field
-						register={register({
+						register={register('confirm', {
 							// prettier-ignore
 							validate: (value: string) => value === watch('password') || (t('The passwords do not match') as string)
 						})}
@@ -70,7 +75,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 					/>
 
 					<Field
-						register={register({ required })}
+						register={register('username', { required })}
 						type="text"
 						name="username"
 						label={t('Username')}
@@ -81,7 +86,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 
 				<div className="c-form__col">
 					<Field
-						register={register({ required })}
+						register={register('first_name', { required })}
 						type="text"
 						name="first_name"
 						label={t('First name')}
@@ -90,7 +95,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 					/>
 
 					<Field
-						register={register({ required })}
+						register={register('last_name', { required })}
 						type="text"
 						name="last_name"
 						label={t('Last name')}
@@ -99,7 +104,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 					/>
 
 					<Field
-						register={register({ required })}
+						register={register('gender', { required })}
 						type="select"
 						options={[t('Unspecified'), t('Male'), t('Female')]}
 						name="gender"
@@ -108,7 +113,7 @@ export const SignupForm: React.FunctionComponent<Props> = (props: Props) => {
 					/>
 
 					<Field
-						register={register()}
+						register={register('image_url')}
 						type="url"
 						name="image_url"
 						label={t('Avatar image URL')}

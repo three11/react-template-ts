@@ -17,7 +17,12 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 	const { t } = useTranslation();
 	const required = t('This field is required.');
 	const { loading, passwordResetError } = useSelector((store: RootStore) => store.auth);
-	const { handleSubmit, register, errors, watch } = useForm({
+	const {
+		watch,
+		register,
+		handleSubmit,
+		formState: { errors }
+	} = useForm({
 		mode: 'onBlur'
 	});
 
@@ -26,7 +31,7 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 			<h2>Reset your account&apos;s password</h2>
 
 			<Field
-				register={register({
+				register={register('email', {
 					required,
 					pattern: {
 						value: EMAIL_REGEX,
@@ -41,7 +46,7 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 			/>
 
 			<Field
-				register={register({
+				register={register('password', {
 					required,
 					pattern: {
 						value: PASSWORD_REGEX,
@@ -56,7 +61,7 @@ export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) 
 			/>
 
 			<Field
-				register={register({
+				register={register('confirm', {
 					// prettier-ignore
 					validate: (value: string) => value === watch('password') || (t('The passwords do not match') as string)
 				})}

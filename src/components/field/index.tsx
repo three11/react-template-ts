@@ -27,7 +27,7 @@ export const Field: React.FunctionComponent<Props> = ({
 		</header>
 
 		{type === 'select' ? (
-			<select id={name} ref={register} name={name}>
+			<select id={name} {...register} name={name}>
 				{!!options &&
 					options.map((option: string, key: number) => (
 						<option value={option} key={key}>
@@ -36,9 +36,9 @@ export const Field: React.FunctionComponent<Props> = ({
 					))}
 			</select>
 		) : type === 'textarea' ? (
-			<textarea id={name} ref={register} name={name} placeholder={placeholder} cols={30} rows={10}></textarea>
+			<textarea id={name} {...register} name={name} placeholder={placeholder} cols={30} rows={10}></textarea>
 		) : (
-			<input id={name} ref={register} type={type} name={name} placeholder={placeholder} />
+			<input id={name} {...register} type={type} name={name} placeholder={placeholder} />
 		)}
 	</div>
 );
