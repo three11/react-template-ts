@@ -19,6 +19,7 @@ const dotenv = require('dotenv').config({
 });
 
 const { Routes } = require('./src/utilities/enums');
+const { compilerOptions } = require('./tsconfig.json');
 
 const PATHS = {
 	src: r('./src'),
@@ -40,12 +41,7 @@ const tsConfig = {
 			loader: 'ts-loader',
 			options: {
 				transpileOnly: true,
-				compilerOptions: {
-					sourceMap: true,
-					target: 'es5',
-					isolatedModules: true,
-					noEmitOnError: false
-				}
+				compilerOptions
 			}
 		}
 	],
