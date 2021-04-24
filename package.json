@@ -71,7 +71,7 @@
 		"react-hook-form": "7.2.3",
 		"react-i18next": "11.8.13",
 		"react-inlinesvg": "2.2.2",
-		"react-redux": "7.2.3",
+		"react-redux": "7.2.4",
 		"react-router": "5.2.0",
 		"react-router-dom": "5.2.0",
 		"redux": "4.0.5",
