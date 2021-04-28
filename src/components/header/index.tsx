@@ -14,7 +14,7 @@ import './index.scss';
 export const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	const authState: AuthState = useAppSelector(store => store.auth);
+	const authState: AuthState = useAppSelector(state => state.auth);
 
 	const Nav = (): JSX.Element => (
 		<nav className="c-nav">

@@ -15,7 +15,7 @@ interface Props {
 export const LoginForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
-	const { loading, loginError } = useAppSelector(store => store.auth);
+	const { loading, loginError } = useAppSelector(state => state.auth);
 	const {
 		register,
 		handleSubmit,

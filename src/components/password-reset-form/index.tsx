@@ -15,7 +15,7 @@ interface Props {
 export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
-	const { loading, passwordResetError } = useAppSelector(store => store.auth);
+	const { loading, passwordResetError } = useAppSelector(state => state.auth);
 	const {
 		watch,
 		register,
