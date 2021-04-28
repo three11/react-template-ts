@@ -23,6 +23,12 @@ export const Header: React.FunctionComponent = () => {
 					<NavLink to={Routes.ABOUT}>{t('About')}</NavLink>
 				</li>
 
+				{!authState.token && (
+					<li>
+						<NavLink to={Routes.LOGIN}>{t('Login')}</NavLink>
+					</li>
+				)}
+
 				{!!authState.token && (
 					<>
 						<li>
