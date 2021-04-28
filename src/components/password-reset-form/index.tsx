@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { Field, Button } from '@components';
-import { EMAIL_REGEX, PASSWORD_REGEX, useAppSelector } from '@utilities';
+import { useAppSelector } from '@src/utilities/hooks';
+import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities';
 
 interface Props {
 	readonly onSubmit: (values: any) => void;

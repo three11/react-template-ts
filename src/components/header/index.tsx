@@ -3,9 +3,10 @@ import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 
+import { Routes } from '@utilities';
 import { history } from '@store/index';
 import { Icon, Button } from '@components';
-import { Routes, useAppSelector } from '@utilities';
+import { useAppSelector } from '@src/utilities/hooks';
 import { AuthState, AuthActionType } from '@store/auth';
 
 import './index.scss';
