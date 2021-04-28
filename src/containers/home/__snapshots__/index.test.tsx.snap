@@ -2,6 +2,10 @@
 
 exports[`Home component should render successfully 1`] = `
 <Wrapper>
-  Homepage
+  <div
+    className="o-shell"
+  >
+    Homepage
+  </div>
 </Wrapper>
 `;

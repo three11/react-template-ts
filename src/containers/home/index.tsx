@@ -6,7 +6,11 @@ import { Wrapper } from '@components';
 export const Home: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 
-	return <Wrapper>{t('Homepage')}</Wrapper>;
+	return (
+		<Wrapper>
+			<div className="o-shell">{t('Homepage')}</div>
+		</Wrapper>
+	);
 };
 
 export default Home;

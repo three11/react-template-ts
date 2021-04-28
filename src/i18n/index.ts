@@ -2,12 +2,12 @@ import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-import en from '../assets/locale/translations.json';
-import de from '../assets/locale/de.json';
+import * as en from '../assets/locale/translations.json';
+import * as de from '../assets/locale/de.json';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import locales from './locales';
+import * as locales from './locales';
 
 const resources = {
 	en: {
