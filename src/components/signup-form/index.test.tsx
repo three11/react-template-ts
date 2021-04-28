@@ -10,7 +10,7 @@ jest.mock('react-redux', () => ({
 jest.mock('@src/utilities/hooks', () => ({
 	useAppSelector: jest.fn(() => ({
 		loading: false,
-		loginError: ''
+		signupError: ''
 	}))
 }));
 
