@@ -8,17 +8,17 @@ import sagas from './sagas';
 import rootReducer from './reducers';
 import { AuthState, initialState as authInitialState } from './auth';
 
-export interface RootStore {
+export interface RootState {
 	auth: AuthState;
 }
 
 export const history: History = createBrowserHistory();
 export const sagaMiddleware: SagaMiddleware = createSagaMiddleware();
 
-export function configureStore(): Store<RootStore> {
+export function configureStore(): Store<RootState> {
 	const historyMiddleware: Middleware = routerMiddleware(history);
 
-	const store: Store<RootStore> = createStore(
+	const store: Store<RootState> = createStore(
 		rootReducer(history),
 		{
 			auth: authInitialState

@@ -7,9 +7,9 @@ import { ConnectedRouter } from 'connected-react-router';
 import { App } from './app';
 import { removeItems } from '@utilities';
 import { AuthActionType } from '@store/auth';
-import { history, RootStore, configureStore } from '@store/index';
+import { history, RootState, configureStore } from '@store/index';
 
-export const store: Store<RootStore> = configureStore();
+export const store: Store<RootState> = configureStore();
 
 const node: HTMLElement | null = document.getElementById('app') || document.createElement('div');
 const renderRoot = (app: JSX.Element): void => render(app, node);

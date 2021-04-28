@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-import { RootStore } from '@store/index';
 import { Field, Button } from '@components';
-import { EMAIL_REGEX, PASSWORD_REGEX } from '@utilities';
+import { EMAIL_REGEX, PASSWORD_REGEX, useAppSelector } from '@utilities';
 
 interface Props {
 	readonly onSubmit: (values: any) => void;
@@ -16,7 +14,7 @@ interface Props {
 export const PasswordResetForm: React.FunctionComponent<Props> = (props: Props) => {
 	const { t } = useTranslation();
 	const required = t('This field is required.');
-	const { loading, passwordResetError } = useSelector((store: RootStore) => store.auth);
+	const { loading, passwordResetError } = useAppSelector(store => store.auth);
 	const {
 		watch,
 		register,

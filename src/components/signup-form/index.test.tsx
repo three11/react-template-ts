@@ -4,10 +4,13 @@ import { shallow } from 'enzyme';
 import { SignupForm } from '.';
 
 jest.mock('react-redux', () => ({
-	connect: (): jest.Mock => jest.fn(),
-	useSelector: jest.fn(() => ({
+	connect: (): jest.Mock => jest.fn()
+}));
+
+jest.mock('@utilities/hooks', () => ({
+	useAppSelector: jest.fn(() => ({
 		loading: false,
-		signupError: ''
+		loginError: ''
 	}))
 }));
 

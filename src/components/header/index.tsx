@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { Routes } from '@utilities';
+import { history } from '@store/index';
 import { Icon, Button } from '@components';
-import { history, RootStore } from '@store/index';
+import { Routes, useAppSelector } from '@utilities';
 import { AuthState, AuthActionType } from '@store/auth';
 
 import './index.scss';
@@ -13,7 +13,7 @@ import './index.scss';
 export const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	const authState: AuthState = useSelector((store: RootStore) => store.auth);
+	const authState: AuthState = useAppSelector(store => store.auth);
 
 	const Nav = (): JSX.Element => (
 		<nav className="c-nav">
