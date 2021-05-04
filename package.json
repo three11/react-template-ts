@@ -156,7 +156,7 @@
 		"webpack-hot-middleware": "2.25.0",
 		"webpack-pwa-manifest": "4.3.0",
 		"workbox-cli": "6.1.5",
-		"yargs": "16.2.0"
+		"yargs": "17.0.1"
 	},
 	"browserslist": [
 		"> 1%",
