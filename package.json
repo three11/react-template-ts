@@ -58,7 +58,7 @@
 	},
 	"homepage": "https://github.com/three11/react-template#readme",
 	"dependencies": {
-		"@loadable/component": "5.14.1",
+		"@loadable/component": "5.15.0",
 		"axios": "0.21.1",
 		"connected-react-router": "6.9.1",
 		"date-fns": "2.21.3",
