@@ -1,1 +1,5 @@
-module.exports = 'style-mock';
+module.exports = {
+	process() {
+		return 'style-mock';
+	}
+};

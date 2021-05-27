@@ -48,3 +48,7 @@ jest.mock('@i18n', () => ({
 	},
 	locales: ['de']
 }));
+
+jest.mock('history', () => ({
+	createBrowserHistory: jest.fn()
+}));
