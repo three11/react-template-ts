@@ -126,7 +126,7 @@
 		"jest": "27.0.4",
 		"mini-css-extract-plugin": "1.6.0",
 		"node-sass": "6.0.0",
-		"postcss": "8.3.2",
+		"postcss": "8.3.3",
 		"postcss-easy-import": "3.0.0",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-loader": "6.1.0",
