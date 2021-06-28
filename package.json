@@ -123,7 +123,7 @@
 		"i18next-conv": "10.2.0",
 		"i18next-scanner": "3.0.0",
 		"image-webpack-loader": "7.0.1",
-		"jest": "27.0.5",
+		"jest": "27.0.6",
 		"mini-css-extract-plugin": "1.6.2",
 		"node-sass": "6.0.1",
 		"postcss": "8.3.5",
