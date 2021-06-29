@@ -1,6 +1,8 @@
 // @ts-nocheck
 const Enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-16');
+// TODO: Start using the official adapter when it is finalized
+// https://github.com/enzymejs/enzyme/issues/2429#issuecomment-679265564
+const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
 
 Enzyme.configure({
 	adapter: new Adapter()
@@ -45,4 +47,8 @@ jest.mock('@i18n', () => ({
 		changeLanguage: () => jest.fn()
 	},
 	locales: ['de']
+}));
+
+jest.mock('history', () => ({
+	createBrowserHistory: jest.fn()
 }));
