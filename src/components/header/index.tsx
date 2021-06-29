@@ -5,9 +5,10 @@ import { useDispatch } from 'react-redux';
 
 import { Routes } from '@utilities';
 import { history } from '@store/index';
+import { AuthState } from '@store/interfaces';
 import { Icon, Button } from '@components';
 import { useAppSelector } from '@src/utilities/hooks';
-import { AuthState, AuthActionType } from '@store/auth';
+import { AuthActionType } from '@store/enums';
 
 import './index.scss';
 

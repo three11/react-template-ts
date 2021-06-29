@@ -1,6 +1,6 @@
 import { add, getUnixTime } from 'date-fns';
 
-import { AuthAction } from '@store/auth';
+import { AuthAction } from '@store/interfaces';
 import { TOKEN_KEY, TOKEN_THRESHOLD_KEY, REFRESH_TOKEN_KEY } from './constants';
 
 export const setThreshold = (time: number): string =>

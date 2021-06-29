@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Routes } from '@utilities';
 import { history } from '@store/index';
-import { AuthActionType } from '@store/auth';
+import { AuthActionType } from '@store/enums';
 import { Wrapper, SignupForm } from '@components';
 
 export const Signup: React.FunctionComponent = () => {
