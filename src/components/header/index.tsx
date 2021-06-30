@@ -5,9 +5,8 @@ import { useDispatch } from 'react-redux';
 
 import { Routes } from '@utilities';
 import { history } from '@store/index';
-import { AuthState } from '@store/interfaces';
 import { Icon, Button } from '@components';
-import { useAppSelector } from '@src/utilities/hooks';
+import { useAppSelector } from '@utilities/hooks';
 import { AuthActionType } from '@store/enums';
 
 import './index.scss';
@@ -15,7 +14,7 @@ import './index.scss';
 export const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	const authState: AuthState = useAppSelector(state => state.auth);
+	const authState = useAppSelector(state => state.auth);
 
 	const Nav = (): JSX.Element => (
 		<nav className="c-nav">

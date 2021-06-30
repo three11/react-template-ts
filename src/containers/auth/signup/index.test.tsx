@@ -8,7 +8,7 @@ jest.mock('react-redux', () => ({
 	useDispatch: (): jest.Mock => jest.fn()
 }));
 
-jest.mock('@src/utilities/hooks', () => ({
+jest.mock('@utilities/hooks', () => ({
 	useAppSelector: jest.fn()
 }));
 

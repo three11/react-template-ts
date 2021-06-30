@@ -182,6 +182,7 @@
 			"^@store/(.*)$": "<rootDir>/src/store/$1",
 			"^@assets/(.*)$": "<rootDir>/src/assets/$1",
 			"^@utilities": "<rootDir>/src/utilities",
+			"^@utilities/(.*)$": "<rootDir>/src/utilities/$1",
 			"^@components": "<rootDir>/src/components",
 			"^@containers/(.*)$": "<rootDir>/src/containers/$1",
 			"\\.(css|less|sass|scss)$": "<rootDir>/test-config/StyleMock.js",
