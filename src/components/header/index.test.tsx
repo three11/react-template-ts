@@ -8,8 +8,16 @@ jest.mock('react-redux', () => ({
 	useDispatch: (): jest.Mock => jest.fn()
 }));
 
-jest.mock('@utilities/hooks', () => ({
-	useAppSelector: jest.fn()
+jest.mock('@utilities', () => ({
+	useAppSelector: jest.fn(),
+	Routes: {
+		BASE: '/',
+		ABOUT: '/about',
+		LOGIN: '/login',
+		SIGNUP: '/signup',
+		SETTINGS: '/settings',
+		PASSWORD_RESET: '/reset-password'
+	}
 }));
 
 describe('Header component', () => {
