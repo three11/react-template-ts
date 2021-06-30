@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { Store } from 'redux';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
 import { App } from './app';
 import { removeItems } from '@utilities';
-import { AuthActionType } from '@store/auth';
-import { history, RootStore, configureStore } from '@store/index';
+import { AuthActionType } from '@store/enums';
+import { history, configureStore } from '@store/index';
 
-export const store: Store<RootStore> = configureStore();
+export const store = configureStore();
 
 const node: HTMLElement | null = document.getElementById('app') || document.createElement('div');
 const renderRoot = (app: JSX.Element): void => render(app, node);

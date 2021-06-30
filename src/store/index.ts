@@ -1,28 +1,25 @@
 import { routerMiddleware } from 'connected-react-router';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { History, createBrowserHistory } from 'history';
+import { Store, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware, { Saga, SagaMiddleware } from 'redux-saga';
-import { Store, Middleware, createStore, applyMiddleware } from 'redux';
 
 import sagas from './sagas';
-import rootReducer from './reducers';
-import { AuthState, initialState as authInitialState } from './auth';
+import rootReducer from './root-reducer';
+import { initialState as auth } from '@store/branches/auth/reducer';
 
-export interface RootStore {
-	auth: AuthState;
-}
+const initialState = {
+	auth
+};
 
 export const history: History = createBrowserHistory();
 export const sagaMiddleware: SagaMiddleware = createSagaMiddleware();
 
-export function configureStore(): Store<RootStore> {
-	const historyMiddleware: Middleware = routerMiddleware(history);
-
-	const store: Store<RootStore> = createStore(
+export function configureStore(): Store<typeof initialState> {
+	const historyMiddleware = routerMiddleware(history);
+	const store: Store<typeof initialState> = createStore(
 		rootReducer(history),
-		{
-			auth: authInitialState
-		},
+		initialState,
 		composeWithDevTools(applyMiddleware(sagaMiddleware, historyMiddleware))
 	);
 
@@ -30,7 +27,7 @@ export function configureStore(): Store<RootStore> {
 		module.hot.accept();
 
 		// eslint-disable-next-line
-		store.replaceReducer(require('./reducers').default(history));
+		store.replaceReducer(require('./root-reducer').default(history));
 	}
 
 	sagas.forEach((saga: Saga) => {

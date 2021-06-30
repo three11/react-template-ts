@@ -5,8 +5,11 @@ import { Footer } from '.';
 
 jest.mock('react-redux', () => ({
 	connect: (): jest.Mock => jest.fn(),
-	useSelector: jest.fn(),
 	useDispatch: (): jest.Mock => jest.fn()
+}));
+
+jest.mock('@utilities/hooks', () => ({
+	useAppSelector: jest.fn()
 }));
 
 describe('Footer component', () => {

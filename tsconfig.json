@@ -29,6 +29,7 @@
 			"@store/*": ["./src/store/*"],
 			"@assets/*": ["./src/assets/*"],
 			"@utilities": ["./src/utilities"],
+			"@utilities/*": ["./src/utilities/*"],
 			"@components": ["./src/components"],
 			"@containers/*": ["./src/containers/*"]
 		},

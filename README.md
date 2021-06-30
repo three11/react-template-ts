@@ -101,14 +101,16 @@ npm run test
     ┣ 📂 containers - statefull components. Each container can export more than one component. An example folder structure is included in (`src/containers/.boilerplate`)
     ┣ 📂 i18n - configuration settings for i18n (internationalization)
     ┣ 📂 store - The application Redux store
-    ┣ ┣ 📂 $BRANCH - A branch in the Redux store
-    ┃ ┃ ┗ 📜 enums.ts - Each branch has its own enums
-    ┃ ┃ ┗ 📜 index.ts - Branch's exports
-    ┃ ┃ ┗ 📜 interfaces.ts - Each branch has its own interfaces
-    ┃ ┃ ┗ 📜 reducer.ts - The branch reducer
-    ┃ ┃ ┗ 📜 sagas.ts - The branch sagas
+    ┣ ┣ 📂 branches - all store branches
+    ┣ ┣	┣ ┣ 📂 $BRANCH - A branch in the Redux store
+    ┃ ┃ ┃ ┗ 📜 enums.ts - Each branch has its own enums
+    ┃ ┃ ┃ ┗ 📜 interfaces.ts - Each branch has its own interfaces
+    ┃ ┃ ┃ ┗ 📜 reducer.ts - The branch reducer
+    ┃ ┃ ┃ ┗ 📜 sagas.ts - The branch sagas
+    ┃ ┗ 📜 enums.ts - Store's enums
     ┃ ┗ 📜 index.ts - Application's main store
-    ┃ ┗ 📜 reducers.ts - Application's root reducer
+    ┃ ┗ 📜 interfaces.ts - Store's interfaces
+    ┃ ┗ 📜 root-reducer.ts - Application's root reducer
     ┃ ┗ 📜 sagas.ts - Application's sagas
     ┣ 📂 utilities - helpers and utility functions
     ┗ 📜 app.tsx - Application's main component
