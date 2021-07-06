@@ -87,7 +87,7 @@
 		"@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
 		"@types/copy-webpack-plugin": "8.0.1",
 		"@types/enzyme": "3.10.9",
-		"@types/html-webpack-plugin": "3.2.5",
+		"@types/html-webpack-plugin": "3.2.6",
 		"@types/jest": "26.0.23",
 		"@types/loadable__component": "5.13.3",
 		"@types/mini-css-extract-plugin": "2.0.0",
