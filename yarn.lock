@@ -2223,10 +2223,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-loadable@5.5.5":
-  version "5.5.5"
-  resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.5.5.tgz#b8acc3d6cae5dbd82742927b5042b967cf9185cf"
-  integrity sha512-TDDZAtxqQFE90+qbv63BOJFKKbxsZW0cHbT70OOT7MLkik1815NwN0Gn4SyoJSkvh+XxUr0axsFGlP5Ak/SdpA==
+"@types/react-loadable@5.5.6":
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.5.6.tgz#fcf6493d5015a4602672f3773a32032ce77fedea"
+  integrity sha512-2M7xH/wawZxNybbs/a76JkpUsMk4z6AxBh92cUtIBy2vK7EYYuitQbC4laY0hGz0e05R+mQ44YeHMtH2U+gMsw==
   dependencies:
     "@types/react" "*"
     "@types/webpack" "^4"
