@@ -104,7 +104,7 @@
 		"@typescript-eslint/eslint-plugin": "4.28.2",
 		"@typescript-eslint/parser": "4.28.2",
 		"@wojtekmaj/enzyme-adapter-react-17": "0.6.2",
-		"autoprefixer": "10.2.6",
+		"autoprefixer": "10.3.0",
 		"babel-loader": "8.2.2",
 		"copy-webpack-plugin": "9.0.1",
 		"css-hot-loader": "1.4.4",
