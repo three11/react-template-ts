@@ -103,7 +103,7 @@
 		"@types/webpack-dev-server": "3.11.5",
 		"@typescript-eslint/eslint-plugin": "4.28.3",
 		"@typescript-eslint/parser": "4.28.3",
-		"@wojtekmaj/enzyme-adapter-react-17": "0.6.2",
+		"@wojtekmaj/enzyme-adapter-react-17": "0.6.3",
 		"autoprefixer": "10.3.1",
 		"babel-loader": "8.2.2",
 		"copy-webpack-plugin": "9.0.1",
