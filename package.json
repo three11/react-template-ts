@@ -113,7 +113,7 @@
 		"dotenv": "10.0.0",
 		"enzyme": "3.11.0",
 		"enzyme-to-json": "3.6.2",
-		"eslint": "7.31.0",
+		"eslint": "7.32.0",
 		"eslint-config-prettier": "8.3.0",
 		"eslint-plugin-jest": "24.4.0",
 		"eslint-plugin-react": "7.24.0",
