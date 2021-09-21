@@ -124,7 +124,7 @@
 		"i18next-scanner": "3.0.0",
 		"image-webpack-loader": "7.0.1",
 		"jest": "27.0.6",
-		"mini-css-extract-plugin": "2.2.0",
+		"mini-css-extract-plugin": "2.2.2",
 		"node-sass": "6.0.1",
 		"postcss": "8.3.6",
 		"postcss-easy-import": "3.0.0",
