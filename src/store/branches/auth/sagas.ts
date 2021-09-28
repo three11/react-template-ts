@@ -24,7 +24,7 @@ export function* loginEffect(action: AnyAction): AuthSagaEffect {
 		yield call(setItems, payload);
 
 		redirect();
-	} catch (loginError) {
+	} catch (loginError: any) {
 		yield put({
 			type: AuthActionType.LOGIN_FAILED,
 			payload: {
@@ -54,7 +54,7 @@ export function* logoutEffect(action: AnyAction): AuthSagaEffect {
 		yield call(removeItems);
 
 		action.payload.redirect();
-	} catch (logoutError) {
+	} catch (logoutError: any) {
 		yield put({
 			type: AuthActionType.LOGOUT_FAILED,
 			payload: {
@@ -76,7 +76,7 @@ export function* passwordResetEffect(action: AnyAction): AuthSagaEffect {
 		yield put({ type: AuthActionType.PASSWORD_RESET_SUCCESS });
 
 		redirect();
-	} catch (passwordResetError) {
+	} catch (passwordResetError: any) {
 		yield put({
 			type: AuthActionType.PASSWORD_RESET_FAILED,
 			payload: {
@@ -107,7 +107,7 @@ export function* signupEffect(action: AnyAction): AuthSagaEffect {
 		yield call(setItems, payload);
 
 		redirect();
-	} catch (signupError) {
+	} catch (signupError: any) {
 		yield put({
 			type: AuthActionType.SIGNUP_FAILED,
 			payload: {
