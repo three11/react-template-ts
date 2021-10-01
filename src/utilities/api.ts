@@ -12,7 +12,7 @@ export const post = <T>(endpoint: string, data?: T): Promise<AxiosResponse<T>> =
 	new Promise((resolve, reject) =>
 		http
 			.post(endpoint, data)
-			.then(res => resolve(res.data))
+			.then(resolve)
 			.catch(e => reject(e.response.data))
 	);
 
@@ -20,7 +20,7 @@ export const get = (endpoint: string): Promise<AxiosResponse> =>
 	new Promise((resolve, reject) =>
 		http
 			.get(endpoint)
-			.then(res => resolve(res.data))
+			.then(resolve)
 			.catch(e => reject(e.response.data))
 	);
 
@@ -28,7 +28,7 @@ export const patch = <T>(endpoint: string, data: T): Promise<AxiosResponse<T>> =
 	new Promise((resolve, reject) =>
 		http
 			.patch(endpoint, data)
-			.then(res => resolve(res.data))
+			.then(resolve)
 			.catch(e => reject(e.response.data))
 	);
 
@@ -36,14 +36,17 @@ export const login = (data: AuthRequest): Promise<AxiosResponse<AuthRequest>> =>
 
 export const logout = (): Promise<AxiosResponse> => post('user/logout');
 
-export const passwordReset = (data: Partial<AuthRequest>): Promise<AxiosResponse> => post('user/reset-password', data);
+export const passwordReset = (data: Partial<AuthRequest>): Promise<AxiosResponse<Partial<AuthRequest>>> =>
+	post('user/reset-password', data);
 
 export const signup = (data: SignupRequest): Promise<AxiosResponse<SignupRequest>> =>
 	post('passport/basic/signup', data);
 
 http.interceptors.request.use(
 	(config: AxiosRequestConfig) => {
-		config.headers['Authorization'] = localStorage.getItem(TOKEN_KEY);
+		if (config.headers) {
+			config.headers['Authorization'] = localStorage.getItem(TOKEN_KEY) || '';
+		}
 
 		return config;
 	},
@@ -64,7 +67,9 @@ http.interceptors.response.use(
 		if (error.response.status === 401 && !originalRequest._retry) {
 			originalRequest._retry = true;
 
-			http.defaults.headers['Authorization'] = 'Bearer ' + refreshToken;
+			if (http.defaults.headers) {
+				http.defaults.headers['Authorization'] = 'Bearer ' + refreshToken;
+			}
 
 			return post<any>('auth/token')
 				.then(res => {
@@ -76,7 +81,9 @@ http.interceptors.response.use(
 					handleItem(TOKEN_THRESHOLD_KEY, setThreshold(threshold));
 
 					/*eslint-disable*/
-					http.defaults.headers['Authorization'] = access_token;
+					if (http.defaults.headers) {
+						http.defaults.headers['Authorization'] = access_token;
+					}
 					/*eslint-enable*/
 
 					return http(originalRequest);
