@@ -6553,10 +6553,10 @@ i18next@*:
   dependencies:
     "@babel/runtime" "^7.12.0"
 
-i18next@21.2.1:
-  version "21.2.1"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-21.2.1.tgz#e040bcfcbeb5c6f9991b2c0bbd468e969ffe20c3"
-  integrity sha512-LxT9L/y+aLdt5e3bXKpxq16i22AL5aYmGW+Za/8/PRQl2v9ARvGUPhDrbHreQq9rbh7G8Wv6YKcYgjkIfXRDTQ==
+i18next@21.2.3:
+  version "21.2.3"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-21.2.3.tgz#58730f8b391a3ea880ccbab7052de6012cae40b1"
+  integrity sha512-aOYql7b9dvcSlkp9mDBFiLPv3+3TVAbXM06lgGL8xWCf5yd0QlgQvvvyCin24WR4EMl4eiu+vijKdblYKs3kfw==
   dependencies:
     "@babel/runtime" "^7.12.0"
 
