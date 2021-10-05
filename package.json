@@ -61,7 +61,7 @@
 		"@loadable/component": "5.15.0",
 		"axios": "0.22.0",
 		"connected-react-router": "6.9.1",
-		"date-fns": "2.24.0",
+		"date-fns": "2.25.0",
 		"history": "4.10.1",
 		"i18next": "21.2.4",
 		"i18next-browser-languagedetector": "6.1.2",
