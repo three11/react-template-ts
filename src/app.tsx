@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { hot } from 'react-hot-loader/root';
 import { Route } from 'react-router-dom';
 import { Switch, Redirect } from 'react-router';
 
@@ -31,7 +30,7 @@ export const GuestRoute = ({ component: Component, ...rest }: Props): JSX.Elemen
 	/>
 );
 
-export const App = hot(() => (
+export const App = () => (
 	<Switch>
 		<Route path={Routes.BASE} exact={true} component={Loadables.Home} />
 		<GuestRoute path={Routes.LOGIN} exact={true} component={Loadables.Login} />
@@ -39,4 +38,4 @@ export const App = hot(() => (
 		<GuestRoute path={Routes.PASSWORD_RESET} exact={true} component={Loadables.PasswordReset} />
 		<Route component={Loadables.NotFound} />
 	</Switch>
-));
+);

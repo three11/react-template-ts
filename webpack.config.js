@@ -200,8 +200,7 @@ module.exports = () => {
 				'@assets': PATHS.assets,
 				'@utilities': PATHS.utilities,
 				'@components': PATHS.components,
-				'@containers': PATHS.containers,
-				'react-dom': '@hot-loader/react-dom'
+				'@containers': PATHS.containers
 			},
 			extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
 			modules: ['src', 'node_modules']
