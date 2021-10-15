@@ -118,7 +118,7 @@
 		"eslint-plugin-react": "7.26.1",
 		"file-loader": "6.2.0",
 		"html-loader": "2.1.2",
-		"html-webpack-plugin": "5.3.2",
+		"html-webpack-plugin": "5.4.0",
 		"i18next-conv": "10.2.0",
 		"i18next-scanner": "3.0.1",
 		"image-webpack-loader": "8.0.1",
