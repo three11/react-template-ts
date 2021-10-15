@@ -120,7 +120,7 @@
 		"html-loader": "2.1.2",
 		"html-webpack-plugin": "5.4.0",
 		"i18next-conv": "10.2.0",
-		"i18next-scanner": "3.0.1",
+		"i18next-scanner": "3.1.0",
 		"image-webpack-loader": "8.0.1",
 		"jest": "27.2.5",
 		"mini-css-extract-plugin": "2.4.2",
