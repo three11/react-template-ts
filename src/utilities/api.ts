@@ -86,7 +86,7 @@ http.interceptors.response.use(
 
 					return http(originalRequest);
 				})
-				.catch();
+				.catch(Promise.reject);
 		}
 
 		return Promise.reject(error);
