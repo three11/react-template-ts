@@ -8,7 +8,7 @@ export const http = axios.create({
 	baseURL: API_URL
 });
 
-export const post = <T>(endpoint: string, data?: T): Promise<AxiosResponse<T>> =>
+export const post = (endpoint: string, data?: unknown): Promise<AxiosResponse> =>
 	new Promise((resolve, reject) =>
 		http
 			.post(endpoint, data)
@@ -24,7 +24,7 @@ export const get = (endpoint: string): Promise<AxiosResponse> =>
 			.catch(e => reject(e.response.data))
 	);
 
-export const patch = <T>(endpoint: string, data: T): Promise<AxiosResponse<T>> =>
+export const patch = <T>(endpoint: string, data: T): Promise<AxiosResponse> =>
 	new Promise((resolve, reject) =>
 		http
 			.patch(endpoint, data)
@@ -32,15 +32,13 @@ export const patch = <T>(endpoint: string, data: T): Promise<AxiosResponse<T>> =
 			.catch(e => reject(e.response.data))
 	);
 
-export const login = (data: AuthRequest): Promise<AxiosResponse<AuthRequest>> => post('passport/basic/login', data);
+export const login = (data: AuthRequest): Promise<AxiosResponse> => post('passport/basic/login', data);
 
 export const logout = (): Promise<AxiosResponse> => post('user/logout');
 
-export const passwordReset = (data: Partial<AuthRequest>): Promise<AxiosResponse<Partial<AuthRequest>>> =>
-	post('user/reset-password', data);
+export const passwordReset = (data: Partial<AuthRequest>): Promise<AxiosResponse> => post('user/reset-password', data);
 
-export const signup = (data: SignupRequest): Promise<AxiosResponse<SignupRequest>> =>
-	post('passport/basic/signup', data);
+export const signup = (data: SignupRequest): Promise<AxiosResponse> => post('passport/basic/signup', data);
 
 http.interceptors.request.use(
 	(config: AxiosRequestConfig) => {
@@ -68,11 +66,11 @@ http.interceptors.response.use(
 			originalRequest._retry = true;
 
 			if (http.defaults.headers) {
-				http.defaults.headers['Authorization'] = 'Bearer ' + refreshToken;
+				(http.defaults.headers as any)['Authorization'] = 'Bearer ' + refreshToken;
 			}
 
-			return post<any>('auth/token')
-				.then(res => {
+			return post('auth/token')
+				.then((res: any) => {
 					/*eslint-disable*/
 					const { access_token, threshold } = res.data;
 					/*eslint-enable*/
@@ -82,13 +80,13 @@ http.interceptors.response.use(
 
 					/*eslint-disable*/
 					if (http.defaults.headers) {
-						http.defaults.headers['Authorization'] = access_token;
+						(http.defaults.headers as any)['Authorization'] = access_token;
 					}
 					/*eslint-enable*/
 
 					return http(originalRequest);
 				})
-				.catch();
+				.catch(Promise.reject);
 		}
 
 		return Promise.reject(error);
