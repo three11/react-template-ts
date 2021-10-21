@@ -137,7 +137,7 @@
 		"sass-loader": "12.2.0",
 		"sass-resources-loader": "2.2.4",
 		"style-loader": "3.3.1",
-		"stylelint": "13.13.1",
+		"stylelint": "14.0.0",
 		"stylelint-config-recommended": "5.0.0",
 		"stylelint-scss": "3.21.0",
 		"svg-inline-loader": "0.8.2",
