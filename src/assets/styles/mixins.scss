@@ -81,9 +81,9 @@
 		$transition: $transition + $single;
 	}
 
-	transition: unquote($transition);
+	transition: $transition;
 
-	@if ($will-change == true and $properties != 'all') {
-		will-change: unquote($properties);
+	@if $will-change == true and $properties != 'all' {
+		will-change: string.unquote($properties);
 	}
 }
