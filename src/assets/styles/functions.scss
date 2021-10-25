@@ -3,25 +3,25 @@
 	$result: ();
 
 	// first index of separator in string
-	$index: str-index($string, $separator);
+	$index: string.index($string, $separator);
 
 	// loop through string
 	@while $index != null {
 		// get the substring from the first character to the separator
-		$item: str-slice($string, 1, $index - 1);
+		$item: string.slice($string, 1, $index - 1);
 
 		// push item to array
-		$result: append($result, $item);
+		$result: string.append($result, $item);
 
 		// remove item and separator from string
-		$string: str-slice($string, $index + 1);
+		$string: string.slice($string, $index + 1);
 
 		// find new index of separator
-		$index: str-index($string, $separator);
+		$index: string.index($string, $separator);
 	}
 
 	// add the remaining string to list (the last item)
-	$result: append($result, $string);
+	$result: string.append($result, $string);
 
 	@return $result;
 }

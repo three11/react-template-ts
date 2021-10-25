@@ -1,12 +1,13 @@
 {
-	"plugins": [
-		"stylelint-scss"
-	],
-	"extends": [
-		"stylelint-config-recommended"
-	],
+	"extends": ["stylelint-config-recommended", "stylelint-config-standard-scss"],
+	"plugins": ["stylelint-scss", "stylelint-no-unsupported-browser-features"],
 	"rules": {
+		"indentation": null,
+		"string-quotes": "single",
 		"at-rule-no-unknown": null,
-		"scss/at-rule-no-unknown": true
+		"color-function-notation": null,
+		"scss/at-rule-no-unknown": true,
+		"at-rule-empty-line-before": null,
+		"declaration-empty-line-before": null
 	}
 }
