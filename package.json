@@ -134,7 +134,7 @@
 		"prop-types": "15.7.2",
 		"react-refresh": "0.10.0",
 		"sass": "1.43.4",
-		"sass-loader": "12.2.0",
+		"sass-loader": "12.3.0",
 		"sass-resources-loader": "2.2.4",
 		"style-loader": "3.3.1",
 		"stylelint": "14.0.1",
