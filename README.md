@@ -117,8 +117,7 @@ npm run test
     ┗ 📜 custom.d.ts - Custom type definitions
     ┗ 📜 index.html - Application's HTML file
     ┗ 📜 index.tsx - The main entry point
-    ┗ 📜 loadables.tsx - Custom type definitions
-    ┗ 📜 custom.d.ts - Code split and lazy loaded components
+    ┗ 📜 loadables.tsx - Code split and lazy loaded components
     ```
 
 2.  Latest EcmaScript support
