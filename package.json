@@ -117,7 +117,7 @@
 		"eslint-plugin-jest": "25.2.2",
 		"eslint-plugin-react": "7.26.1",
 		"file-loader": "6.2.0",
-		"html-loader": "3.0.0",
+		"html-loader": "3.0.1",
 		"html-webpack-plugin": "5.5.0",
 		"i18next-conv": "10.2.0",
 		"i18next-scanner": "3.1.0",
