@@ -132,7 +132,7 @@
 		"postcss-utilities": "0.8.4",
 		"prerender-spa-plugin": "3.4.0",
 		"prop-types": "15.7.2",
-		"react-refresh": "0.10.0",
+		"react-refresh": "0.11.0",
 		"sass": "1.43.4",
 		"sass-loader": "12.3.0",
 		"sass-resources-loader": "2.2.4",
