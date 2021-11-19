@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+    build:
+        docker:
+            - image: circleci/node:lts
+        steps:
+            - checkout
+            - run:
+                  name: autoreconf
+                  command: sudo apt install automake
+            - run:
+                  name: install
+                  command: yarn
+            - run:
+                  name: lint
+                  command: yarn lint
+            - run:
+                  name: test:coverage
+                  command: yarn test:coverage
+            - run:
+                  name: build
+                  command: yarn build
