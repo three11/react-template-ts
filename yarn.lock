@@ -5434,12 +5434,11 @@ i18next-browser-languagedetector@6.1.2:
   dependencies:
     "@babel/runtime" "^7.14.6"
 
-i18next-conv@11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-11.0.1.tgz#82e465255e284a39a5be1236b7abb0d7ab6a7814"
-  integrity sha512-FwS4R69EA1W88AMie3SYjNIhJqpN+arj2qoyeXkWgeBZA4CbV/z1Al/2QkF/nSzJ+1vH34l6vl0AJIPKN4dktQ==
+i18next-conv@11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-11.0.2.tgz#6d8738d606eac27047ada1fa96840daef21df46c"
+  integrity sha512-f2NT5URzS9S1yjxtOrQPFjDY3YR60bhnmk93k4Zsz/AMYtd51xq9KUP8G5FXTXTqKwK1kUPfsuO4BamAJ9a1DQ==
   dependencies:
-    arrify "^2.0.1"
     colorette "^2.0.16"
     commander "^8.3.0"
     gettext-converter "^1.2.0"
