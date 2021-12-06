@@ -15,6 +15,9 @@ exports[`LoginForm component should render successfully 1`] = `
     register={
       Object {
         "name": "email",
+        "onBlur": [Function],
+        "onChange": [Function],
+        "ref": [Function],
       }
     }
     type="email"
@@ -26,6 +29,9 @@ exports[`LoginForm component should render successfully 1`] = `
     register={
       Object {
         "name": "password",
+        "onBlur": [Function],
+        "onChange": [Function],
+        "ref": [Function],
       }
     }
     type="password"
