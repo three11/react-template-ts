@@ -8575,10 +8575,10 @@ react-from-dom@^0.6.0:
   resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.6.1.tgz#6740f5a3d79e0c354703e5c096b8fdfe0db71b0f"
   integrity sha512-7aAZx7LhRnmR51W5XtmTBYHGFl2n1AdEk1uoXLuzHa1OoGXrxOW/iwLcudvgp6BGX/l4Yh1rtMrIzvhlvbVddg==
 
-react-hook-form@7.22.1:
-  version "7.22.1"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.22.1.tgz#604cfb2572ed2fcbc7426982a320056cdc23cf18"
-  integrity sha512-c1jMj8k0AyvLhqU08B85HZGU2n1RknmyOEDcbROWaraW8kT4ga7kCsi/4XH6A7KCDzAM0sWoa30DVyqkIsJl9Q==
+react-hook-form@7.22.2:
+  version "7.22.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.22.2.tgz#aa66fd75cad858049739770341079d9787683c6b"
+  integrity sha512-gdz5dhdOPfd04uj00a+Fw8JHA4m6evn3RQeVEQSZCOrmRC+LqaTwsR97cQfj5vu3yCXhSETrUtiDoXJojW/KGg==
 
 react-i18next@11.15.1:
   version "11.15.1"
