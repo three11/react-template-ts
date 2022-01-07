@@ -9466,14 +9466,6 @@ sass-resources-loader@2.2.4:
     glob "^7.1.6"
     loader-utils "^2.0.0"
 
-sass@1.44.0:
-  version "1.44.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.44.0.tgz#619aa0a2275c097f9af5e6b8fe8a95e3056430fb"
-  integrity sha512-0hLREbHFXGQqls/K8X+koeP+ogFRPF4ZqetVB19b7Cst9Er8cOR0rc6RU7MaI4W1JmUShd1BPgPoeqmmgMMYFw==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
-    immutable "^4.0.0"
-
 sass@1.46.0:
   version "1.46.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.46.0.tgz#923117049525236026a7ede69715580eb0fac751"
@@ -9522,12 +9514,12 @@ schema-utils@^4.0.0:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.0.0"
 
-scss-goodies@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/scss-goodies/-/scss-goodies-2.0.1.tgz#37b2efcbe41fccda3390bf28cd9743330126c43a"
-  integrity sha512-aTxZGkVHWKGRnZjYLxd0lLRL6TbeqmgBovz5NCLhI3p31MO99jhOxGgZSj1y6jk6cQGCqvH5wX4w8uJg4gg65Q==
+scss-goodies@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/scss-goodies/-/scss-goodies-2.1.0.tgz#9470642f460d23584618fc50ca0a7afad97475f6"
+  integrity sha512-chCZYo/BgsUV8yfp4mC9lySUfeHPofKrQfchOTlY0P+2MLxmC2WgVsM3aLa+ugolQZtRJ97+5X5IhWmeZ9t+9w==
   dependencies:
-    sass "1.44.0"
+    sass "1.46.0"
 
 seamless-immutable@^7.1.3:
   version "7.1.4"
