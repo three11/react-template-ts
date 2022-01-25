@@ -113,7 +113,7 @@
 		"i18next-conv": "11.0.3",
 		"i18next-scanner": "3.1.0",
 		"jest": "27.4.7",
-		"mini-css-extract-plugin": "2.5.2",
+		"mini-css-extract-plugin": "2.5.3",
 		"postcss": "8.4.5",
 		"postcss-easy-import": "3.0.0",
 		"postcss-flexbugs-fixes": "5.0.2",
