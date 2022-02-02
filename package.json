@@ -101,7 +101,7 @@
 		"css-hot-loader": "1.4.4",
 		"css-loader": "6.5.1",
 		"cssnano": "5.0.16",
-		"dotenv": "15.0.0",
+		"dotenv": "15.0.1",
 		"enzyme": "3.11.0",
 		"enzyme-to-json": "3.6.2",
 		"eslint": "8.8.0",
