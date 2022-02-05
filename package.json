@@ -112,7 +112,7 @@
 		"html-webpack-plugin": "5.5.0",
 		"i18next-conv": "11.0.3",
 		"i18next-scanner": "3.1.0",
-		"jest": "27.4.7",
+		"jest": "27.5.0",
 		"mini-css-extract-plugin": "2.5.3",
 		"postcss": "8.4.6",
 		"postcss-easy-import": "3.0.0",
