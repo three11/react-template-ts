@@ -124,7 +124,7 @@
 		"react-refresh": "0.11.0",
 		"react-refresh-typescript": "2.0.3",
 		"sass": "1.49.7",
-		"sass-loader": "12.5.0",
+		"sass-loader": "12.6.0",
 		"sass-resources-loader": "2.2.4",
 		"style-loader": "3.3.1",
 		"stylelint": "14.5.0",
