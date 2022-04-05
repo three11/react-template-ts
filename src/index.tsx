@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { createRoot } from 'react-dom/client';
 import { ConnectedRouter } from 'connected-react-router';
 
 import { App } from './app';
@@ -10,8 +10,8 @@ import { history, configureStore } from '@store/index';
 
 export const store = configureStore();
 
-const node: HTMLElement | null = document.getElementById('app') || document.createElement('div');
-const renderRoot = (app: JSX.Element): void => render(app, node);
+const root = createRoot(document.getElementById('app') || document.createElement('div'));
+const renderRoot = (app: JSX.Element): void => root.render(app);
 const router = (Application: any): JSX.Element => (
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
