@@ -22,9 +22,10 @@ export const Button: React.FunctionComponent<Readonly<Props>> = ({
 }: Props) => {
 	const linkProps = !!to ? { to } : !!href ? { href } : {};
 	const HTMLElement = !!to ? Link : !!href ? 'a' : As;
+	const classes: string[] = className ? className.split(' ') : [''];
 
 	return (
-		<HTMLElement className={`c-btn ${className}`} {...linkProps} {...rest}>
+		<HTMLElement className={`c-btn ${classes}`} {...linkProps} {...rest}>
 			{children}
 		</HTMLElement>
 	);
