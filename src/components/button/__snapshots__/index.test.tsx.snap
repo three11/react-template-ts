@@ -2,6 +2,6 @@
 
 exports[`Button component should render successfully 1`] = `
 <button
-  className="c-btn "
+  className="c-btn undefined"
 />
 `;
