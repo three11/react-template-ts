@@ -1,24 +1,32 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 
 interface Props {
-	readonly type?: 'submit' | 'reset' | 'button';
-	readonly children?: any;
-	readonly className?: string;
-	readonly onClick?: (...args: any[]) => any;
-	readonly [x: string]: any;
+	as?: React.ElementType;
+	to?: string;
+	children?: any;
+	className?: string;
+	href?: string;
+	[x: string]: any;
 }
 
-export const Button: React.FunctionComponent<Props> = (props: Props) => {
-	const { type, children, className, onClick, ...rest } = props;
-	const classes: string[] = className ? className.split(' ') : [''];
-	const classNames: string = ['c-btn'].concat(classes).join(' ');
+export const Button: React.FunctionComponent<Readonly<Props>> = ({
+	as: As = 'button',
+	to,
+	href,
+	children,
+	className,
+	...rest
+}: Props) => {
+	const linkProps = !!to ? { to } : !!href ? { href } : {};
+	const HTMLElement = !!to ? Link : !!href ? 'a' : As;
 
 	return (
-		<button className={classNames} type={type} onClick={onClick} {...rest}>
+		<HTMLElement className={`c-btn ${className || ''}`} {...linkProps} {...rest}>
 			{children}
-		</button>
+		</HTMLElement>
 	);
 };
 
