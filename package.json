@@ -1,6 +1,6 @@
 {
 	"name": "create-react-app-ts",
-	"version": "1.8.0",
+	"version": "1.9.0",
 	"description": "Scalable starter boilerplate for React applications",
 	"main": "./src/index.tsx",
 	"bin": {
@@ -86,7 +86,7 @@
 		"@types/enzyme": "3.10.11",
 		"@types/jest": "27.4.1",
 		"@types/loadable__component": "5.13.4",
-		"@types/node": "17.0.16",
+		"@types/node": "17.0.23",
 		"@types/react": "17.0.43",
 		"@types/react-dom": "17.0.14",
 		"@types/react-loadable": "5.5.6",
