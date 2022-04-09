@@ -83,7 +83,7 @@
 		"@dreysolano/prerender-spa-plugin": "1.0.3",
 		"@loadable/webpack-plugin": "5.15.2",
 		"@pmmmwh/react-refresh-webpack-plugin": "0.5.5",
-		"@types/enzyme": "3.10.11",
+		"@types/enzyme": "3.10.12",
 		"@types/jest": "27.4.1",
 		"@types/loadable__component": "5.13.4",
 		"@types/node": "17.0.23",
