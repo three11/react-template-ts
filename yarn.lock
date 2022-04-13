@@ -3450,7 +3450,7 @@ commander@^8.3.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
   integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
-commander@^9.0.0:
+commander@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-9.1.0.tgz#a6b263b2327f2e188c6402c42623327909f2dbec"
   integrity sha512-i0/MaqBtdbnJ4XQs4Pmyb+oFQl+q0lsAmokVUH92SlSw4fkeAcG3bVon+Qt7hmtF+u3Het6o4VgrcY3qAoEB6w==
@@ -5009,7 +5009,7 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-gettext-converter@^1.2.0:
+gettext-converter@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gettext-converter/-/gettext-converter-1.2.2.tgz#23e56a6722d4b7ce63d5654ff747a97a7f2953fd"
   integrity sha512-lFpaaDLI2WqosubcBtBNOd6mtwGNQ7sQ55fpBVqwRaT3/4zUXrBx6wCPljlcnW5hwOqIhTqnaOt1mNwGhzNtEg==
@@ -5018,7 +5018,7 @@ gettext-converter@^1.2.0:
     content-type "1.0.4"
     encoding "0.1.13"
 
-gettext-parser@^5.0.0:
+gettext-parser@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/gettext-parser/-/gettext-parser-5.1.2.tgz#ebecc29a905334a48680a57b2d64da920f781cd4"
   integrity sha512-TaCShmFIQDvic6Ao+LFvFSPyl/9sjua3zNHMfmjfzzEeK3NIPbBSbNdPihJ+vG476td+ylrVk0ZyjJaAy9CiwQ==
@@ -5537,16 +5537,16 @@ i18next-browser-languagedetector@6.1.4:
   dependencies:
     "@babel/runtime" "^7.14.6"
 
-i18next-conv@12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-12.1.0.tgz#ecf432139a139d024f433ccb93c9d021c8393bcd"
-  integrity sha512-ozVO9XlzXgRNQY7wNN6LbZNtz+JqUd6PfnElpqIEfIZ3B6EGO55hfMOKsK1F/YSmlSnUJyf38rYmMKywdBb0Rg==
+i18next-conv@12.1.1:
+  version "12.1.1"
+  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-12.1.1.tgz#cda23ddda849083454aac857547b04a3605168f4"
+  integrity sha512-NYYVVGjB1/c/L+I4CG8Yu5xFYbn+FDQXbki3z8/CxLepkfnqw43VHaelllGpagv8xE6kXaYq1qKEF9EY6+EcOA==
   dependencies:
     c8 "^7.11.0"
     colorette "^2.0.16"
-    commander "^9.0.0"
-    gettext-converter "^1.2.0"
-    gettext-parser "^5.0.0"
+    commander "^9.1.0"
+    gettext-converter "^1.2.2"
+    gettext-parser "^5.1.2"
     node-gettext "^3.0.0"
 
 i18next-scanner@3.1.0:
