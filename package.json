@@ -70,7 +70,7 @@
 		"react-dom": "18.0.0",
 		"react-hook-form": "7.29.0",
 		"react-i18next": "11.16.6",
-		"react-inlinesvg": "2.3.0",
+		"react-inlinesvg": "3.0.0",
 		"react-redux": "7.2.8",
 		"react-router": "5.2.1",
 		"react-router-dom": "5.3.0",
