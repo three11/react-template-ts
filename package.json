@@ -88,7 +88,7 @@
 		"@types/loadable__component": "5.13.4",
 		"@types/node": "17.0.23",
 		"@types/react": "18.0.6",
-		"@types/react-dom": "17.0.15",
+		"@types/react-dom": "17.0.16",
 		"@types/react-loadable": "5.5.6",
 		"@types/react-redux": "7.1.24",
 		"@types/react-router": "5.1.18",
@@ -199,6 +199,6 @@
 	},
 	"resolutions": {
 		"@types/react": "18.0.6",
-		"@types/react-dom": "17.0.15"
+		"@types/react-dom": "17.0.16"
 	}
 }
