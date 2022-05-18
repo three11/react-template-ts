@@ -97,7 +97,7 @@
 		"@typescript-eslint/parser": "5.25.0",
 		"@wojtekmaj/enzyme-adapter-react-17": "0.6.7",
 		"autoprefixer": "10.4.7",
-		"copy-webpack-plugin": "10.2.4",
+		"copy-webpack-plugin": "11.0.0",
 		"css-hot-loader": "1.4.4",
 		"css-loader": "6.7.1",
 		"cssnano": "5.1.8",
