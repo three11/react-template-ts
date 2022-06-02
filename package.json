@@ -84,7 +84,7 @@
 		"@loadable/webpack-plugin": "5.15.2",
 		"@pmmmwh/react-refresh-webpack-plugin": "0.5.7",
 		"@types/enzyme": "3.10.12",
-		"@types/jest": "27.5.2",
+		"@types/jest": "28.1.0",
 		"@types/loadable__component": "5.13.4",
 		"@types/node": "17.0.23",
 		"@types/react": "18.0.10",
