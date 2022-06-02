@@ -133,7 +133,7 @@
 		"stylelint-no-unsupported-browser-features": "5.0.3",
 		"stylelint-scss": "4.2.0",
 		"svgo-viewbox": "2.0.4",
-		"terser-webpack-plugin": "5.3.1",
+		"terser-webpack-plugin": "5.3.3",
 		"ts-jest": "28.0.3",
 		"ts-loader": "9.3.0",
 		"tslib": "2.4.0",
