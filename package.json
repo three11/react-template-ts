@@ -68,7 +68,7 @@
 		"normalize.css": "8.0.1",
 		"react": "18.1.0",
 		"react-dom": "18.1.0",
-		"react-hook-form": "7.32.0",
+		"react-hook-form": "7.32.1",
 		"react-i18next": "11.17.1",
 		"react-inlinesvg": "3.0.0",
 		"react-redux": "8.0.2",
