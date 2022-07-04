@@ -8679,10 +8679,10 @@ react-redux@8.0.2:
     react-is "^18.0.0"
     use-sync-external-store "^1.0.0"
 
-react-refresh-typescript@2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-refresh-typescript/-/react-refresh-typescript-2.0.5.tgz#8b0a3879be5cfb6e1f316e5315d605e587b20a98"
-  integrity sha512-TlcxF9VMBBS8dHvMD+3dklgArXeIhjbtT7R09ycsXvhPPYmv70J67kiGT8mxe6/tYzkql9aCHaZAY6QYdutLdw==
+react-refresh-typescript@2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/react-refresh-typescript/-/react-refresh-typescript-2.0.6.tgz#3b617c16b1caffa7f56557a59dd0ef4d4a7c54f2"
+  integrity sha512-Aj7/SPmc9vFZTzizM6LVJf1UEQ76kVLb3Cd5J/bD3y25W9n+ZQjcSINoMJtOWXzCezm0apYKSE2jcl6NSa860g==
 
 react-refresh@0.14.0:
   version "0.14.0"
