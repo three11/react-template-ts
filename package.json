@@ -144,7 +144,7 @@
 		"webpack-dev-server": "4.9.3",
 		"webpack-hot-middleware": "2.25.1",
 		"webpack-pwa-manifest": "4.3.0",
-		"workbox-cli": "6.5.3",
+		"workbox-cli": "6.5.4",
 		"yargs": "17.5.1"
 	},
 	"browserslist": [
