@@ -8524,10 +8524,10 @@ react-i18next@11.18.4:
     "@babel/runtime" "^7.14.5"
     html-parse-stringify "^3.0.1"
 
-react-inlinesvg@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-3.0.0.tgz#801c6bac1535334586708cd346f4b1125dcfa8f9"
-  integrity sha512-zUt0DW3cKBk+vYZJJCzJqA9STRb+ZFmKLQFWurTvM4UR6vyHT8kHZSzyZZseX9BUNbTFJAfirtwpt97BWDJoSg==
+react-inlinesvg@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-3.0.1.tgz#2133f5d2c770ac405060db2ce1c13eed30e7e83b"
+  integrity sha512-cBfoyfseNI2PkDA7ZKIlDoHq0eMfpoC3DhKBQNC+/X1M4ZQB+aXW+YiNPUDDDKXUsGDUIZWWiZWNFeauDIVdoA==
   dependencies:
     exenv "^1.2.2"
     react-from-dom "^0.6.2"
