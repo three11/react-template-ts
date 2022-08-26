@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { readFileSync, writeFileSync } = require('fs');
-const { i18nextToPot, gettextToI18next } = require('i18next-conv');
+import { readFileSync, writeFileSync } from 'fs';
+import { i18nextToPot, gettextToI18next } from 'i18next-conv';
 
-const locales = require('./locales');
+import locales from './locales.mjs';
+
 const basePath = './src/assets/locale/';
 
-// @ts-ignore
 const save = target => result => writeFileSync(target, result);
 
 const jsonToPot = () => {

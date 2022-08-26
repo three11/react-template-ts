@@ -19,7 +19,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="email"
         placeholder="someone@example.com"
         register={
-          Object {
+          {
             "name": "email",
             "onBlur": [Function],
             "onChange": [Function],
@@ -33,7 +33,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="password"
         placeholder="********"
         register={
-          Object {
+          {
             "name": "password",
             "onBlur": [Function],
             "onChange": [Function],
@@ -47,7 +47,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="confirm"
         placeholder="********"
         register={
-          Object {
+          {
             "name": "confirm",
             "onBlur": [Function],
             "onChange": [Function],
@@ -61,7 +61,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="username"
         placeholder="JohnSmith"
         register={
-          Object {
+          {
             "name": "username",
             "onBlur": [Function],
             "onChange": [Function],
@@ -79,7 +79,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="first_name"
         placeholder="John"
         register={
-          Object {
+          {
             "name": "first_name",
             "onBlur": [Function],
             "onChange": [Function],
@@ -93,7 +93,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="last_name"
         placeholder="Smith"
         register={
-          Object {
+          {
             "name": "last_name",
             "onBlur": [Function],
             "onChange": [Function],
@@ -106,14 +106,14 @@ exports[`SignupForm component should render successfully 1`] = `
         label="Gender"
         name="gender"
         options={
-          Array [
+          [
             "Unspecified",
             "Male",
             "Female",
           ]
         }
         register={
-          Object {
+          {
             "name": "gender",
             "onBlur": [Function],
             "onChange": [Function],
@@ -127,7 +127,7 @@ exports[`SignupForm component should render successfully 1`] = `
         name="image_url"
         placeholder="https://images.com/john-smith.jpg"
         register={
-          Object {
+          {
             "name": "image_url",
             "onBlur": [Function],
             "onChange": [Function],
