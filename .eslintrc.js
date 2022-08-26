@@ -12,7 +12,7 @@ module.exports = {
 		tsconfigRootDir: __dirname
 	},
 	plugins: ['jest', '@typescript-eslint'],
-	ignorePatterns: ['bin/*', '.eslintrc.js', 'test-config/*', 'workbox-config.js', 'webpack.config.js'],
+	ignorePatterns: ['bin/*', '*.js', '*.mjs'],
 	rules: {
 		'react/display-name': 'off',
 		'@typescript-eslint/no-explicit-any': 'off'

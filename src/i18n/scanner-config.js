@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 module.exports = {
 	options: {
 		debug: false,
@@ -11,10 +10,8 @@ module.exports = {
 			i18nKey: 'i18nKey',
 			defaultsKey: 'defaults',
 			extensions: ['.js', '.jsx'],
-			// @ts-ignore
-			fallbackKey: (ns, value) => value
+			fallbackKey: (_, value) => value
 		},
-		// @ts-ignore
 		defaultValue: (lng, ns, key) => key,
 		resource: {
 			loadPath: 'src/assets/locale/translations.json',
