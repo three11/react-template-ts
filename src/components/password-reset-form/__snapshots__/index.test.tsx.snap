@@ -13,7 +13,7 @@ exports[`PasswordResetForm component should render successfully 1`] = `
     name="email"
     placeholder="someone@example.com"
     register={
-      Object {
+      {
         "name": "email",
         "onBlur": [Function],
         "onChange": [Function],
@@ -27,7 +27,7 @@ exports[`PasswordResetForm component should render successfully 1`] = `
     name="password"
     placeholder="********"
     register={
-      Object {
+      {
         "name": "password",
         "onBlur": [Function],
         "onChange": [Function],
@@ -41,7 +41,7 @@ exports[`PasswordResetForm component should render successfully 1`] = `
     name="confirm"
     placeholder="********"
     register={
-      Object {
+      {
         "name": "confirm",
         "onBlur": [Function],
         "onChange": [Function],
