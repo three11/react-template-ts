@@ -130,7 +130,7 @@
 		"stylelint": "14.13.0",
 		"stylelint-config-recommended": "9.0.0",
 		"stylelint-config-standard-scss": "5.0.0",
-		"stylelint-no-unsupported-browser-features": "6.0.0",
+		"stylelint-no-unsupported-browser-features": "6.0.1",
 		"stylelint-scss": "4.3.0",
 		"svgo-viewbox": "2.1.0",
 		"terser-webpack-plugin": "5.3.6",
