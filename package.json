@@ -59,7 +59,7 @@
 	"homepage": "https://github.com/three11/react-template#readme",
 	"dependencies": {
 		"@loadable/component": "5.15.2",
-		"axios": "0.27.2",
+		"axios": "1.1.2",
 		"connected-react-router": "6.9.3",
 		"date-fns": "2.29.3",
 		"history": "4.10.1",
@@ -86,7 +86,7 @@
 		"@types/enzyme": "3.10.12",
 		"@types/jest": "29.1.2",
 		"@types/loadable__component": "5.13.4",
-		"@types/node": "18.7.14",
+		"@types/node": "18.8.3",
 		"@types/react": "18.0.21",
 		"@types/react-dom": "18.0.6",
 		"@types/react-loadable": "5.5.6",
