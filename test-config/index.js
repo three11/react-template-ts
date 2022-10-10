@@ -14,6 +14,25 @@ global.mount = Enzyme.mount;
 
 jest.mock('react-inlinesvg');
 
+jest.mock('axios', () => ({
+	__esModule: true,
+	default: {
+		create: jest.fn(() => ({
+			get: jest.fn(() => Promise.resolve()),
+			post: jest.fn(() => Promise.resolve()),
+			patch: jest.fn(() => Promise.resolve()),
+			interceptors: {
+				request: {
+					use: jest.fn()
+				},
+				response: {
+					use: jest.fn()
+				}
+			}
+		}))
+	}
+}));
+
 jest.mock('react-i18next', () => ({
 	Trans: ({ children }) => children,
 	useTranslation: () => ({ t: key => key }),
