@@ -82,7 +82,7 @@
 	"devDependencies": {
 		"@dreysolano/prerender-spa-plugin": "1.0.3",
 		"@loadable/webpack-plugin": "5.15.2",
-		"@pmmmwh/react-refresh-webpack-plugin": "0.5.8",
+		"@pmmmwh/react-refresh-webpack-plugin": "0.5.9",
 		"@types/enzyme": "3.10.12",
 		"@types/jest": "29.2.2",
 		"@types/loadable__component": "5.13.4",
