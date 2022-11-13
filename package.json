@@ -99,7 +99,7 @@
 		"autoprefixer": "10.4.13",
 		"copy-webpack-plugin": "11.0.0",
 		"css-hot-loader": "1.4.4",
-		"css-loader": "6.7.1",
+		"css-loader": "6.7.2",
 		"cssnano": "5.1.14",
 		"dotenv": "16.0.3",
 		"enzyme": "3.11.0",
