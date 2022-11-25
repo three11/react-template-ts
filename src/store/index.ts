@@ -1,4 +1,4 @@
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from '@redux-devtools/extension';
 import { Store, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware, { Saga, SagaMiddleware } from 'redux-saga';
 
