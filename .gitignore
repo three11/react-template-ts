@@ -24,4 +24,4 @@ Thumbs.db
 /coverage
 
 # Project specific
-/src/utilities/enums.js
+/.vscode
