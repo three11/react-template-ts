@@ -58,6 +58,7 @@
 	"homepage": "https://github.com/three11/react-template#readme",
 	"dependencies": {
 		"@loadable/component": "5.15.2",
+		"@redux-devtools/extension": "3.2.3",
 		"axios": "1.2.0",
 		"date-fns": "2.29.3",
 		"i18next": "22.0.6",
@@ -72,7 +73,6 @@
 		"react-router": "6.4.3",
 		"react-router-dom": "6.4.3",
 		"redux": "4.2.0",
-		"redux-devtools-extension": "2.13.9",
 		"redux-saga": "1.2.1",
 		"scss-goodies": "2.2.0"
 	},
@@ -93,9 +93,6 @@
 		"@vitejs/plugin-react": "2.2.0",
 		"autoprefixer": "10.4.13",
 		"cssnano": "5.1.14",
-		"dotenv": "16.0.3",
-		"enzyme": "3.11.0",
-		"enzyme-to-json": "3.6.2",
 		"eslint": "8.28.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-jest": "27.1.6",
@@ -152,9 +149,6 @@
 		"setupFiles": [
 			"<rootDir>/test-config/index.js",
 			"<rootDir>/test-config/LocalStorageMock.js"
-		],
-		"snapshotSerializers": [
-			"enzyme-to-json/serializer"
 		],
 		"transform": {
 			"^.+\\.tsx?$": "ts-jest",
