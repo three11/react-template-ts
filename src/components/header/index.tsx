@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 import { Routes } from '@utilities';
-import { history } from '@store/index';
 import { Icon, Button } from '@components';
 import { useAppSelector } from '@utilities/hooks';
 import { AuthActionType } from '@store/enums';
@@ -14,6 +13,7 @@ import './index.scss';
 export const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const authState = useAppSelector(state => state.auth);
 
 	const Nav = (): JSX.Element => (
@@ -41,7 +41,7 @@ export const Header: React.FunctionComponent = () => {
 									dispatch({
 										type: AuthActionType.LOGOUT_REQUEST,
 										payload: {
-											redirect: (): void => history.push(Routes.LOGIN)
+											redirect: (): void => navigate(Routes.LOGIN)
 										}
 									});
 								}}

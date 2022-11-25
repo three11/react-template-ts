@@ -1,6 +1,4 @@
-import { routerMiddleware } from 'connected-react-router';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { History, createBrowserHistory } from 'history';
 import { Store, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware, { Saga, SagaMiddleware } from 'redux-saga';
 
@@ -12,15 +10,13 @@ const initialState = {
 	auth
 };
 
-export const history: History = createBrowserHistory();
 export const sagaMiddleware: SagaMiddleware = createSagaMiddleware();
 
 export function configureStore(): Store<typeof initialState> {
-	const historyMiddleware = routerMiddleware(history);
 	const store: Store<typeof initialState> = createStore(
-		rootReducer(history),
+		rootReducer(),
 		initialState,
-		composeWithDevTools(applyMiddleware(sagaMiddleware, historyMiddleware))
+		composeWithDevTools(applyMiddleware(sagaMiddleware))
 	);
 
 	sagas.forEach((saga: Saga) => {

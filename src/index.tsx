@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
-import { ConnectedRouter } from 'connected-react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './app';
 import { removeItems } from '@utilities';
 import { AuthActionType } from '@store/enums';
-import { history, configureStore } from '@store/index';
+import { configureStore } from '@store/index';
 
 export const store = configureStore();
 
@@ -16,9 +16,9 @@ const root = createRoot(node);
 const renderRoot = (Application: any): void => {
 	root.render(
 		<Provider store={store}>
-			<ConnectedRouter history={history}>
+			<BrowserRouter>
 				<Application />
-			</ConnectedRouter>
+			</BrowserRouter>
 		</Provider>
 	);
 };

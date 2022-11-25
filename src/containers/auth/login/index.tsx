@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Routes } from '@utilities';
-import { history } from '@store/index';
 import { AuthActionType } from '@store/enums';
 import { Wrapper, LoginForm } from '@components';
 
 export const Login: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	return (
 		<Wrapper className="o-wrapper--fancy">
@@ -20,7 +20,7 @@ export const Login: React.FunctionComponent = () => {
 						type: AuthActionType.LOGIN_REQUEST,
 						payload: {
 							...payload,
-							redirect: (): void => history.push(Routes.BASE)
+							redirect: (): void => navigate(Routes.BASE)
 						}
 					});
 				}}
