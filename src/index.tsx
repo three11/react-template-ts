@@ -10,30 +10,26 @@ import { history, configureStore } from '@store/index';
 
 export const store = configureStore();
 
-const root = createRoot(document.getElementById('app') || document.createElement('div'));
-const renderRoot = (app: JSX.Element): void => root.render(app);
-const router = (Application: any): JSX.Element => (
-	<Provider store={store}>
-		<ConnectedRouter history={history}>
-			<Application />
-		</ConnectedRouter>
-	</Provider>
-);
+const node: HTMLElement | null = document.getElementById('app') || document.createElement('div');
+const root = createRoot(node);
+
+const renderRoot = (Application: any): void => {
+	root.render(
+		<Provider store={store}>
+			<ConnectedRouter history={history}>
+				<Application />
+			</ConnectedRouter>
+		</Provider>
+	);
+};
 
 removeItems();
 
 store.dispatch({ type: AuthActionType.RESET_AUTH });
 
-renderRoot(router(App));
+renderRoot(App);
 
-if (module.hot) {
-	module.hot.accept();
-
-	// eslint-disable-next-line
-	renderRoot(router(require('./app').App));
-}
-
-if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 		navigator.serviceWorker.register('/service-worker.js');
 	});
