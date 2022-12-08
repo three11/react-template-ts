@@ -10,10 +10,11 @@
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
+		"isolatedModules": true,
 		"jsx": "react",
-		"lib": ["dom", "esNext"],
-		"module": "commonjs",
-		"moduleResolution": "node",
+		"lib": ["dom", "ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "Node",
 		"noEmit": false,
 		"noEmitHelpers": true,
 		"noEmitOnError": true,
@@ -41,7 +42,7 @@
 		"strictPropertyInitialization": true,
 		"strictNullChecks": true,
 		"sourceMap": true,
-		"target": "es5"
+		"target": "ES5"
 	},
 	"compileOnSave": false,
 	"include": ["src/**/*"],
