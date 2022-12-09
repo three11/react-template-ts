@@ -76,7 +76,7 @@
 		"react-router-dom": "5.3.4",
 		"redux": "4.2.0",
 		"redux-devtools-extension": "2.13.9",
-		"redux-saga": "1.2.1",
+		"redux-saga": "1.2.2",
 		"scss-goodies": "2.2.0"
 	},
 	"devDependencies": {
