@@ -7,7 +7,7 @@ import * as de from '../assets/locale/de.json';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import locales from './locales.mjs';
+import { default as locales } from './locales.mjs';
 
 const resources = {
 	en: {
