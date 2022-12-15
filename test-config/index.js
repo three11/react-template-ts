@@ -1,4 +1,11 @@
 // @ts-nocheck
+const jestMock = (path, mock) => {
+	jest.mock(path, () => ({
+		...jest.requireActual(path),
+		...mock
+	}));
+};
+
 jest.mock('react-inlinesvg');
 
 jest.mock('axios', () => ({
@@ -54,3 +61,11 @@ jest.mock('@i18n', () => ({
 	},
 	locales: ['de']
 }));
+
+jestMock('react-redux', {
+	useDispatch: () => jest.fn()
+});
+
+jestMock('react-router-dom', {
+	useNavigate: () => jest.fn()
+});

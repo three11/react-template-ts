@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Icon } from '.';
 
-describe('Icon component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(<Icon src="@assets/logo.svg" />);
+test('Icon component should render successfully', () => {
+	const { asFragment } = render(<Icon src="@assets/logo.svg" />);
 
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
 });

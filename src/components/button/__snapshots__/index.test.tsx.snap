@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component should render successfully 1`] = `
-<button
-  className="c-btn "
-/>
+exports[`should render successfully 1`] = `
+<DocumentFragment>
+  <button
+    class="c-btn "
+  />
+</DocumentFragment>
 `;

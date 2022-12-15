@@ -24,15 +24,15 @@
 		"noImplicitThis": true,
 		"noStrictGenericChecks": false,
 		"paths": {
-			"@src/*": ["./src/*"],
-			"@root/*": ["./*"],
 			"@i18n": ["./src/i18n"],
 			"@store/*": ["./src/store/*"],
 			"@assets/*": ["./src/assets/*"],
 			"@utilities": ["./src/utilities"],
 			"@utilities/*": ["./src/utilities/*"],
 			"@components": ["./src/components"],
-			"@containers/*": ["./src/containers/*"]
+			"@containers/*": ["./src/containers/*"],
+      "@src/*": ["./src/*"],
+			"@root/*": ["./*"],
 		},
 		"pretty": true,
 		"removeComments": false,
@@ -43,7 +43,7 @@
 		"strictNullChecks": true,
 		"sourceMap": true,
 		"target": "ESNext",
-		"types": ["vite/client"]
+		"types": ["vite/client", "jest"]
 	},
 	"compileOnSave": false,
 	"include": ["src/**/*", "./vite.config.ts"],

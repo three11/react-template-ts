@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Button } from '.';
 
-describe('Button component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(<Button />);
+test('should render successfully', () => {
+	const { asFragment } = render(<Button />);
 
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
+	expect(true).toBeTruthy();
 });

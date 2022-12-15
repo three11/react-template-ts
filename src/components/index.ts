@@ -6,4 +6,5 @@ export { default as Icon } from './icon';
 export { default as LoginForm } from './login-form';
 export { default as PasswordResetForm } from './password-reset-form';
 export { default as SignupForm } from './signup-form';
+export { default as TestStoreProvider } from './test-store-provider';
 export { default as Wrapper } from './wrapper';

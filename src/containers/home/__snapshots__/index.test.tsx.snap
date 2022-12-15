@@ -1,11 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home component should render successfully 1`] = `
-<Wrapper>
+<DocumentFragment>
   <div
-    className="o-shell"
+    class="o-wrapper"
   >
-    Homepage
+    <header
+      class="c-header"
+    >
+      <div
+        class="o-shell o-shell--flex"
+      >
+        <a
+          class="c-logo"
+          href="/"
+        />
+        <nav
+          class="c-nav"
+        >
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/login"
+              >
+                Login
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main
+      class="o-main"
+    >
+      <div
+        class="o-shell"
+      >
+        Homepage
+      </div>
+    </main>
+    <footer
+      class="c-footer"
+    >
+      <div
+        class="o-shell"
+      >
+        <p>
+          © 2022. All rights reserved.
+        </p>
+        <p>
+          Change language:
+          <button>
+            de
+          </button>
+          <button
+            disabled=""
+          >
+            en
+          </button>
+        </p>
+      </div>
+    </footer>
   </div>
-</Wrapper>
+</DocumentFragment>
 `;

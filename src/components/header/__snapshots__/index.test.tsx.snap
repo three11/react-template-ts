@@ -1,21 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component should render successfully 1`] = `
-<header
-  className="c-header"
->
-  <div
-    className="o-shell o-shell--flex"
+<DocumentFragment>
+  <header
+    class="c-header"
   >
-    <Link
-      className="c-logo"
-      to="/"
+    <div
+      class="o-shell o-shell--flex"
     >
-      <Icon
-        src="/assets/react.svg"
+      <a
+        class="c-logo"
+        href="/"
       />
-    </Link>
-    <Nav />
-  </div>
-</header>
+      <nav
+        class="c-nav"
+      >
+        <ul>
+          <li>
+            <a
+              class=""
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              class=""
+              href="/login"
+            >
+              Login
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</DocumentFragment>
 `;

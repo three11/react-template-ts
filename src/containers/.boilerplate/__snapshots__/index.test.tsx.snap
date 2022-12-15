@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Page component should render successfully 1`] = `
-<div>
-  Boilerplate
-</div>
+<DocumentFragment>
+  <div>
+    Boilerplate
+  </div>
+</DocumentFragment>
 `;

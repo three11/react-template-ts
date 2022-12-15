@@ -17,17 +17,16 @@ module.exports = {
 		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
 			'<rootDir>/test-config/FileMock.js'
 	},
-	setupFiles: [
-		'jest-localstorage-mock',
-		'<rootDir>/test-config/index.js',
-		'<rootDir>/test-config/LocalStorageMock.js'
-	],
+	setupFiles: ['jest-localstorage-mock', '<rootDir>/test-config/index.js'],
 	transform: {
-		'^.+\\.tsx?$': 'ts-jest',
-		'\\.(css|less|sass|scss)$': '<rootDir>/test-config/StyleMock.js',
-		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-			'<rootDir>/test-config/FileMock.js'
+		'\\.tsx?$': [
+			'ts-jest',
+			{
+				tsconfig: '<rootDir>/test-config/tsconfig.json'
+			}
+		]
 	},
 	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+	testEnvironment: 'jsdom',
 	testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/', '<rootDir>/test-config/']
 };
