@@ -6,6 +6,8 @@ module.exports = {
 	 * @param {string} filename
 	 */
 	process(_, filename) {
-		return `module.exports = ${JSON.stringify(basename(filename))};`;
+		return {
+			code: `module.exports = ${JSON.stringify(basename(filename))};`
+		};
 	}
 };

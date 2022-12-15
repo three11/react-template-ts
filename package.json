@@ -15,7 +15,7 @@
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
 		"test": "jest --config=./test-config/jest.config.js --runInBand --coverage --env jsdom",
-		"test:coverage": "jest --coverage",
+		"test:coverage": "jest --config=./test-config/jest.config.js --runInBand --coverage --env jsdom --coverage",
 		"locale:scan": "i18next-scanner --config ./src/i18n/scanner-config.js './src/**/*.{ts,tsx}'",
 		"locale:pot": "node ./src/i18n/gettext-converter.mjs jsonToPot",
 		"locale:po": "node ./src/i18n/gettext-converter.mjs poToJson",
@@ -121,6 +121,7 @@
 		"typescript": "4.9.4",
 		"vite": "4.0.1",
 		"vite-plugin-prerender": "1.0.8",
+		"vite-plugin-pwa": "^0.14.0",
 		"workbox-cli": "6.5.4"
 	},
 	"browserslist": [

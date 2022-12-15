@@ -19,6 +19,7 @@ module.exports = {
 	},
 	setupFiles: ['jest-localstorage-mock', '<rootDir>/test-config/index.js'],
 	transform: {
+		'\\.svg$': '<rootDir>/test-config/FileMock.js',
 		'\\.tsx?$': [
 			'ts-jest',
 			{

@@ -8,6 +8,8 @@ import { Icon, Button } from '@components';
 import { useAppSelector } from '@store/selectors';
 import { AuthActionType } from '@store/enums';
 
+import Logo from '@assets/images/react.svg';
+
 import './index.scss';
 
 export const Header: React.FunctionComponent = () => {
@@ -60,7 +62,7 @@ export const Header: React.FunctionComponent = () => {
 		<header className="c-header">
 			<div className="o-shell o-shell--flex">
 				<Link to={Routes.BASE} className="c-logo">
-					<Icon src="./public/react.svg" />
+					<Icon src={Logo} />
 				</Link>
 
 				<Nav />
