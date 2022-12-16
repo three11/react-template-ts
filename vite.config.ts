@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import alias from '@rollup/plugin-alias';
 import { join } from 'node:path';
 import { Routes } from './src/utilities/enums';
+import { VitePWA } from 'vite-plugin-pwa';
 import autoprefixer from 'autoprefixer';
 import cssNanoPlugin from 'cssnano';
 import vitePrerender from 'vite-plugin-prerender';
@@ -11,10 +12,13 @@ import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
 export default defineConfig({
 	plugins: [
 		react(),
+		VitePWA(),
 		vitePrerender({
 			staticDir: join(__dirname, 'dist'),
 			routes: Object.values(Routes)
 		}),
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
 		alias({
 			entries: {
 				'@src': '/src',
