@@ -12,7 +12,22 @@ import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
 export default defineConfig({
 	plugins: [
 		react(),
-		VitePWA(),
+		VitePWA({
+			includeAssets: ['favicon.ico'],
+			manifest: {
+				name: 'React Template',
+				short_name: 'React TPL',
+				description: 'A React application!',
+				theme_color: '#333333',
+				icons: [
+					{
+						src: 'icon-512x512.png',
+						sizes: '512x512',
+						type: 'image/png'
+					}
+				]
+			}
+		}),
 		vitePrerender({
 			staticDir: join(__dirname, 'dist'),
 			routes: Object.values(Routes)
