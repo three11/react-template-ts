@@ -1,6 +1,6 @@
 {
 	"name": "create-react-app-ts",
-	"version": "1.10.2",
+	"version": "2.0.0",
 	"description": "Scalable starter boilerplate for React applications",
 	"main": "./src/index.tsx",
 	"bin": {
@@ -15,7 +15,7 @@
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:scss": "stylelint './src/**/*.scss' --config .stylelintrc",
 		"test": "jest --config=./test-config/jest.config.js --runInBand --coverage --env jsdom",
-		"test:coverage": "jest --config=./test-config/jest.config.js --runInBand --coverage --env jsdom --coverage",
+		"test:coverage": "yarn test --coverage",
 		"locale:scan": "i18next-scanner --config ./src/i18n/scanner-config.js './src/**/*.{ts,tsx}'",
 		"locale:pot": "node ./src/i18n/gettext-converter.mjs jsonToPot",
 		"locale:po": "node ./src/i18n/gettext-converter.mjs poToJson",
