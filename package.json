@@ -20,8 +20,7 @@
 		"locale:pot": "node ./src/i18n/gettext-converter.mjs jsonToPot",
 		"locale:po": "node ./src/i18n/gettext-converter.mjs poToJson",
 		"locale": "yarn locale:scan && yarn locale:pot && yarn locale:po",
-		"run-dist": "yarn build && npx ecstatic ./dist --root=./dist --host=localhost --port=8080 --baseDir=/",
-		"postbuild": "workbox generateSW"
+		"run-dist": "yarn build && npx ecstatic ./dist --root=./dist --host=localhost --port=8080 --baseDir=/"
 	},
 	"repository": {
 		"type": "git",
@@ -121,8 +120,7 @@
 		"typescript": "4.9.4",
 		"vite": "4.0.2",
 		"vite-plugin-prerender": "1.0.8",
-		"vite-plugin-pwa": "0.14.0",
-		"workbox-cli": "6.5.4"
+		"vite-plugin-pwa": "0.14.0"
 	},
 	"browserslist": [
 		"> 1%",
