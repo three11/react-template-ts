@@ -13,6 +13,7 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
+			registerType: 'autoUpdate',
 			includeAssets: ['favicon.ico'],
 			manifest: {
 				name: 'React Template',
@@ -60,11 +61,6 @@ export default defineConfig({
 		},
 		postcss: {
 			plugins: [autoprefixer, postcssFlexbugsFixes as any, cssNanoPlugin]
-		}
-	},
-	resolve: {
-		alias: {
-			'@assets/': join(__dirname, '/src/assets/')
 		}
 	}
 });
