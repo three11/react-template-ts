@@ -28,9 +28,3 @@ removeItems();
 store.dispatch({ type: AuthActionType.RESET_AUTH });
 
 renderRoot(App);
-
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
-	window.addEventListener('load', () => {
-		navigator.serviceWorker.register('/service-worker.js');
-	});
-}
