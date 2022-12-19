@@ -16,7 +16,7 @@ export const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { token } = useAppSelector(state => state.auth);
+	const token = useAppSelector(state => state.auth.token);
 
 	const Nav = (): JSX.Element => (
 		<nav className="c-nav">
