@@ -19,10 +19,10 @@ Thumbs.db
 .env
 
 # Build
-/dist
+dist/
 
 # Coverage
-/coverage
+coverage/
 
 # Project specific
-/.vscode
+.vscode/
