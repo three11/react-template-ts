@@ -1,30 +1,16 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
+import { initialState } from '@store/branches/auth/reducer';
 import { PasswordResetForm } from '.';
+import { TestStoreProvider } from '@components';
 
-jest.mock('react-redux', () => ({
-	connect: (): jest.Mock => jest.fn()
-}));
+test('PasswordResetForm component should render successfully', () => {
+	const { asFragment } = render(
+		<TestStoreProvider state={{ auth: { ...initialState } }}>
+			<PasswordResetForm onSubmit={(): jest.Mock => jest.fn()} />
+		</TestStoreProvider>
+	);
 
-jest.mock('@utilities', () => ({
-	useAppSelector: jest.fn(() => ({
-		loading: false,
-		passwordResetError: ''
-	})),
-	Routes: {
-		BASE: '/',
-		ABOUT: '/about',
-		LOGIN: '/login',
-		SIGNUP: '/signup',
-		SETTINGS: '/settings',
-		PASSWORD_RESET: '/reset-password'
-	}
-}));
-describe('PasswordResetForm component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(<PasswordResetForm onSubmit={(): jest.Mock => jest.fn()} />);
-
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
 });

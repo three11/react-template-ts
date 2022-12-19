@@ -1,8 +1,0 @@
-{
-	"compilerOptions": {
-		"module": "commonjs",
-		"sourceMap": false
-	},
-	"extends": "./tsconfig.json",
-	"include": ["src/utilities/enums.ts"]
-}

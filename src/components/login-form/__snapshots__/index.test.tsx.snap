@@ -1,47 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginForm component should render successfully 1`] = `
-<form
-  className="c-form c-form--login"
-  onSubmit={[Function]}
->
-  <h2>
-    Login
-  </h2>
-  <Field
-    label="Email Address"
-    name="email"
-    placeholder="someone@example.com"
-    register={
-      {
-        "name": "email",
-        "onBlur": [Function],
-        "onChange": [Function],
-        "ref": [Function],
-      }
-    }
-    type="email"
-  />
-  <Field
-    label="Password"
-    name="password"
-    placeholder="********"
-    register={
-      {
-        "name": "password",
-        "onBlur": [Function],
-        "onChange": [Function],
-        "ref": [Function],
-      }
-    }
-    type="password"
-  />
-  <Button
-    className=""
-    disabled={false}
-    type="submit"
+<DocumentFragment>
+  <form
+    class="c-form c-form--login"
   >
-    Login
-  </Button>
-</form>
+    <h2>
+      Login
+    </h2>
+    <div
+      class="c-form__field c-form__field--email"
+    >
+      <header
+        class="c-form__field-head"
+      >
+        <label
+          for="email"
+        >
+          Email Address
+        </label>
+      </header>
+      <input
+        id="email"
+        name="email"
+        placeholder="someone@example.com"
+        type="email"
+      />
+    </div>
+    <div
+      class="c-form__field c-form__field--password"
+    >
+      <header
+        class="c-form__field-head"
+      >
+        <label
+          for="password"
+        >
+          Password
+        </label>
+      </header>
+      <input
+        id="password"
+        name="password"
+        placeholder="********"
+        type="password"
+      />
+    </div>
+    <button
+      class="c-btn "
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</DocumentFragment>
 `;

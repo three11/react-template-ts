@@ -1,20 +1,22 @@
 import * as React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 import { Routes } from '@utilities';
-import { history } from '@store/index';
 import { Icon, Button } from '@components';
-import { useAppSelector } from '@utilities/hooks';
+import { useAppSelector } from '@store/selectors';
 import { AuthActionType } from '@store/enums';
+
+import Logo from '@assets/images/react.svg';
 
 import './index.scss';
 
 export const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	const authState = useAppSelector(state => state.auth);
+	const navigate = useNavigate();
+	const token = useAppSelector(state => state.auth.token);
 
 	const Nav = (): JSX.Element => (
 		<nav className="c-nav">
@@ -23,13 +25,13 @@ export const Header: React.FunctionComponent = () => {
 					<NavLink to={Routes.ABOUT}>{t('About')}</NavLink>
 				</li>
 
-				{!authState.token && (
+				{!token && (
 					<li>
 						<NavLink to={Routes.LOGIN}>{t('Login')}</NavLink>
 					</li>
 				)}
 
-				{!!authState.token && (
+				{!!token && (
 					<>
 						<li>
 							<NavLink to={Routes.SETTINGS}>{t('Settings')}</NavLink>
@@ -41,7 +43,7 @@ export const Header: React.FunctionComponent = () => {
 									dispatch({
 										type: AuthActionType.LOGOUT_REQUEST,
 										payload: {
-											redirect: (): void => history.push(Routes.LOGIN)
+											redirect: (): void => navigate(Routes.LOGIN)
 										}
 									});
 								}}
@@ -60,7 +62,7 @@ export const Header: React.FunctionComponent = () => {
 		<header className="c-header">
 			<div className="o-shell o-shell--flex">
 				<Link to={Routes.BASE} className="c-logo">
-					<Icon src="/assets/react.svg" />
+					<Icon src={Logo} />
 				</Link>
 
 				<Nav />

@@ -1,21 +1,10 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Footer } from '.';
 
-jest.mock('react-redux', () => ({
-	connect: (): jest.Mock => jest.fn(),
-	useDispatch: (): jest.Mock => jest.fn()
-}));
+test('Footer component should render successfully', () => {
+	const { asFragment } = render(<Footer />);
 
-jest.mock('@utilities/hooks', () => ({
-	useAppSelector: jest.fn()
-}));
-
-describe('Footer component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(<Footer />);
-
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
 });

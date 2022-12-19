@@ -1,6 +1,4 @@
-@use 'sass:list';
-@use 'sass:color';
-@use 'sass:string';
+@import 'mixins';
 
 $color-base: #333;
 $color-white: #fff;

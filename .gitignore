@@ -16,12 +16,13 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
+.env
 
 # Build
-/dist
+dist/
 
 # Coverage
-/coverage
+coverage/
 
 # Project specific
-/src/utilities/enums.js
+.vscode/

@@ -1,149 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignupForm component should render successfully 1`] = `
-<form
-  className="c-form c-form--signup"
-  onSubmit={[Function]}
->
-  <h2>
-    Signup
-  </h2>
-  <div
-    className="c-form__cols"
+<DocumentFragment>
+  <form
+    class="c-form c-form--signup"
   >
+    <h2>
+      Signup
+    </h2>
     <div
-      className="c-form__col"
+      class="c-form__cols"
     >
-      <Field
-        label="Email Address"
-        name="email"
-        placeholder="someone@example.com"
-        register={
-          {
-            "name": "email",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="email"
-      />
-      <Field
-        label="Password"
-        name="password"
-        placeholder="********"
-        register={
-          {
-            "name": "password",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="password"
-      />
-      <Field
-        label="Confirm password"
-        name="confirm"
-        placeholder="********"
-        register={
-          {
-            "name": "confirm",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="password"
-      />
-      <Field
-        label="Username"
-        name="username"
-        placeholder="JohnSmith"
-        register={
-          {
-            "name": "username",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="text"
-      />
+      <div
+        class="c-form__col"
+      >
+        <div
+          class="c-form__field c-form__field--email"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="email"
+            >
+              Email Address
+            </label>
+          </header>
+          <input
+            id="email"
+            name="email"
+            placeholder="someone@example.com"
+            type="email"
+          />
+        </div>
+        <div
+          class="c-form__field c-form__field--password"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="password"
+            >
+              Password
+            </label>
+          </header>
+          <input
+            id="password"
+            name="password"
+            placeholder="********"
+            type="password"
+          />
+        </div>
+        <div
+          class="c-form__field c-form__field--password"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="confirm"
+            >
+              Confirm password
+            </label>
+          </header>
+          <input
+            id="confirm"
+            name="confirm"
+            placeholder="********"
+            type="password"
+          />
+        </div>
+        <div
+          class="c-form__field c-form__field--text"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="username"
+            >
+              Username
+            </label>
+          </header>
+          <input
+            id="username"
+            name="username"
+            placeholder="JohnSmith"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        class="c-form__col"
+      >
+        <div
+          class="c-form__field c-form__field--text"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="first_name"
+            >
+              First name
+            </label>
+          </header>
+          <input
+            id="first_name"
+            name="first_name"
+            placeholder="John"
+            type="text"
+          />
+        </div>
+        <div
+          class="c-form__field c-form__field--text"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="last_name"
+            >
+              Last name
+            </label>
+          </header>
+          <input
+            id="last_name"
+            name="last_name"
+            placeholder="Smith"
+            type="text"
+          />
+        </div>
+        <div
+          class="c-form__field c-form__field--select"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="gender"
+            >
+              Gender
+            </label>
+          </header>
+          <select
+            id="gender"
+            name="gender"
+          >
+            <option
+              value="Unspecified"
+            >
+              Unspecified
+            </option>
+            <option
+              value="Male"
+            >
+              Male
+            </option>
+            <option
+              value="Female"
+            >
+              Female
+            </option>
+          </select>
+        </div>
+        <div
+          class="c-form__field c-form__field--url"
+        >
+          <header
+            class="c-form__field-head"
+          >
+            <label
+              for="image_url"
+            >
+              Avatar image URL
+            </label>
+          </header>
+          <input
+            id="image_url"
+            name="image_url"
+            placeholder="https://images.com/john-smith.jpg"
+            type="url"
+          />
+        </div>
+      </div>
     </div>
-    <div
-      className="c-form__col"
+    <button
+      class="c-btn "
+      type="submit"
     >
-      <Field
-        label="First name"
-        name="first_name"
-        placeholder="John"
-        register={
-          {
-            "name": "first_name",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="text"
-      />
-      <Field
-        label="Last name"
-        name="last_name"
-        placeholder="Smith"
-        register={
-          {
-            "name": "last_name",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="text"
-      />
-      <Field
-        label="Gender"
-        name="gender"
-        options={
-          [
-            "Unspecified",
-            "Male",
-            "Female",
-          ]
-        }
-        register={
-          {
-            "name": "gender",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="select"
-      />
-      <Field
-        label="Avatar image URL"
-        name="image_url"
-        placeholder="https://images.com/john-smith.jpg"
-        register={
-          {
-            "name": "image_url",
-            "onBlur": [Function],
-            "onChange": [Function],
-            "ref": [Function],
-          }
-        }
-        type="url"
-      />
-    </div>
-  </div>
-  <Button
-    className=""
-    disabled={false}
-    type="submit"
-  >
-    Sign up
-  </Button>
-</form>
+      Sign up
+    </button>
+  </form>
+</DocumentFragment>
 `;

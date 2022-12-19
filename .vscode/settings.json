@@ -1,5 +1,0 @@
-{
-	"jest.autoRun": "off",
-	"jest.jestCommandLine": "yarn jest",
-	"typescript.tsdk": "node_modules/typescript/lib"
-}

@@ -1,21 +1,19 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Field } from '.';
 
-describe('Field component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(
-			<Field
-				register={(): jest.Mock => jest.fn()}
-				type="email"
-				name="email"
-				label="Email Address"
-				error={{}}
-				placeholder="someone@example.com"
-			/>
-		);
+test('Field component should render successfully', () => {
+	const { asFragment } = render(
+		<Field
+			register={(): jest.Mock => jest.fn()}
+			type="email"
+			name="email"
+			label="Email Address"
+			error={{}}
+			placeholder="someone@example.com"
+		/>
+	);
 
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
 });

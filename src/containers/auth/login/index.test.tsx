@@ -1,28 +1,16 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Login } from '.';
+import { initialState } from '@store/branches/auth/reducer';
+import { TestStoreProvider } from '@components';
 
-jest.mock('react-redux', () => ({
-	connect: (): jest.Mock => jest.fn(),
-	useDispatch: (): jest.Mock => jest.fn()
-}));
+test('Login component should render successfully', () => {
+	const { asFragment } = render(
+		<TestStoreProvider state={{ auth: { ...initialState } }}>
+			<Login />
+		</TestStoreProvider>
+	);
 
-jest.mock('@utilities', () => ({
-	useAppSelector: jest.fn(),
-	Routes: {
-		BASE: '/',
-		ABOUT: '/about',
-		LOGIN: '/login',
-		SIGNUP: '/signup',
-		SETTINGS: '/settings',
-		PASSWORD_RESET: '/reset-password'
-	}
-}));
-describe('Login component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(<Login />);
-
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
 });

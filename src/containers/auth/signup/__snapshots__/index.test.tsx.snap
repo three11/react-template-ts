@@ -1,23 +1,271 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Signup component should render successfully 1`] = `
-<Wrapper
-  className="o-wrapper--fancy"
->
-  <SignupForm
-    onSubmit={[Function]}
+<DocumentFragment>
+  <div
+    class="o-wrapper o-wrapper--fancy"
   >
-    <p
-      className="c-form__hint"
+    <header
+      class="c-header"
     >
-      Already have an account?
-       
-      <Link
-        to="/login"
+      <div
+        class="o-shell o-shell--flex"
       >
-        Login
-      </Link>
-    </p>
-  </SignupForm>
-</Wrapper>
+        <a
+          class="c-logo"
+          href="/"
+        />
+        <nav
+          class="c-nav"
+        >
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/login"
+              >
+                Login
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main
+      class="o-main"
+    >
+      <form
+        class="c-form c-form--signup"
+      >
+        <h2>
+          Signup
+        </h2>
+        <div
+          class="c-form__cols"
+        >
+          <div
+            class="c-form__col"
+          >
+            <div
+              class="c-form__field c-form__field--email"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="email"
+                >
+                  Email Address
+                </label>
+              </header>
+              <input
+                id="email"
+                name="email"
+                placeholder="someone@example.com"
+                type="email"
+              />
+            </div>
+            <div
+              class="c-form__field c-form__field--password"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="password"
+                >
+                  Password
+                </label>
+              </header>
+              <input
+                id="password"
+                name="password"
+                placeholder="********"
+                type="password"
+              />
+            </div>
+            <div
+              class="c-form__field c-form__field--password"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="confirm"
+                >
+                  Confirm password
+                </label>
+              </header>
+              <input
+                id="confirm"
+                name="confirm"
+                placeholder="********"
+                type="password"
+              />
+            </div>
+            <div
+              class="c-form__field c-form__field--text"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="username"
+                >
+                  Username
+                </label>
+              </header>
+              <input
+                id="username"
+                name="username"
+                placeholder="JohnSmith"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="c-form__col"
+          >
+            <div
+              class="c-form__field c-form__field--text"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="first_name"
+                >
+                  First name
+                </label>
+              </header>
+              <input
+                id="first_name"
+                name="first_name"
+                placeholder="John"
+                type="text"
+              />
+            </div>
+            <div
+              class="c-form__field c-form__field--text"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="last_name"
+                >
+                  Last name
+                </label>
+              </header>
+              <input
+                id="last_name"
+                name="last_name"
+                placeholder="Smith"
+                type="text"
+              />
+            </div>
+            <div
+              class="c-form__field c-form__field--select"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="gender"
+                >
+                  Gender
+                </label>
+              </header>
+              <select
+                id="gender"
+                name="gender"
+              >
+                <option
+                  value="Unspecified"
+                >
+                  Unspecified
+                </option>
+                <option
+                  value="Male"
+                >
+                  Male
+                </option>
+                <option
+                  value="Female"
+                >
+                  Female
+                </option>
+              </select>
+            </div>
+            <div
+              class="c-form__field c-form__field--url"
+            >
+              <header
+                class="c-form__field-head"
+              >
+                <label
+                  for="image_url"
+                >
+                  Avatar image URL
+                </label>
+              </header>
+              <input
+                id="image_url"
+                name="image_url"
+                placeholder="https://images.com/john-smith.jpg"
+                type="url"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="c-btn "
+          type="submit"
+        >
+          Sign up
+        </button>
+        <p
+          class="c-form__hint"
+        >
+          Already have an account? 
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </p>
+      </form>
+    </main>
+    <footer
+      class="c-footer"
+    >
+      <div
+        class="o-shell"
+      >
+        <p>
+          © 2022. All rights reserved.
+        </p>
+        <p>
+          Change language:
+          <button>
+            de
+          </button>
+          <button
+            disabled=""
+          >
+            en
+          </button>
+        </p>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
 `;

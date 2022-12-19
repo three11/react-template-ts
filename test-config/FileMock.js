@@ -1,7 +1,13 @@
 const { basename } = require('path');
 
 module.exports = {
-	process(src, filename) {
-		return `module.exports = ${JSON.stringify(basename(filename))};`;
+	/**
+	 * @param {any} _
+	 * @param {string} filename
+	 */
+	process(_, filename) {
+		return {
+			code: `module.exports = ${JSON.stringify(basename(filename))};`
+		};
 	}
 };

@@ -1,30 +1,16 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { SignupForm } from '.';
+import { initialState } from '@store/branches/auth/reducer';
+import { TestStoreProvider } from '@components';
 
-jest.mock('react-redux', () => ({
-	connect: (): jest.Mock => jest.fn()
-}));
+test('SignupForm component should render successfully', () => {
+	const { asFragment } = render(
+		<TestStoreProvider state={{ auth: { ...initialState } }}>
+			<SignupForm onSubmit={(): jest.Mock => jest.fn()} />
+		</TestStoreProvider>
+	);
 
-jest.mock('@utilities', () => ({
-	useAppSelector: jest.fn(() => ({
-		loading: false,
-		signupError: ''
-	})),
-	Routes: {
-		BASE: '/',
-		ABOUT: '/about',
-		LOGIN: '/login',
-		SIGNUP: '/signup',
-		SETTINGS: '/settings',
-		PASSWORD_RESET: '/reset-password'
-	}
-}));
-describe('SignupForm component', () => {
-	it('should render successfully', () => {
-		const tree = shallow(<SignupForm onSubmit={(): jest.Mock => jest.fn()} />);
-
-		expect(tree).toMatchSnapshot();
-	});
+	expect(asFragment()).toMatchSnapshot();
 });

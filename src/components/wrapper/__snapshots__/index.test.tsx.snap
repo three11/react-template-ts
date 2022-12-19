@@ -1,15 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Wrapper component should render successfully 1`] = `
-<div
-  className="o-wrapper"
->
-  <Header />
-  <main
-    className="o-main"
+<DocumentFragment>
+  <div
+    class="o-wrapper"
   >
-    Test content
-  </main>
-  <Footer />
-</div>
+    <header
+      class="c-header"
+    >
+      <div
+        class="o-shell o-shell--flex"
+      >
+        <a
+          class="c-logo"
+          href="/"
+        />
+        <nav
+          class="c-nav"
+        >
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/login"
+              >
+                Login
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main
+      class="o-main"
+    >
+      Test content
+    </main>
+    <footer
+      class="c-footer"
+    >
+      <div
+        class="o-shell"
+      >
+        <p>
+          © 2022. All rights reserved.
+        </p>
+        <p>
+          Change language:
+          <button>
+            de
+          </button>
+          <button
+            disabled=""
+          >
+            en
+          </button>
+        </p>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
 `;

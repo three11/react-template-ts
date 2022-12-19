@@ -106,6 +106,7 @@ npm run test
     ┃ ┃ ┃ ┗ 📜 enums.ts - Each branch has its own enums
     ┃ ┃ ┃ ┗ 📜 interfaces.ts - Each branch has its own interfaces
     ┃ ┃ ┃ ┗ 📜 reducer.ts - The branch reducer
+    ┃ ┃ ┃ ┗ 📜 selectors.ts - The branch selectors (hooks)
     ┃ ┃ ┃ ┗ 📜 sagas.ts - The branch sagas
     ┃ ┗ 📜 enums.ts - Store's enums
     ┃ ┗ 📜 index.ts - Application's main store
@@ -127,19 +128,18 @@ npm run test
     -   Minification of the bundled file
     -   Source maps
 
-3.  Webpack aliases: Checkout the aliases property in the `webpack.config.ts` file.
+3.  Aliases: Checkout the aliases property in the `vite.config.ts` and `tsconfig.json` files.
 4.  SCSS usage.
 5.  Lint your files: ESLint (with TypeScript ESLint installed and configured) and Stylelint included
-6.  Tests using Jest and Enzyme. The Test environment has been configured so you don't have to
-7.  Offline first - using Offline Plugin to cache important files and assets
-8.  PWA ready - Install as a native app on Android and iOS
-9.  Code splitting and lazy loading
-10. i18n included:
+6.  Tests using Jest and React testing library. The Test environment has been configured so you don't have to
+7.  PWA ready - Install as a native app on Android and iOS
+8.  Code splitting and lazy loading
+9.  i18n included:
     1.  add your locales in `/src/i18n/locales`
     2.  add your po files which are based on the `translations.pot` file located in `/src/assets/locale`
     3.  run `yarn locale` to generate `${locale}.json` file from your `${locale}.po` file.
     4.  update your UI to reflect the newly added locale
-11. Prerendering - All pages are prerendered based on defined routes. This is included in the build step and needs **no additional configuration**.
+10. Prerendering - All pages are prerendered based on defined routes. This is included in the build step and needs **no additional configuration**.
 
 ## Supported Browsers
 
