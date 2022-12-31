@@ -95,7 +95,7 @@
 		"@vitejs/plugin-react": "3.0.0",
 		"autoprefixer": "10.4.13",
 		"cssnano": "5.1.14",
-		"eslint": "8.30.0",
+		"eslint": "8.31.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-jest": "27.1.7",
 		"eslint-plugin-react": "7.31.11",
