@@ -9,7 +9,7 @@ exports[`Footer component should render successfully 1`] = `
       class="o-shell"
     >
       <p>
-        © 2022. All rights reserved.
+        © 2023. All rights reserved.
       </p>
       <p>
         Change language:
