@@ -92,7 +92,7 @@
 		"@types/redux-mock-store": "1.0.3",
 		"@typescript-eslint/eslint-plugin": "5.48.0",
 		"@typescript-eslint/parser": "5.48.0",
-		"@vitejs/plugin-react": "3.0.0",
+		"@vitejs/plugin-react": "3.0.1",
 		"autoprefixer": "10.4.13",
 		"cssnano": "5.1.14",
 		"eslint": "8.31.0",
