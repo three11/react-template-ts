@@ -1525,10 +1525,10 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.3.0.tgz#b6ee542c7f087b73b3d8215b9bf799f648be71cb"
   integrity sha512-nwQoYb3m4DDpHTeOwpJEuDt8lWVcujhYYSFGLluC+9es2PyLjm+jjq3IeRBQbwBtPLJE/lkuHuGHr8uQLgmJRA==
 
-"@rollup/plugin-alias@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-4.0.2.tgz#fec6c6aff8dd6fce580ae6bc5345084cd702bb62"
-  integrity sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ==
+"@rollup/plugin-alias@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-4.0.3.tgz#571f6fb26387df91d0363905a7fd835757727ae2"
+  integrity sha512-ZuDWE1q4PQDhvm/zc5Prun8sBpLJy41DMptYrS6MhAy9s9kL/doN1613BWfEchGVfKxzliJ3BjbOPizXX38DbQ==
   dependencies:
     slash "^4.0.0"
 
