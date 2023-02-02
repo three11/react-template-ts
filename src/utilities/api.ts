@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 import { handleItem, setThreshold } from './local-storage';
 import { AuthRequest, SignupRequest } from './interfaces';
@@ -40,20 +40,17 @@ export const passwordReset = (data: Partial<AuthRequest>): Promise<AxiosResponse
 
 export const signup = (data: SignupRequest): Promise<AxiosResponse> => post('passport/basic/signup', data);
 
-http.interceptors.request.use(
-	(config: AxiosRequestConfig) => {
-		if (config.headers) {
-			config.headers['Authorization'] = localStorage.getItem(TOKEN_KEY) || '';
-		}
+http.interceptors.request.use(config => {
+	if (config.headers) {
+		config.headers['Authorization'] = localStorage.getItem(TOKEN_KEY) || '';
+	}
 
-		return config;
-	},
-	(error: any) => Promise.reject(error)
-);
+	return config;
+}, Promise.reject);
 
 http.interceptors.response.use(
-	(response: AxiosResponse) => response,
-	(error: any) => {
+	response => response,
+	error => {
 		const refreshToken = localStorage.getItem(REFRESH_TOKEN_KEY);
 
 		if (!refreshToken) {
@@ -66,23 +63,19 @@ http.interceptors.response.use(
 			originalRequest._retry = true;
 
 			if (http.defaults.headers) {
-				(http.defaults.headers as any)['Authorization'] = 'Bearer ' + refreshToken;
+				http.defaults.headers['Authorization'] = 'Bearer ' + refreshToken;
 			}
 
 			return post('auth/token')
-				.then((res: any) => {
-					/*eslint-disable*/
+				.then(res => {
 					const { access_token, threshold } = res.data;
-					/*eslint-enable*/
 
 					handleItem(TOKEN_KEY, access_token);
 					handleItem(TOKEN_THRESHOLD_KEY, setThreshold(threshold));
 
-					/*eslint-disable*/
 					if (http.defaults.headers) {
-						(http.defaults.headers as any)['Authorization'] = access_token;
+						http.defaults.headers['Authorization'] = access_token;
 					}
-					/*eslint-enable*/
 
 					return http(originalRequest);
 				})
