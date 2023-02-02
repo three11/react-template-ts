@@ -3026,6 +3026,11 @@ commander@2.17.x:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
+commander@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-10.0.0.tgz#71797971162cd3cf65f0b9d24eb28f8d303acdf1"
+  integrity sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==
+
 commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
@@ -3036,7 +3041,7 @@ commander@^7.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-commander@^9.0.0, commander@^9.4.0:
+commander@^9.0.0:
   version "9.4.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.1.tgz#d1dd8f2ce6faf93147295c0df13c7c21141cfbdd"
   integrity sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==
@@ -4708,18 +4713,18 @@ i18next-browser-languagedetector@7.0.1:
   dependencies:
     "@babel/runtime" "^7.19.4"
 
-i18next-conv@13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-13.1.0.tgz#b62326b0530a7257cffb4e73a5a8056c2eb3e1d2"
-  integrity sha512-GC8qbasFjKC10r2ZL5Sx9i0C83YotvC+go/84U34bMXf4YTyaReCNtTLNysXg6JNCHF0zQJf9LC6XAXsmDdozw==
+i18next-conv@13.1.1:
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/i18next-conv/-/i18next-conv-13.1.1.tgz#db2f7aa59cc1637ff3d1d0d8c36838e21c40205b"
+  integrity sha512-j4DTCvOFFFgv4R7Ru7YiShHOOcmpKKMJ84Os0PhsL2GKvnifzNYgQRBr905R7Pp0bYhLJ0pK+oGP3Apvh2vMHA==
   dependencies:
     c8 "^7.12.0"
     colorette "^2.0.19"
-    commander "^9.4.0"
+    commander "^10.0.0"
     gettext-converter "^1.2.3"
     gettext-parser "^6.0.0"
     node-gettext "^3.0.0"
-    p-from-callback "^1.0.0"
+    p-from-callback "^1.0.1"
 
 i18next-scanner@4.1.1:
   version "4.1.1"
@@ -6527,10 +6532,10 @@ ordered-read-streams@^1.0.0:
   dependencies:
     readable-stream "^2.0.1"
 
-p-from-callback@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/p-from-callback/-/p-from-callback-1.0.0.tgz#33d057b8916884c294f574c50ad5750e57e32c10"
-  integrity sha512-loR7OeICbyTMmrjp54F/OBbmqsWKYlAZpGxh9h9n+ntPS+vjTM/JM20N5hjCOhgeHbFJ3f3XhFbtdrE3l+un2g==
+p-from-callback@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/p-from-callback/-/p-from-callback-1.0.1.tgz#c437884511098ea8db0ef08540f11eb39b79930e"
+  integrity sha512-5N3Xj5tWR7giRLxF1qz1+bOAHNZFuiszG4H0f0dhbGCWxX72OQuJSuwnMv+ZT0qWcUKdkh7X0tu8Z2FALiM8pw==
 
 p-limit@^2.2.0:
   version "2.3.0"
