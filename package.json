@@ -108,7 +108,7 @@
 		"postcss-flexbugs-fixes": "5.0.2",
 		"redux-mock-store": "1.5.4",
 		"sass": "1.62.0",
-		"stylelint": "15.4.0",
+		"stylelint": "15.5.0",
 		"stylelint-config-recommended": "11.0.0",
 		"stylelint-config-standard-scss": "8.0.0",
 		"stylelint-no-unsupported-browser-features": "6.1.0",
