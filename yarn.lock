@@ -8251,10 +8251,10 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==
 
-svgo-viewbox@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/svgo-viewbox/-/svgo-viewbox-2.2.1.tgz#f51585544d4c32c10606858d5ea641bc603970db"
-  integrity sha512-pdcktzCxuJ4m1tF3xo08FV1lQmlqAlZeVslcLr53oIrmTa81T4zM09nn9U+QJpLxmZ47tnIKYreHoubOdGh0cQ==
+svgo-viewbox@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/svgo-viewbox/-/svgo-viewbox-2.3.0.tgz#f184becaee19a5fda39cf1388044a91df5d72d53"
+  integrity sha512-CK3hX0w/sN67Y+hlRmdcC0IK+T8ayg0u1nY++RjrRtBRHxXc/HmJWev1VoImin8hC60QeO0nTslgohtan643yQ==
   dependencies:
     meow "9.0.0"
     svgo "3.0.2"
