@@ -82,7 +82,7 @@
 		"@types/jest": "29.5.1",
 		"@types/loadable__component": "5.13.4",
 		"@types/node": "18.16.1",
-		"@types/postcss-flexbugs-fixes": "4.2.1",
+		"@types/postcss-flexbugs-fixes": "5.0.0",
 		"@types/react": "18.2.0",
 		"@types/react-dom": "18.2.1",
 		"@types/react-loadable": "5.5.7",
