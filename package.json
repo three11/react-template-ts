@@ -69,8 +69,8 @@
 		"react-i18next": "12.2.2",
 		"react-inlinesvg": "3.0.2",
 		"react-redux": "8.0.5",
-		"react-router": "6.11.0",
-		"react-router-dom": "6.11.0",
+		"react-router": "6.11.1",
+		"react-router-dom": "6.11.1",
 		"redux": "4.2.1",
 		"redux-saga": "1.2.3",
 		"scss-goodies": "2.2.0"
