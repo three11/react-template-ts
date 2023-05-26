@@ -121,8 +121,8 @@
 		"vite": "4.3.9",
 		"vite-plugin-prerender": "1.0.8",
 		"vite-plugin-pwa": "0.15.1",
-		"workbox-build": "6.5.4",
-		"workbox-window": "6.5.4"
+		"workbox-build": "6.6.0",
+		"workbox-window": "6.6.0"
 	},
 	"browserslist": [
 		"> 1%",
