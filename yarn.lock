@@ -8835,10 +8835,10 @@ vite-plugin-prerender@1.0.8:
     html-minifier "^3.5.16"
     mkdirp "^1.0.4"
 
-vite-plugin-pwa@0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.16.1.tgz#3853a951d8758a60253415867b351b11f6e5d845"
-  integrity sha512-OdD+ck+jiCkeUQPwXCNttR62ZC2On4wasn+03Qyx0x1bLGv1IXgl59WexpWMbgKD7jZVjozWGcy3etRJJzwsvA==
+vite-plugin-pwa@0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.16.2.tgz#fa6e927fbbce59a168431210015b8c7a9921c5d8"
+  integrity sha512-MB/0UjZ06w8l6PqMehmJvejCHOvDT563LSo/CLxn0MkT6+Qk0TeytAeAWyn2S/dwXVIUYYmr8s67HJiSA7dNLw==
   dependencies:
     debug "^4.3.4"
     fast-glob "^3.2.12"
