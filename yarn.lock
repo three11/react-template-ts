@@ -4848,10 +4848,10 @@ i18next@*:
   dependencies:
     "@babel/runtime" "^7.20.6"
 
-i18next@23.0.1:
-  version "23.0.1"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.0.1.tgz#f33cce7de865849bd9120438bc75f770ffc070d5"
-  integrity sha512-/wiTpPwkrfg2rMdRsREJzH0TJT9QBgoTRfiPlNoewvIrOI3ID4lY0eDRE5xi8a+HClpa3ChYfQZHJuGzOx1GBw==
+i18next@23.0.2:
+  version "23.0.2"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.0.2.tgz#3dba0d33b0fa6de2cb9c81531861fe04856da51c"
+  integrity sha512-UhTW8vtJWwG8Qb4g/M7xwrTGTHo6t8X0nJxunLihRdLX+p/Eh7/pl5GQ4eDeBb7xFdVc8LskNwCW4LQh6qx8FQ==
   dependencies:
     "@babel/runtime" "^7.22.5"
 
