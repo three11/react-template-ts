@@ -66,7 +66,7 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-hook-form": "7.45.0",
-		"react-i18next": "13.0.0",
+		"react-i18next": "13.0.1",
 		"react-inlinesvg": "3.0.2",
 		"react-redux": "8.1.1",
 		"react-router": "6.13.0",
