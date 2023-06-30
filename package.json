@@ -114,7 +114,7 @@
 		"stylelint-no-unsupported-browser-features": "6.1.0",
 		"stylelint-scss": "5.0.1",
 		"svgo-viewbox": "2.3.0",
-		"ts-jest": "29.1.0",
+		"ts-jest": "29.1.1",
 		"ts-node": "10.9.1",
 		"tslib": "2.6.0",
 		"typescript": "5.1.6",
