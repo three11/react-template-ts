@@ -96,7 +96,7 @@
 		"autoprefixer": "10.4.14",
 		"cssnano": "6.0.1",
 		"eslint": "8.46.0",
-		"eslint-config-prettier": "8.9.0",
+		"eslint-config-prettier": "8.10.0",
 		"eslint-plugin-jest": "27.2.3",
 		"eslint-plugin-react": "7.33.1",
 		"i18next-conv": "14.0.0",
