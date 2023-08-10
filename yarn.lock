@@ -4234,11 +4234,6 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-exenv@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
-  integrity sha512-Z+ktTxTwv9ILfgKCk32OX3n/doe+OcLTRtqK9pcL+JsP3J1/VW8Uvl4ZjLlKqeW4rzK4oesDOGMEMRIZqtP4Iw==
-
 exit@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
@@ -7415,12 +7410,11 @@ react-i18next@13.0.3:
     "@babel/runtime" "^7.22.5"
     html-parse-stringify "^3.0.1"
 
-react-inlinesvg@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-4.0.0.tgz#e5b6433547fccf703fd5be5cde6c50f223c3eed7"
-  integrity sha512-b/pnbmuluXkTs+URnyAePI9h1UyjwCVWipCgy7x6K8OuX98JLk7WgQ/cp3gVcGgaHwg7IVSqHKCoKpHzYRpjsw==
+react-inlinesvg@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-4.0.1.tgz#53b78ac0328e5fa984f74606c04d577327499cae"
+  integrity sha512-iy/4Uml4EU3N3fWuTpzHV55l/cDTlw8XV3yDGcfuth5Hs2Ed0oT0IJJ7EnarAJPwSQK0+fb6Z6YCwbDdTfXUeA==
   dependencies:
-    exenv "^1.2.2"
     react-from-dom "^0.6.2"
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0:
