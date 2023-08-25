@@ -2421,11 +2421,6 @@ acorn-class-fields@^0.3.7:
   dependencies:
     acorn-private-class-elements "^0.2.7"
 
-acorn-dynamic-import@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/acorn-dynamic-import/-/acorn-dynamic-import-4.0.0.tgz#482210140582a36b83c3e342e1cfebcaa9240948"
-  integrity sha512-d3OEjQV4ROpoflsnUA8HozoIR504TFxNivYEUi6uwz0IYhBkTDXGuWlNdMtybRt3nqVx/L6XqMt0FxkXuWKZhw==
-
 acorn-globals@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/acorn-globals/-/acorn-globals-7.0.1.tgz#0dbf05c44fa7c94332914c02066d5beff62c40c3"
@@ -5115,13 +5110,12 @@ i18next-conv@14.0.0:
     node-gettext "^3.0.0"
     p-from-callback "^1.0.1"
 
-i18next-scanner@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/i18next-scanner/-/i18next-scanner-4.3.0.tgz#853823a856d0b52ba6cfa579e874908154170f97"
-  integrity sha512-pLMq5vf4wFl8VgSnTcG/8BQZRnc/dVaOPudcYWPb/Pbbk9E4vcOIfZ/NHfK/9Jrzkzkxw9pqLQfHwDfb8VzkwA==
+i18next-scanner@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/i18next-scanner/-/i18next-scanner-4.4.0.tgz#aefa12bd2b879ddcd164669b192c15f2cdff81ba"
+  integrity sha512-bgnVEfoFHLVxfXNQtsFFzexB/5kwgDZZkZ6+AnCmyaFKEQQbtMkgPgLHlMZ0deIIEG6KN/tYAus5ZJzng2Ac9g==
   dependencies:
     acorn "^8.0.4"
-    acorn-dynamic-import "^4.0.0"
     acorn-jsx "^5.3.1"
     acorn-stage3 "^4.0.0"
     acorn-walk "^8.0.0"
