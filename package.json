@@ -120,7 +120,7 @@
 		"typescript": "5.2.2",
 		"vite": "4.4.9",
 		"vite-plugin-prerender": "1.0.8",
-		"vite-plugin-pwa": "0.16.4",
+		"vite-plugin-pwa": "0.16.5",
 		"workbox-build": "7.0.0",
 		"workbox-window": "7.0.0"
 	},
