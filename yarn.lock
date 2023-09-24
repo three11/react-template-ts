@@ -2073,10 +2073,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
-"@types/postcss-flexbugs-fixes@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@types/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-5.0.0.tgz#907f14da404d0cf7ea529e682051170756a57c19"
-  integrity sha512-EglgYTFYZT7CAJ8TPenkgfHz3b2+2OHSZAxa5APz5yK9pawmE63Uoe8MEVQnD5TYrFGFVNZLAM2l+2sU9WmHuw==
+"@types/postcss-flexbugs-fixes@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@types/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-5.0.1.tgz#23e1065fe7720e67c9fed11970ea23a0c1661f67"
+  integrity sha512-u4ZF/Q2oL/bjGWilu6qrIPt67nR9TWMm+sFmRbkIIIah4q46KyW3lgt4REWrzPPKdjjvemdDqFdeWot5d3Ve+g==
   dependencies:
     postcss "^8.1.4"
 
