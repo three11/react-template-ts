@@ -1,6 +1,6 @@
 {
 	"name": "create-react-app-ts",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "Scalable starter boilerplate for React applications",
 	"main": "./src/index.tsx",
 	"bin": {
