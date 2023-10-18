@@ -4,5 +4,6 @@
 	color: $color-error;
 	text-align: center;
 	height: 100%;
+
 	@include flex-row(wrap, center, center);
 }

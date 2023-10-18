@@ -5,6 +5,7 @@
 .c-nav {
 	ul {
 		@include flex-row(nowrap, center, flex-start);
+
 		padding: 0;
 		margin: 0;
 		list-style: none outside none;
