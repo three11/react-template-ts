@@ -6,11 +6,13 @@
 
 @mixin flex-row($wrap: wrap, $align: stretch, $justify: space-between) {
 	@include flex($align, $justify);
+
 	flex-flow: row $wrap;
 }
 
 @mixin flex-column($wrap: nowrap, $align: stretch, $justify: space-between) {
 	@include flex($align, $justify);
+
 	flex-flow: column $wrap;
 }
 
@@ -21,7 +23,7 @@
 }
 
 @mixin desktop-only {
-	@media (min-width: $tablet-landscape + 1) {
+	@media (calc($tablet-landscape + 1) <= width) {
 		@content;
 	}
 }
@@ -33,7 +35,7 @@
 }
 
 @mixin tablet-landscape-only {
-	@media (min-width: $tablet-portrait + 1) and (max-width: $tablet-landscape) {
+	@media (calc($tablet-portrait + 1) <= width <= $tablet-landscape) {
 		@content;
 	}
 }
@@ -45,7 +47,7 @@
 }
 
 @mixin tablet-portrait-only {
-	@media (min-width: $mobile + 1) and (max-width: $tablet-portrait) {
+	@media (calc($mobile + 1) <= width <= $tablet-portrait) {
 		@content;
 	}
 }

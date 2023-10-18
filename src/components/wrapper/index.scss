@@ -130,8 +130,7 @@
 		textarea {
 			height: 200px;
 			resize: none;
-			overflow-x: hidden;
-			overflow-y: auto;
+			overflow: hidden auto;
 			-webkit-overflow-scrolling: touch;
 		}
 
@@ -160,6 +159,7 @@
 			font-size: 0.75rem;
 			line-height: 1.5;
 			margin-bottom: 0.25rem;
+
 			@include flex-row(nowrap, center, space-between);
 		}
 	}
