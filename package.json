@@ -81,7 +81,7 @@
 		"@testing-library/react": "14.0.0",
 		"@types/jest": "29.5.6",
 		"@types/loadable__component": "5.13.6",
-		"@types/node": "20.8.8",
+		"@types/node": "20.8.9",
 		"@types/postcss-flexbugs-fixes": "5.0.2",
 		"@types/react": "18.2.32",
 		"@types/react-dom": "18.2.14",
