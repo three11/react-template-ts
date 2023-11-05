@@ -57,7 +57,7 @@
 	"homepage": "https://github.com/three11/react-template#readme",
 	"dependencies": {
 		"@loadable/component": "5.15.3",
-		"@redux-devtools/extension": "3.2.5",
+		"@redux-devtools/extension": "3.2.6",
 		"axios": "1.6.0",
 		"date-fns": "2.30.0",
 		"i18next": "23.6.0",
