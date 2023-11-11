@@ -60,7 +60,7 @@
 		"@redux-devtools/extension": "3.2.6",
 		"axios": "1.6.1",
 		"date-fns": "2.30.0",
-		"i18next": "23.7.1",
+		"i18next": "23.7.2",
 		"i18next-browser-languagedetector": "7.2.0",
 		"normalize.css": "8.0.1",
 		"react": "18.2.0",
