@@ -1547,10 +1547,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@loadable/component@5.16.2":
-  version "5.16.2"
-  resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.16.2.tgz#b10bd7e56f628d18d6d441104b85d752bba5ac2f"
-  integrity sha512-WCtVYg7rWuxZLakHBiArMGkMIxu2O0JvXfNZOaB6pAx5pDyozvnxt5nrhg9DBZ9tEnQXaidnJCelauAWq/H61w==
+"@loadable/component@5.16.3":
+  version "5.16.3"
+  resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.16.3.tgz#3fc96d48defd8ff47aa624b8ce7f70248943e102"
+  integrity sha512-2mVvHs2988oVX2/zM0y6nYhJ4rTVHhkhRnpupBA0Rjl5tS8op9uSR4u5SLVfMLxzpspr2UiIBQD+wEuMsuq4Dg==
   dependencies:
     "@babel/runtime" "^7.7.7"
     hoist-non-react-statics "^3.3.1"
