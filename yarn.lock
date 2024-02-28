@@ -7465,10 +7465,10 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-from-dom@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.7.1.tgz#ceefda6ad57a826aa2b2a32bb03f8f1247bdd1fe"
-  integrity sha512-nkcOum4D+C8fQcbv2HKeDAmWWfD5bj9JCrUvGj/zSdTZsvXjtqUw5PMAK/I9xsAcj3DVh3jx9LkbjDPu52ZjFg==
+react-from-dom@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.7.2.tgz#791dcd2407ece4e943f954ce48986583a6286919"
+  integrity sha512-mu7bTd7euJ5SUpfrtTIQMt9dMXNT5WUW3dWOzOQKI2xgLbtrPKmGH4/vJO72FY9BUYu55Rz3/OY/rADD65632Q==
 
 react-hook-form@7.50.1:
   version "7.50.1"
@@ -7483,12 +7483,12 @@ react-i18next@14.0.5:
     "@babel/runtime" "^7.23.9"
     html-parse-stringify "^3.0.1"
 
-react-inlinesvg@4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-4.1.2.tgz#f870eeee1e88759e9902b14d00509a623c3c0514"
-  integrity sha512-YKBBKb4WL0dHhDm5/UXrBp810Euusf6wNdoJMYWD1ky1tVcW1Ypn6zLjMD/ZbmhwTnQIvhV6SGzXyoO3R3rA4g==
+react-inlinesvg@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-4.1.3.tgz#671f083fd78934ec58afa5128460252dcae61177"
+  integrity sha512-p1+wkr1UQZyLw/3bdpnHO3v3tMNVWyxWnAEY6ML/Ql9ldDYTBTy6HqAyNl7u3au925XPffLMiXKnQrqZeJAldw==
   dependencies:
-    react-from-dom "^0.7.1"
+    react-from-dom "^0.7.2"
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
