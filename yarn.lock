@@ -9213,10 +9213,10 @@ vite-plugin-prerender@1.0.8:
     html-minifier "^3.5.16"
     mkdirp "^1.0.4"
 
-vite-plugin-pwa@0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.19.0.tgz#2223d6014b9b980deb89a7e8aefebafe71d8a7ef"
-  integrity sha512-Unfb4Jk/ka4HELtpMLIPCmGcW4LFT+CL7Ri1/Of1544CVKXS2ftP91kUkNzkzeI1sGpOdVGuxprVLB9NjMoCAA==
+vite-plugin-pwa@0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.19.1.tgz#f8d75036b5f5d43ddc5c28b82e57d881bcf697ec"
+  integrity sha512-pxubJSqDfiUflmFfU8ErPP2eIHz7SqiSuJz6Qk2dPlEeC5Wm2hTInYhmVBYVx1KbVUEhQ4f8uCdmhYB/YP/pqw==
   dependencies:
     debug "^4.3.4"
     fast-glob "^3.3.2"
