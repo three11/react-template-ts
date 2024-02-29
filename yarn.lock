@@ -1989,10 +1989,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.14.tgz#74a97a5573980802f32c8e47b663530ab3b6b7d1"
   integrity sha512-U3PUjAudAdJBeC2pgN8uTIKgxrb4nlDF3SF0++EldXQvQBGkpFZMSnwQiIoDU77tv45VgNkl/L4ouD+rEomujw==
 
-"@types/loadable__component@5.13.8":
-  version "5.13.8"
-  resolved "https://registry.yarnpkg.com/@types/loadable__component/-/loadable__component-5.13.8.tgz#641365895c02329420785354b793e7dbce746a3a"
-  integrity sha512-0FF/WihuPkR5IFOHiBzC95bSACvgQNUQCuNy1WF8F/lCBBHgS2SxarIk4CTjWM10A72ovpmXZDRcuAXZNS+/kQ==
+"@types/loadable__component@5.13.9":
+  version "5.13.9"
+  resolved "https://registry.yarnpkg.com/@types/loadable__component/-/loadable__component-5.13.9.tgz#4a265ee0892ab3e52ca74ac98189f791a24f075b"
+  integrity sha512-QWOtIkwZqHNdQj3nixQ8oyihQiTMKZLk/DNuvNxMSbTfxf47w+kqcbnxlUeBgAxdOtW0Dh48dTAIp83iJKtnrQ==
   dependencies:
     "@types/react" "*"
 
