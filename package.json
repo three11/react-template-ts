@@ -83,7 +83,7 @@
 		"@types/loadable__component": "5.13.9",
 		"@types/node": "20.12.2",
 		"@types/postcss-flexbugs-fixes": "5.0.3",
-		"@types/react": "18.2.73",
+		"@types/react": "18.2.74",
 		"@types/react-dom": "18.2.23",
 		"@types/react-loadable": "5.5.11",
 		"@types/react-redux": "7.1.33",
