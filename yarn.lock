@@ -8845,6 +8845,11 @@ svgo-add-viewbox@3.0.0:
   resolved "https://registry.yarnpkg.com/svgo-add-viewbox/-/svgo-add-viewbox-3.0.0.tgz#5b06a9384c55a925c014d0f4238be4f4be727aae"
   integrity sha512-ASBU5/a3yPyQhF2ggqb6m9171iVBX9E9X49TgeX501OStABRxEWO98Zfo7UCQc9qRrADSXy5xhvW0x6QZrTYhA==
 
+svgo-add-viewbox@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/svgo-add-viewbox/-/svgo-add-viewbox-3.1.0.tgz#d7795c97784c583ca5b4b0b12883b09504c1363f"
+  integrity sha512-hBpN3f6CsrhGLWBDY++n0Om9vsF5iC/hEExdS/hnZw6lXhHK+P9u3qZKWl4z6bHk61XcdhmV7hiLkJsDG4gaZA==
+
 svgo-viewbox@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/svgo-viewbox/-/svgo-viewbox-3.0.0.tgz#63f59b3edbf443427e4a4472aae1e85db44f3e44"
