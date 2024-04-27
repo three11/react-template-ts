@@ -97,7 +97,7 @@
 		"cssnano": "6.1.2",
 		"eslint": "8.57.0",
 		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-jest": "28.2.0",
+		"eslint-plugin-jest": "28.3.0",
 		"eslint-plugin-react": "7.34.1",
 		"i18next-conv": "14.1.0",
 		"i18next-scanner": "4.4.0",
