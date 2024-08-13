@@ -58,7 +58,7 @@
 	"dependencies": {
 		"@loadable/component": "5.16.4",
 		"@redux-devtools/extension": "3.3.0",
-		"axios": "1.7.3",
+		"axios": "1.7.4",
 		"date-fns": "3.6.0",
 		"i18next": "23.12.3",
 		"i18next-browser-languagedetector": "7.2.1",
