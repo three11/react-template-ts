@@ -76,7 +76,7 @@
 		"scss-goodies": "2.2.0"
 	},
 	"devDependencies": {
-		"@rollup/plugin-alias": "5.1.0",
+		"@rollup/plugin-alias": "5.1.1",
 		"@testing-library/jest-dom": "6.5.0",
 		"@testing-library/react": "14.3.1",
 		"@types/jest": "29.5.13",
