@@ -5746,10 +5746,10 @@ i18next-conv@14.1.0:
     node-gettext "^3.0.0"
     p-from-callback "^1.0.1"
 
-i18next-scanner@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/i18next-scanner/-/i18next-scanner-4.5.0.tgz#d0ed52615597b973ca7837ffc692c6a88b3e02c4"
-  integrity sha512-5QMRUkQA6zvsOjwVzBCm7HRyzgrFJH1QsbuSMZCk0GDLRCJG6IL4i/5aYyzH695toXUkJ/rx4PCK/yvBw2i8Vw==
+i18next-scanner@4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/i18next-scanner/-/i18next-scanner-4.6.0.tgz#e7e0b9955388e24c43f1073647e066b747e981b9"
+  integrity sha512-I/xKcwKfii3L3is3bUvfaIU0QA/wYhpZnjppfrzyb61QQddxkcpspASEtmfnxSYvE6yIaAxDlIxg0EHV7mxssg==
   dependencies:
     acorn "^8.0.4"
     acorn-jsx "^5.3.1"
