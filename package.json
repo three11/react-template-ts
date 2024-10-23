@@ -79,7 +79,7 @@
 		"@rollup/plugin-alias": "5.1.1",
 		"@testing-library/jest-dom": "6.6.2",
 		"@testing-library/react": "14.3.1",
-		"@types/jest": "29.5.13",
+		"@types/jest": "29.5.14",
 		"@types/loadable__component": "5.13.9",
 		"@types/node": "20.16.14",
 		"@types/postcss-flexbugs-fixes": "5.0.3",
