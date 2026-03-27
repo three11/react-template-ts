@@ -2371,10 +2371,10 @@
   dependencies:
     undici-types "~5.25.1"
 
-"@types/node@20.17.9":
-  version "20.17.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.17.9.tgz#5f141d4b7ee125cdee5faefe28de095398865bab"
-  integrity sha512-0JOXkRyLanfGPE2QRCwgxhzlBAvaRdCNMcvbd7jFfpmD4eEXll7LRwy5ymJmyeZqk7Nh7eD2LeUyQ68BbndmXw==
+"@types/node@20.17.58":
+  version "20.17.58"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.17.58.tgz#26d8dcdd87237f2b3cf9aabfe7da712b1e851948"
+  integrity sha512-UvxetCgGwZ9HmsgGZ2tpStt6CiFU1bu28ftHWpDyfthsCt7OHXas0C7j0VgO3gBq8UHKI785wXmtcQVhLekcRg==
   dependencies:
     undici-types "~6.19.2"
 
